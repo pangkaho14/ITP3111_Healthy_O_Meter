@@ -1,12 +1,21 @@
-# ITP3111_Healthy_O_Meter
+# ITP3111_Healthy_O_Meter Documentation
+
+This is the implementation of the Healthy Eating Mobile App done by:
+| Student | Student ID |
+| ------------- |:-------------:|
+|Pang Ka Ho|2102047|
+|Lim Ryan|2101702|
+|Tan Zong Wei|2100642|
+|Rachel Cha|2102803|
+|Chew Xun Yuan|2101297|
 
 Project folder structure: <br>
 ![image](https://github.com/pangkaho14/ITP3111_Healthy_O_Meter/assets/71180280/981ead46-a150-49bd-9309-01f346a6f18c)
 
 Branches:
 - main
-- sprint1
-- sprint1_us-id
+- sprintX
+- sprintX_us-id
 
 Workflow:
 1. Work on sprintX branch.
@@ -23,11 +32,6 @@ Good git commit messages practice:
 - refactor: code structure refactor
 - revert: revert to previous code
 - build: release #X
-
-Branches:
-- main
-- sprint1
-- sprint1_us-id
 
 File and code naming conventions and standards:
 - Use Pascal Case (e.g., don't use: Outofmemoryexception. use: OutOfMemoryException)
