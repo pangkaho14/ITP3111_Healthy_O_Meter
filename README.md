@@ -18,8 +18,8 @@ Branches:
 - sprint1_us-id
 
 File and code naming conventions and standards:
-- Use Pascal Case (e.g., don't use: Outofmemoryexception. Use: OutOfMemoryException)
-- Use descriptive names and don't abbreviate (e.g., don't use: lBtnStM. Use: LargeButtonSettingsMenu)
+- Use Pascal Case (e.g., don't use: Outofmemoryexception. use: OutOfMemoryException)
+- Use descriptive names and don't abbreviate (e.g., don't use: lBtnStM. use: LargeButtonSettingsMenu)
 
 For more information:
 - Naming conventions and standards (https://www.youtube.com/watch?v=GEOqwtzmeP0)
