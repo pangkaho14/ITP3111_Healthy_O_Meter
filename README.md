@@ -19,7 +19,7 @@ Branches:
 
 File and code naming conventions and standards:
 - Use Pascal Case (e.g., don't use: Outofmemoryexception. Use: OutOfMemoryException)
-- ![image](https://github.com/pangkaho14/ITP3111_Healthy_O_Meter/assets/71180280/6a9d3368-153e-4c93-b8b8-d78e5df1af32)
+- Use descriptive names and don't abbreviate (e.g., don't use: lBtnStM. Use: LargeButtonSettingsMenu)
 
 For more information:
 - Naming conventions and standards (https://www.youtube.com/watch?v=GEOqwtzmeP0)
