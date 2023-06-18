@@ -1,20 +1,7 @@
 # ITP3111_Healthy_O_Meter
 
 Project folder structure:
-Assets
-+---Art
-| +---Sprites
-+---Audio
-| +---Music
-| +---Sound
-+---Builds
-+---Code
-| +---Scripts # C# scripts
-+---Docs # Wiki, concept art, marketing material
-+---Levels # Anything related to game design in Unity
-| +---Prefabs
-| +---Scenes
-| +---UI
+![image](https://github.com/pangkaho14/ITP3111_Healthy_O_Meter/assets/71180280/981ead46-a150-49bd-9309-01f346a6f18c)
 
 Good git commit messages practice:
 - feat: add new abilities
