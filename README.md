@@ -24,7 +24,7 @@ Assets
 +---Levels # Anything related to game design in Unity
 | +---Prefabs
 | +---Scenes
-| \---UI
+| +---UI
 ```
 
 ## Branches:
