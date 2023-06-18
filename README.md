@@ -1,6 +1,6 @@
 # ITP3111_Healthy_O_Meter
 
-Project folder structure:
+Project folder structure: <br>
 ![image](https://github.com/pangkaho14/ITP3111_Healthy_O_Meter/assets/71180280/981ead46-a150-49bd-9309-01f346a6f18c)
 
 Good git commit messages practice:
