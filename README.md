@@ -10,7 +10,22 @@ This is the implementation of the Healthy Eating Mobile App done by:
 |Chew Xun Yuan|2101297|
 
 Project folder structure: <br>
-![image](https://github.com/pangkaho14/ITP3111_Healthy_O_Meter/assets/71180280/981ead46-a150-49bd-9309-01f346a6f18c)
+```
+Assets
++---Art
+| +---Sprites
++---Audio
+| +---Music
+| +---Sound
++---Builds
++---Code
+| +---Scripts # C# scripts
++---Docs # Wiki, concept art, marketing material
++---Levels # Anything related to game design in Unity
+| +---Prefabs
+| +---Scenes
+| \---UI
+```
 
 Branches:
 - main
