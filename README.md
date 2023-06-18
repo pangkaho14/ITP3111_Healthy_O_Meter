@@ -19,9 +19,9 @@ Assets
 | +---Sound
 +---Builds
 +---Code
-| +---Scripts # C# scripts
-+---Docs # Wiki, concept art, marketing material
-+---Levels # Anything related to game design in Unity
+| +---Scripts  # C# scripts
++---Docs       # Wiki, concept art, marketing material
++---Levels     # Anything related to game design in Unity
 | +---Prefabs
 | +---Scenes
 | +---UI
