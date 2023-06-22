@@ -153,15 +153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 7551169727231985320, guid: 061518263a00e9e45bce894ee866862f, type: 3}
-  spawnInterval: 3
-  spawnSpeed: 1
-  laneOffset: 3
-  laneWidth: 1
+  spawnInterval: 5
+  spawnSpeed: 0.9
+  laneOffset: 2
+  laneWidth: 0.2
   minHeight: 0.2
   maxHeight: 0.2
-  leftLaneObject: {fileID: 0}
-  middleLaneObject: {fileID: 0}
-  rightLaneObject: {fileID: 0}
+  middleLaneObject: {fileID: 2021423260}
 --- !u!4 &444182082
 Transform:
   m_ObjectHideFlags: 0
