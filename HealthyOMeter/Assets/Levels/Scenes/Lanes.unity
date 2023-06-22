@@ -181,6 +181,7 @@ MonoBehaviour:
   - {fileID: 1893571962}
   laneChangeSpeed: 5
   threshold: 50
+  swipeBufferTime: 0.5
   player: {fileID: 1929672889}
 --- !u!1 &1340925958
 GameObject:
@@ -265,7 +266,7 @@ GameObject:
   - component: {fileID: 1929672889}
   - component: {fileID: 1929672888}
   m_Layer: 0
-  m_Name: auntie
+  m_Name: Auntie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
