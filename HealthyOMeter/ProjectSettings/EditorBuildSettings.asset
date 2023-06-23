@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/Lanes.unity
     guid: 0b6ec93aac7ef44499051c72340031ae
+  - enabled: 1
+    path: Assets/Levels/Scenes/Game Over.unity
+    guid: 496248d85242ccd4c8302f49b909d461
   m_configObjects: {}
