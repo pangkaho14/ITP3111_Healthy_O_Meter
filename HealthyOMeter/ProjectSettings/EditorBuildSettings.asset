@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/Game Over.unity
     guid: 496248d85242ccd4c8302f49b909d461
+  - enabled: 1
+    path: Assets/Levels/Scenes/Tutorial/TutorialMovement.unity
+    guid: 2364cf955e5514a488e853951f31a912
+  - enabled: 1
+    path: Assets/Levels/Scenes/Tutorial/TutorialItems.unity
+    guid: 1a908e6bd1a39b043a0f2414fc2f1c6c
+  - enabled: 1
+    path: Assets/Levels/Scenes/Tutorial/TutorialHealthmeter.unity
+    guid: 8e932bdc0a4ffcf4d98aa035037dcabc
   m_configObjects: {}
