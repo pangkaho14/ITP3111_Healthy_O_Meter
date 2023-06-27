@@ -6,24 +6,11 @@ using UnityEngine.UIElements;
 
 public class characterManager : MonoBehaviour
 {
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
-
-    // Start is called before the first frame update
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
-        //Get the Aunty and Uncle Buttons
+        //Get the Aunty and Uncle Icon Buttons
         Button buttonAunty = root.Q<Button>("btnAunty");
         Button buttonUncle = root.Q<Button>("btnUncle");
         buttonAunty.clicked += () => LoadNextScene("Lanes");

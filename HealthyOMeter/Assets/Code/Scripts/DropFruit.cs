@@ -38,10 +38,10 @@ public class ObjectSpawner : MonoBehaviour
         // // Instantiate a new object from the prefab
         // GameObject newObject = Instantiate(objectPrefab, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
 
-        // Create random index fo the different objects
+        // Create random index for the different objects to be dropped
         int randomIndex = Random.Range(0, objectPrefab.Length);
 
-        // Instatiate different objects from the prefab
+        // Instantiate different objects from the prefab
         GameObject newObject = Instantiate(objectPrefab[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
 
         // Add a rigidbody component to the object if it doesn't have one
