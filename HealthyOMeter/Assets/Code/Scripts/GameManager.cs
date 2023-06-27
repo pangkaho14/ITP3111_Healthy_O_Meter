@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         //On click listeners for the buttons
         // buttonPlay.clicked += () => LoadNextScene("Lanes");
         buttonPlay.clicked += () => LoadNextScene("CharacterSelection");
-        buttonLeaderboard.clicked += () => LoadNextScene("LeaderboardHome");
+        buttonLeaderboard.clicked += () => LoadNextScene("LeaderBoardHome");
         buttonSettings.clicked += () => LoadNextScene("Settings");
         buttonTutorial.clicked += () => LoadNextScene("TutorialMovement");
     }
