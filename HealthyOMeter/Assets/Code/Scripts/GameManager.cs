@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
         Button buttonTutorial = root.Q<Button>("btn_tutorial");
         
         //On click listeners for the buttons
-        buttonPlay.clicked += () => LoadNextScene("Lanes");
+        // buttonPlay.clicked += () => LoadNextScene("Lanes");
+        buttonPlay.clicked += () => LoadNextScene("CharacterSelection");
         buttonLeaderboard.clicked += () => LoadNextScene("LeaderboardHome");
         buttonSettings.clicked += () => LoadNextScene("Settings");
         buttonTutorial.clicked += () => LoadNextScene("TutorialMovement");

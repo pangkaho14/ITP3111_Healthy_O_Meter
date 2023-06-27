@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject objectPrefab;    // The prefab of the object you want to spawn
+    // public GameObject objectPrefab;    // The prefab of the object you want to spawn
+
+    public GameObject[] objectPrefab;  // Create an array of prefab of objects you want to spawn
     public float spawnInterval = 1f;   // The time interval between spawns
     public float spawnSpeed = 5f;      // The speed at which the object moves
     public float laneOffset = 3f;      // The offset between each lane
@@ -33,8 +35,14 @@ public class ObjectSpawner : MonoBehaviour
         float spawnX = transform.position.x + lanePosition * laneOffset;
         float spawnY = transform.position.y;
 
-        // Instantiate a new object from the prefab
-        GameObject newObject = Instantiate(objectPrefab, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+        // // Instantiate a new object from the prefab
+        // GameObject newObject = Instantiate(objectPrefab, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+
+        // Create random index fo the different objects
+        int randomIndex = Random.Range(0, objectPrefab.Length);
+
+        // Instatiate different objects from the prefab
+        GameObject newObject = Instantiate(objectPrefab[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
 
         // Add a rigidbody component to the object if it doesn't have one
         if (!newObject.GetComponent<Rigidbody2D>())

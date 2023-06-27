@@ -32,6 +32,12 @@ public class PlayerHealth : MonoBehaviour
         UpdateHPText(currentHP);
     }
 
+    public void GainHP(int amount)
+    {
+        currentHP += amount;
+        UpdateHPText(currentHP);
+    }
+
     public void CheckHP()
     {
         if (currentHP <= 0)
@@ -48,4 +54,5 @@ public class PlayerHealth : MonoBehaviour
             hpText.text = "HP: " + currentHP.ToString();
         }
     }
+
 }

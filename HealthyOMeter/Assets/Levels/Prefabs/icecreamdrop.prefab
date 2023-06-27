@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4306639416564557776}
   - component: {fileID: 2936245168797596445}
   m_Layer: 0
-  m_Name: watermelondrop
+  m_Name: icecreamdrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ba60638fe459d94fbd34360465b26e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef4427c9da26c4e7c912905c74e80c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
