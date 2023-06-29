@@ -1,0 +1,29 @@
+.ClickEffect {
+    width: 310px;
+    height: 150px;
+    top: 455px;
+    left: 50px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    background-color: rgb(248, 157, 79);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+}
+
+.ClickEffect:hover {
+    width: 310px;
+    height: 150px;
+    top: 455px;
+    left: 50px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    background-color: rgb(168, 84, 11);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+}
