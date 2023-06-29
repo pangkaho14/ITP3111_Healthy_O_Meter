@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
@@ -37,6 +38,12 @@ public class HealthBar : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        
+        if (currentHealth <= 0)
+        {
+            //Move to gameover screen
+            SceneManager.LoadScene("Game Over");
+        }
     }
     
     public void Heal(float heal)
