@@ -30,7 +30,7 @@ Assets
 ## Branches:
 - main
 - sprintX
-- sprintX_us-id
+- sprintX-usXX
 
 ## Workflow:
 1. Work on sprintX branch.
