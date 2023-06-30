@@ -363,14 +363,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a78331a97bac8448daa1ae552b8b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lanes:
+  Lanes:
   - {fileID: 1340925959}
   - {fileID: 2021423261}
   - {fileID: 1893571962}
-  laneChangeSpeed: 5
-  threshold: 50
-  swipeBufferTime: 0.5
-  player: {fileID: 1929672889}
+  LaneChangeSpeed: 5
+  Threshold: 10
+  SwipeBufferTime: 0.5
+  Player: {fileID: 1929672889}
 --- !u!1 &1340925958
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,75 +1,84 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class LaneManager : MonoBehaviour
 {
-    public Transform[] lanes; // Array of lane GameObjects
-    public float laneChangeSpeed = 5f; // Speed of lane change
-    public int threshold = 10; // Threshold of swipe strength
+    public Transform[] Lanes;
+    public float LaneChangeSpeed = 5f;
+    public int Threshold = 10;
 
-    public float swipeBufferTime = 0.5f; // Cooldown time between lane changes
-    private bool canSwipe = true; // Flag to track if a swipe is currently allowed
+    public float SwipeBufferTime = 0.5f;
+    private bool CanSwipe = true;
 
-    public Transform player; // Reference to the player object
+    public Transform Player;
 
-    private int currentLaneIndex = 1; // Initial lane index of the player
+    private int CurrentLaneIndex = 1;
+    private Vector3 TargetPosition;
 
-    private void Update()
+    private void Start()
     {
-        // Detect swipe input
-        if (canSwipe && Input.touches.Length > 0)
+        if (Lanes.Length == 0)
         {
-            Touch touch = Input.touches[0];
-            if (touch.phase == TouchPhase.Moved)
+            UnityEngine.Debug.LogError("Lanes array is empty. Please assign lanes in the Inspector.");
+            this.enabled = false;
+            return;
+        }
+        TargetPosition = Player.position;
+        StartCoroutine(DetectSwipe());
+        StartCoroutine(SmoothMoveToLane());
+    }
+
+    private IEnumerator DetectSwipe()
+    {
+        while (true)
+        {
+            if (CanSwipe && Input.touches.Length > 0)
             {
-                float swipeDelta = touch.deltaPosition.x;
-                if (Mathf.Abs(swipeDelta) >= threshold)
+                Touch touch = Input.touches[0];
+                if (touch.phase == TouchPhase.Moved)
                 {
-                    // Process the swipe
-                    // Determine swipe direction
-                    int targetLaneIndex = currentLaneIndex;
-                    if (swipeDelta < 0) // Swipe left
-                        targetLaneIndex--;
-                    else if (swipeDelta > 0) // Swipe right
-                        targetLaneIndex++;
+                    float swipeDelta = touch.deltaPosition.x;
+                    if (Mathf.Abs(swipeDelta) >= Threshold)
+                    {
+                        int TargetLaneIndex = CurrentLaneIndex;
+                        if (swipeDelta < 0)
+                            TargetLaneIndex--;
+                        else if (swipeDelta > 0)
+                            TargetLaneIndex++;
 
-                    // Clamp the target lane index within the valid range
-                    targetLaneIndex = Mathf.Clamp(targetLaneIndex, 0, lanes.Length - 1);
+                        TargetLaneIndex = Mathf.Clamp(TargetLaneIndex, 0, Lanes.Length - 1);
 
-                    // Move the player to the target lane
-                    MoveToLane(targetLaneIndex);
-
-                    // Apply buffer - Disable swiping temporarily
-                    StartCoroutine(EnableSwipeBuffer());
+                        MoveToLane(TargetLaneIndex);
+                        StartCoroutine(EnableSwipeBuffer());
+                        yield return new WaitUntil(() => CanSwipe);
+                    }
                 }
-                
             }
+            yield return null;
         }
     }
 
     private void MoveToLane(int laneIndex)
     {
-        // Update the current lane index
-        currentLaneIndex = laneIndex;
+        CurrentLaneIndex = laneIndex;
+        TargetPosition = Player.position;
+        TargetPosition.x = Lanes[laneIndex].position.x;
+    }
 
-        // Move the player to the target lane by setting the X-position to the desired point within the lane
-        Vector3 targetPosition = player.position;
-        targetPosition.x = lanes[laneIndex].position.x;
-        // Example of smooth movement:
-        //player.position = Vector3.Lerp(player.position, targetPosition, Time.deltaTime * laneChangeSpeed);
-        // Example of direct positioning:
-        player.position = targetPosition;
+    private IEnumerator SmoothMoveToLane()
+    {
+        while (true)
+        {
+            Player.position = Vector3.MoveTowards(Player.position, TargetPosition, LaneChangeSpeed * Time.deltaTime);
+            yield return null;
+        }
     }
 
     private IEnumerator EnableSwipeBuffer()
     {
-        canSwipe = false; // Disable swiping
-
-        yield return new WaitForSeconds(swipeBufferTime);
-
-        canSwipe = true; // Enable swiping again
+        CanSwipe = false;
+        yield return new WaitForSeconds(SwipeBufferTime);
+        CanSwipe = true;
     }
 }
-
-
