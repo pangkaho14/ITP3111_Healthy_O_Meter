@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pit
       objectReference: {fileID: 0}
+    - target: {fileID: 4608989085131912663, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1929672895}
     - target: {fileID: 5611243757338291474, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -745,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c06c448ab12dca45b23613eaa49072a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1929672895}
 --- !u!114 &1929672895
 MonoBehaviour:
   m_ObjectHideFlags: 0

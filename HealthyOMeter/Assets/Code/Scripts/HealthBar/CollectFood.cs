@@ -4,19 +4,8 @@ using UnityEngine;
 
 public class CollectFood : MonoBehaviour
 {
-    public HealthBar healthBar;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        healthBar = GetComponent<HealthBar>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // assign the health bar instance you want from the UI Inspector
+    [SerializeField] private HealthBar healthBar;
     
     private void OnTriggerEnter2D(Collider2D other)
     {

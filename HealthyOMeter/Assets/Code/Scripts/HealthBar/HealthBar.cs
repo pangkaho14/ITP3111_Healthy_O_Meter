@@ -11,8 +11,9 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image healthBarFillImage;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Slider healthBarSlider;
+    
     private float lerpSpeed = 3f;
-    private float currentHealth = 100f;
+    private float currentHealth = MAX_HEALTH;
     
     private void Start()
     {
@@ -41,7 +42,7 @@ public class HealthBar : MonoBehaviour
         
         if (currentHealth <= 0)
         {
-            //Move to gameover screen
+            // Move to GameOver screen
             SceneManager.LoadScene("Game Over");
         }
     }

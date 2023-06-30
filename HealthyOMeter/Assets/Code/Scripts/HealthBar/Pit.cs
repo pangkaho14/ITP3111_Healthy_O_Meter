@@ -5,12 +5,8 @@ using UnityEngine;
 
 public class Pit : MonoBehaviour
 {
-    public HealthBar healthBar;
-    
-    void Start()
-    {
-        healthBar = FindObjectOfType<HealthBar>();
-    }
+    // assign the health bar instance you want from the UI Inspector
+    [SerializeField] private HealthBar healthBar;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
