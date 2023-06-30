@@ -4,29 +4,21 @@ using UnityEngine;
 
 public class CollectFood : MonoBehaviour
 {
-    public HealthBar healthBar;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        healthBar = GetComponent<HealthBar>();
-    }
+    // assign the health bar instance you want from the UI Inspector
+    [SerializeField] private HealthBar healthBar;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float healAmt = 20f;
+    [SerializeField] private float damageAmt = 20f;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
         {
-            healthBar.Heal(20);
+            healthBar.Heal(healAmt);
         }
         else if (other.CompareTag("unhealthy"))
         {
-            healthBar.TakeDamage(20);
+            healthBar.TakeDamage(damageAmt);
         }
         
         Destroy(other.gameObject);
