@@ -37,7 +37,8 @@ Assets
 2. Branch off of sprintX branch when working on a User Story.
 3. If more than one person is working on the same User Story, then share the branch.
 4. When a User Story is completed, do a Pull Request and request a reviewer (anyone except the PR requester will do, just need to get another pair of eyes).
-5. Never commit broken code! Or else I will pull your ear >:(
+5. When the reviewer has approve the Pull Request. It is the requester's responsibility to merge and delete the unused branch.
+6. Never commit broken code! Or else I will pull your ear >:(
 
 ## Good git commit messages practice:
 - feat: add new abilities
