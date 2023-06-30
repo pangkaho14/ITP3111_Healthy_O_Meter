@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class gameOverBtn : MonoBehaviour
+public class GameOverBtn : MonoBehaviour
 {
     private void OnEnable()
     {
