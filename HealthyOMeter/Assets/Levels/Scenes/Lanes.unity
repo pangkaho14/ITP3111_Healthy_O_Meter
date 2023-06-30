@@ -681,6 +681,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1929672894}
+  healAmt: 20
+  damageAmt: 20
 --- !u!1 &2021423260
 GameObject:
   m_ObjectHideFlags: 0
