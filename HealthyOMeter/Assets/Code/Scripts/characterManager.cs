@@ -8,13 +8,13 @@ public class characterManager : MonoBehaviour
 {
     private void OnEnable()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+        //VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
         //Get the Aunty and Uncle Icon Buttons
-        Button buttonAunty = root.Q<Button>("btnAunty");
-        Button buttonUncle = root.Q<Button>("btnUncle");
-        buttonAunty.clicked += () => LoadNextScene("Lanes");
-        buttonUncle.clicked += () => LoadNextScene("LanesUnc");
+       // Button buttonAunty = root.Q<Button>("btnAunty");
+      //  Button buttonUncle = root.Q<Button>("btnUncle");
+      //  buttonAunty.clicked += () => LoadNextScene("Lanes");
+       // buttonUncle.clicked += () => LoadNextScene("LanesUnc");
     }
 
     private void LoadNextScene(string sceneName)
