@@ -166,13 +166,18 @@ MonoBehaviour:
   objectPrefab:
   - {fileID: 7551169727231985320, guid: 061518263a00e9e45bce894ee866862f, type: 3}
   - {fileID: 7551169727231985320, guid: 6527a142fd01542d887ec1c3a2f1bf79, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2.4
   spawnSpeed: 0.9
   laneOffset: 2
   laneWidth: 0.2
   minHeight: 0.2
   maxHeight: 0.2
   middleLaneObject: {fileID: 2021423260}
+  maxSpawnSpeed: 8
+  spawnSpeedIncreaseInterval: 11
+  spawnSpeedIncreaseAmount: 1
+  minSpawnInterval: 0.1
+  spawnIntervalDecreaseAmount: 0.1
 --- !u!4 &444182082
 Transform:
   m_ObjectHideFlags: 0
@@ -181,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444182080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 8.25, z: 0}
+  m_LocalPosition: {x: 0.01, y: 5.91, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

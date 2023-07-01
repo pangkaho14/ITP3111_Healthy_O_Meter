@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Levels/Scenes/Tutorial/TutorialHealthmeter.unity
     guid: 8e932bdc0a4ffcf4d98aa035037dcabc
   - enabled: 1
-    path: Assets/Levels/Scenes/LeaderBoardHome.unity
+    path: Assets/Levels/Scenes/MainMenuLeaderBoard.unity
     guid: ef442fb7f2e3fec4fb0c20baa324c8bf
   - enabled: 1
     path: Assets/Levels/Scenes/Settings.unity
