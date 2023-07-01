@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 1929672893}
   - component: {fileID: 1929672894}
   - component: {fileID: 1929672895}
+  - component: {fileID: 1929672896}
   m_Layer: 0
   m_Name: Auntie
   m_TagString: Untagged
@@ -688,6 +689,20 @@ MonoBehaviour:
   healthBar: {fileID: 1929672894}
   healAmt: 20
   damageAmt: 20
+--- !u!114 &1929672896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929672887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9928e4304f25a421cafba27d91fcd519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDB: {fileID: 11400000, guid: b487ffdf4b5c4470c9f48902db886b31, type: 2}
+  artworkSprite: {fileID: 1929672888}
 --- !u!1 &2021423260
 GameObject:
   m_ObjectHideFlags: 0
