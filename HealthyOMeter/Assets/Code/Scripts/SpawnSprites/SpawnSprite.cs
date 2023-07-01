@@ -20,7 +20,7 @@ using UnityEngine;
  */
 
 
-public class ObjectSpawner : MonoBehaviour
+public class SpawnSprite : MonoBehaviour
 {
     // The prefabs of the objects you want to spawn
     public GameObject[] objectPrefab;
@@ -65,6 +65,9 @@ public class ObjectSpawner : MonoBehaviour
     // Timer to track when to increase spawn speed and decrease spawn interval
     private float elapsedSpawnSpeedIncreaseInterval = 0f;
 
+    //Healthbar Object
+    public HealthBar HealthBar;
+
     // Update is called once per frame
     private void Update()
     {
@@ -74,8 +77,10 @@ public class ObjectSpawner : MonoBehaviour
         // Increment the elapsed time for spawn speed increase
         elapsedSpawnSpeedIncreaseInterval += Time.deltaTime;
 
+        //Getting current health
+        float currentHealth = HealthBar.GetCurrentHealth();
         // Check if it's time to spawn a new object
-        if (spawnTimer >= spawnInterval)
+        if (spawnTimer >= spawnInterval && currentHealth > 0)
         {
             // Call the method to spawn a new object
             SpawnObject();

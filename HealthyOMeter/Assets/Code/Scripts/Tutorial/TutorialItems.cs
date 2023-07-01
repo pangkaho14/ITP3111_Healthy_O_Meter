@@ -7,22 +7,24 @@ using UnityEngine.UIElements;
 
 public class TutorialItems : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void OnEnable()
+    //Game objects needed
+    public GameObject HawkerFood;
+    public GameObject NTUCFood;
+
+    public void HawkerButton()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-
-        //Get the buttons from UI document
-        Button buttonHealthMeter = root.Q<Button>("btn_healthmeter");
-
-
-        //On click listeners for the buttons
-        buttonHealthMeter.clicked += () => LoadNextScene("TutorialHealthMeter");
+        HawkerFood.SetActive(true);
+        NTUCFood.SetActive(false);
     }
 
-    private void LoadNextScene(string sceneName)
+    public void NTUCButton()
     {
-        // Replace "NextSceneName" with the name or index of your desired next scene
-        SceneManager.LoadScene(sceneName);
+        HawkerFood.SetActive(false);
+        NTUCFood.SetActive(true);
+    }
+
+    public void NextButton()
+    {
+        SceneManager.LoadScene("TutorialHealthmeter");
     }
 }
