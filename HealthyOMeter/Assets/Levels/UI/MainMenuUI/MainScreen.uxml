@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Levels/UI/MainMenuUI/Style.uss?fileID=7433441132597879392&amp;guid=f55dcffa617b9d6459e1c430c0ad0411&amp;type=3#Style" />
-    <ui:Button text="Play" display-tooltip-when-elided="true" name="btn_play" class="ClickEffect" style="left: 40px; width: 200px; height: 100px; margin-left: -15px; font-size: 25px;" />
-    <ui:Button text="Leaderboard" display-tooltip-when-elided="true" name="btn_leaderboard" class="ClickEffect" style="top: 475px; left: 40px; width: 200px; height: 100px; margin-left: -15px; font-size: 25px;" />
-    <ui:Button text="Settings" display-tooltip-when-elided="true" name="btn_settings" class="ClickEffect" style="left: 400px; top: 320px; margin-left: -135px; width: 200px; height: 100px; margin-top: 50px; font-size: 25px;" />
-    <ui:Button text="Tutorial" display-tooltip-when-elided="true" name="btn_tutorial" class="ClickEffect" style="position: absolute; left: 400px; width: 200px; height: 100px; margin-left: -135px; margin-right: 90px; font-size: 25px;" />
-</ui:UXML>
