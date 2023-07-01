@@ -14,6 +14,8 @@ public class ObjectSpawner : MonoBehaviour
 
     public GameObject middleLaneObject;  // The middle lane object
 
+    public HealthBar HealthBar;
+
     private float spawnTimer = 0f;
 
     private void Update()
@@ -21,8 +23,11 @@ public class ObjectSpawner : MonoBehaviour
         // Increment the spawn timer
         spawnTimer += Time.deltaTime;
 
+        //Get Current Health
+        float currentHealth = HealthBar.GetCurrentHealth();
+
         // Check if it's time to spawn a new object
-        if (spawnTimer >= spawnInterval)
+        if (spawnTimer >= spawnInterval && currentHealth > 0)
         {
             SpawnObject();
             spawnTimer = 0f; // Reset the spawn timer

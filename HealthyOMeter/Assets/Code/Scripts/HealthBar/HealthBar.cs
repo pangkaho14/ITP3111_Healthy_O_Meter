@@ -53,4 +53,8 @@ public class HealthBar : MonoBehaviour
     {
         currentHealth += heal;
     }
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
 }
