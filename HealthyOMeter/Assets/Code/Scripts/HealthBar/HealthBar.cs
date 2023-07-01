@@ -14,7 +14,9 @@ public class HealthBar : MonoBehaviour
     
     private float lerpSpeed = 3f;
     private float currentHealth = MAX_HEALTH;
-    
+
+    public GameOverScreen GameOverScreen;
+
     private void Start()
     {
         currentHealth = MAX_HEALTH;
@@ -43,12 +45,16 @@ public class HealthBar : MonoBehaviour
         if (currentHealth <= 0)
         {
             // Move to GameOver screen
-            SceneManager.LoadScene("Game Over");
+            GameOverScreen.Setup(100);
         }
     }
     
     public void Heal(float heal)
     {
         currentHealth += heal;
+    }
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
     }
 }
