@@ -571,14 +571,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a78331a97bac8448daa1ae552b8b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lanes:
+  Lanes:
   - {fileID: 1291317624}
   - {fileID: 32119268}
   - {fileID: 1185889223}
-  laneChangeSpeed: 5
-  threshold: 50
-  swipeBufferTime: 0.5
-  player: {fileID: 1825841287}
+  LaneChangeSpeed: 5
+  Threshold: 10
+  SwipeBufferTime: 0.5
+  Player: {fileID: 1825841287}
 --- !u!224 &2128672422
 RectTransform:
   m_ObjectHideFlags: 0
