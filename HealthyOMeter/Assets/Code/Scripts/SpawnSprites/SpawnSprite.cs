@@ -23,7 +23,10 @@ using UnityEngine;
 public class SpawnSprite : MonoBehaviour
 {
     // The prefabs of the objects you want to spawn
-    public GameObject[] objectPrefab;
+    public GameObject[] ntucHealthyFoodPrefabs;
+    public GameObject[] ntucUnhealthyFoodPrefabs;
+    public GameObject[] hawkerHealthyFoodPrefabs;
+    public GameObject[] hawkerUnhealthyFoodPrefabs;
 
     // Time interval between spawns (initially 1 second)
     public float spawnInterval = 1f;
@@ -104,6 +107,7 @@ public class SpawnSprite : MonoBehaviour
     }
 
     // Method to spawn a new object
+    // Method to spawn a new object
     private void SpawnObject()
     {
         // Randomly choose a lane (-1, 0, or 1)
@@ -113,11 +117,35 @@ public class SpawnSprite : MonoBehaviour
         float spawnX = transform.position.x + lanePosition * laneOffset;
         float spawnY = transform.position.y;
 
-        // Randomly choose an object from the prefab array
-        int randomIndex = Random.Range(0, objectPrefab.Length);
+        // Randomly choose an object from the prefab array based on the selected scene
+        GameObject[] selectedPrefabs = null;
+        int selectedScene = PlayerPrefs.GetInt("selectedScenarioName");
+
+        if (selectedScene == 0)
+        {
+            // NTUC scene
+            GameObject[] unhealthyFoodPrefabs = ntucUnhealthyFoodPrefabs;
+            GameObject[] healthyFoodPrefabs = ntucHealthyFoodPrefabs;
+            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length];
+            unhealthyFoodPrefabs.CopyTo(selectedPrefabs, 0);
+            healthyFoodPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length);
+        }
+        else if (selectedScene == 1)
+        {
+            // Hawker scene
+            // Hawker scene: Concatenate both healthy and unhealthy arrays
+            GameObject[] unhealthyFoodPrefabs = hawkerUnhealthyFoodPrefabs;
+            GameObject[] healthyFoodPrefabs = hawkerHealthyFoodPrefabs;
+            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length];
+            unhealthyFoodPrefabs.CopyTo(selectedPrefabs, 0);
+            healthyFoodPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length);
+        }
+
+        // Randomly choose an object from the selected prefab array
+        int randomIndex = Random.Range(0, selectedPrefabs.Length);
 
         // Instantiate the selected object at the calculated spawn position
-        GameObject newObject = Instantiate(objectPrefab[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+        GameObject newObject = Instantiate(selectedPrefabs[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
 
         // Add a Rigidbody2D component to the object if it doesn't have one
         if (!newObject.GetComponent<Rigidbody2D>())
@@ -130,6 +158,7 @@ public class SpawnSprite : MonoBehaviour
         // Set the velocity of the object to move straight downwards
         newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
     }
+
 
     // Method to increase the spawn speed
     private void IncreaseSpawnSpeed()
