@@ -4577,7 +4577,12 @@ MonoBehaviour:
   scoreKeeper: {fileID: 1056210220}
   healAmt: 20
   damageAmt: 20
+  FloatingTextAddPointsPrefab: {fileID: 1190686605553596705, guid: 5878be484102ddd4f8c17dad9f36db3a, type: 3}
   scoreAmt: 100
+  addPointsText: 100
+  pointsCollectedoffsetX: 9.37
+  pointsCollectedoffsetY: 5.37
+  pointsTextSize: 5
 --- !u!114 &1929672896
 MonoBehaviour:
   m_ObjectHideFlags: 0
