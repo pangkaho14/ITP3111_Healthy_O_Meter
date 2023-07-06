@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 
@@ -27,6 +28,8 @@ public class SpawnSprite : MonoBehaviour
     public GameObject[] ntucUnhealthyFoodPrefabs;
     public GameObject[] hawkerHealthyFoodPrefabs;
     public GameObject[] hawkerUnhealthyFoodPrefabs;
+   
+
 
     // Time interval between spawns (initially 1 second)
     public float spawnInterval = 1f;
@@ -64,6 +67,8 @@ public class SpawnSprite : MonoBehaviour
 
     // Timer to track when to spawn a new object
     private float spawnTimer = 0f;
+
+  
 
     // Timer to track when to increase spawn speed and decrease spawn interval
     private float elapsedSpawnSpeedIncreaseInterval = 0f;
@@ -157,6 +162,10 @@ public class SpawnSprite : MonoBehaviour
 
         // Set the velocity of the object to move straight downwards
         newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+
+        
+
+
     }
 
 
