@@ -16,8 +16,8 @@ public class CollectFood : MonoBehaviour
     [SerializeField] private string addPointsText;
 
     // Offset variables for text position
-    [SerializeField] private float pointsCollectedoffsetX = 0f;
-    [SerializeField] private float pointsCollectedoffsetY = 1f;
+    [SerializeField] private float pointsCollectedoffsetX;
+    [SerializeField] private float pointsCollectedoffsetY;
 
     // Fixed position for the floating text
     private Vector3 fixedPosition;
