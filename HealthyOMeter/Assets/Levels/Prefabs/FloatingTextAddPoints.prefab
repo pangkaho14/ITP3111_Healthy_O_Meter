@@ -113,7 +113,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4278688256
   m_fontColor: {r: 0, g: 0.6037736, b: 0.027661161, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -185,10 +185,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190686605553596705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32dd857a458032540bc7237e1888b39a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bbd0924fa074554e809be87053148ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTime: 1
+  DestroyTime: 3
 --- !u!95 &-5185407070831663410
 Animator:
   serializedVersion: 5

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HealthyOMeter/Assets/Code/Scripts/PauseButton.cs.meta
+guid: 0bbd0924fa074554e809be87053148ec
+========
 guid: 32dd857a458032540bc7237e1888b39a
+>>>>>>>> origin/sprint2-us20:HealthyOMeter/Assets/Code/Scripts/FloatingTextProperties.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

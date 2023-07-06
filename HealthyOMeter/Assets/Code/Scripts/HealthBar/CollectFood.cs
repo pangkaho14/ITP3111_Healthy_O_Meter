@@ -7,10 +7,12 @@ public class CollectFood : MonoBehaviour
 {
     // Assign the health bar instance you want from the UI Inspector
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private ScoreKeeper scoreKeeper;
 
     [SerializeField] private float healAmt = 20f;
     [SerializeField] private float damageAmt = 20f;
     public GameObject FloatingTextAddPointsPrefab;
+    [SerializeField] private float scoreAmt = 100f;
 
     // Customizable text to display when colliding
     [SerializeField] private string addPointsText;
@@ -30,11 +32,13 @@ public class CollectFood : MonoBehaviour
         if (other.CompareTag("healthy"))
         {
             healthBar.Heal(healAmt);
+            scoreKeeper.Add(scoreAmt);
             // Trigger text
             if (FloatingTextAddPointsPrefab)
             {
                 ShowFloatingText(); // No need to pass the collision position
             }
+
         }
         else if (other.CompareTag("unhealthy"))
         {

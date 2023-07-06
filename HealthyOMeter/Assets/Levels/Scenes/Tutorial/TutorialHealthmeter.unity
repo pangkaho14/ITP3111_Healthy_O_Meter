@@ -161,7 +161,9 @@ MonoBehaviour:
   healthBarFillImage: {fileID: 1133291055}
   healthText: {fileID: 866835889}
   healthBarSlider: {fileID: 640566367}
-  GameOverScreen: {fileID: 0}
+  OnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &139964174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +360,6 @@ GameObject:
   - component: {fileID: 422721359}
   - component: {fileID: 422721358}
   - component: {fileID: 422721357}
-  - component: {fileID: 422721361}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -446,7 +447,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 512145490}
-  - {fileID: 2106073889}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -455,18 +455,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &422721361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422721356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d144d6c9e08f2b147a8311fbc7f19c89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &512145489
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +731,50 @@ RectTransform:
   m_AnchoredPosition: {x: -2.0749, y: -3.7323}
   m_SizeDelta: {x: 2.08, y: 2.5525}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1029715550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029715551}
+  - component: {fileID: 1029715552}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029715551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029715550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 181.22896, y: 1758.6425, z: -0.81121063}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029715552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029715550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb7d5edddf63c94d90f2085013a73ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1070396300
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,9 +911,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5d554919cb4394c8d9a4e8c3654530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab:
-  - {fileID: 7551169727231985320, guid: 061518263a00e9e45bce894ee866862f, type: 3}
-  - {fileID: 7551169727231985320, guid: 6527a142fd01542d887ec1c3a2f1bf79, type: 3}
+  ntucHealthyFoodPrefabs: []
+  ntucUnhealthyFoodPrefabs: []
+  hawkerHealthyFoodPrefabs: []
+  hawkerUnhealthyFoodPrefabs: []
   spawnInterval: 2.4
   spawnSpeed: 0.9
   laneOffset: 2
@@ -1129,16 +1162,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 422721361}
-        m_TargetAssemblyTypeName: TutorialHealthMeter, Assembly-CSharp
-        m_MethodName: HomeButton
-        m_Mode: 1
+      - m_Target: {fileID: 1029715552}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1658855852
@@ -1503,7 +1536,7 @@ GameObject:
   - component: {fileID: 2106073891}
   - component: {fileID: 2106073890}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: TutorialCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1524,8 +1557,8 @@ RectTransform:
   - {fileID: 2083514820}
   - {fileID: 1949247582}
   - {fileID: 1658855850}
-  m_Father: {fileID: 422721360}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
