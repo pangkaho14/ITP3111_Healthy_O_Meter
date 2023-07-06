@@ -29,7 +29,7 @@ public class ScoreKeeper : MonoBehaviour
         }
         if (scoreTextLeaderBoard != null)
         {
-            scoreTextLeaderBoard.text = currentScore.ToString();
+            scoreTextLeaderBoard.text = "Score: " + currentScore.ToString();
         }
     }
 }

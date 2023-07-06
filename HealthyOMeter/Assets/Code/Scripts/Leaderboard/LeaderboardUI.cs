@@ -13,20 +13,18 @@ public class LeaderboardUI : MonoBehaviour
         // Retrieve the leaderboard data from PlayerPrefs
         string leaderboardJson = PlayerPrefs.GetString("Leaderboard");
         LeaderboardManager.ScoreEntryList leaderboardData = JsonUtility.FromJson<LeaderboardManager.ScoreEntryList>(leaderboardJson);
-        // Debug log to verify the raw leaderboard data
-        UnityEngine.Debug.Log("Raw Leaderboard Data: " + leaderboardJson);
+
         // Sort the leaderboard data by score (descending order)
         leaderboardData.scoreEntries = leaderboardData.scoreEntries.OrderByDescending(entry => entry.score).ToList();
-        UnityEngine.Debug.Log(leaderboardData + "UI");
 
         // Create a string to hold the leaderboard text
-        string leaderboardTextString = "Leaderboard:\n";
+        string leaderboardTextString = "";
 
         // Display the top 5 entries in the leaderboard
         int maxEntries = Mathf.Min(5, leaderboardData.scoreEntries.Count);
         for (int i = 0; i < maxEntries; i++)
         {
-            leaderboardTextString += $"{leaderboardData.scoreEntries[i].playerName}: {leaderboardData.scoreEntries[i].score}\n";
+            leaderboardTextString += $"{i+1}: {leaderboardData.scoreEntries[i].playerName} {leaderboardData.scoreEntries[i].score}\n";
         }
 
         // Set the leaderboard text in the TextMeshProUGUI component

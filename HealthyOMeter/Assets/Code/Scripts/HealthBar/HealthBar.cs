@@ -23,7 +23,6 @@ public class HealthBar : MonoBehaviour
     private void Awake()
     {
         currentHealth = MAX_HEALTH;
-        UnityEngine.Debug.Log("HealthBar instance created", this);
         if (OnHealthDepleted == null)
         {
             OnHealthDepleted = new UnityEvent();
@@ -38,7 +37,6 @@ public class HealthBar : MonoBehaviour
         // when player is dead
         if (!isHealthDepleted && currentHealth <= MIN_HEALTH)
         {
-            UnityEngine.Debug.Log("Health depleted. Invoking OnHealthDepleted event.");
             OnHealthDepleted.Invoke();
             isHealthDepleted=true; // Set the flag to true after invoking the event
         }

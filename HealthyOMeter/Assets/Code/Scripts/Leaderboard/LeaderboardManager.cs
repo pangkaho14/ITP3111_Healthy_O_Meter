@@ -46,7 +46,6 @@ public class LeaderboardManager : MonoBehaviour
     {
         // Create a list to store the score entries
         ScoreEntryList leaderboardData = new ScoreEntryList { scoreEntries = new List<ScoreEntry>() };
-        UnityEngine.Debug.Log(leaderboardData);
 
         // Check if leaderboard data already exists in PlayerPrefs
         if (PlayerPrefs.HasKey("Leaderboard"))
