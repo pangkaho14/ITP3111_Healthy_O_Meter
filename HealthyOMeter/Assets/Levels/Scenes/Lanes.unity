@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 444182081}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: healthy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -835,6 +835,11 @@ MonoBehaviour:
   healthBar: {fileID: 1929672894}
   healAmt: 20
   damageAmt: 20
+  FloatingTextPrefab: {fileID: 1190686605553596705, guid: 5878be484102ddd4f8c17dad9f36db3a, type: 3}
+  addPointsText: 33
+  pointsCollectedoffsetX: 9.82
+  pointsCollectedoffsetY: 5.37
+  pointsTextSize: 5
 --- !u!114 &1929672896
 MonoBehaviour:
   m_ObjectHideFlags: 0
