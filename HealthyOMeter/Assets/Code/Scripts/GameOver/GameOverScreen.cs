@@ -14,7 +14,6 @@ public class GameOverScreen : MonoBehaviour{
     public void ActivateGameOverScreen()
     {
         // Activate your game over screen here
-        UnityEngine.Debug.Log("GameOverScreen's ActivateGameOverScreen method called.");
         gameObject.SetActive(true);
         //Pause the game to stop movement and food falling
         Time.timeScale = 0;
@@ -22,7 +21,6 @@ public class GameOverScreen : MonoBehaviour{
 
     public void DeactivateGameOverScreen()
     {
-        UnityEngine.Debug.Log("GameOverScreen's DeactivateGameOverScreen method called.");
         gameObject.SetActive(false);
         Time.timeScale = 1;
     }
