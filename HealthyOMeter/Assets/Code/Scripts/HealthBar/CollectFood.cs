@@ -20,7 +20,7 @@ public class CollectFood : MonoBehaviour
     // Offset variables for text position
     [SerializeField] private float pointsCollectedoffsetX;
     [SerializeField] private float pointsCollectedoffsetY;
-
+    [SerializeField] private OverlayEffect overlayEffect;
     // Fixed position for the floating text
     private Vector3 fixedPosition;
 
@@ -42,6 +42,8 @@ public class CollectFood : MonoBehaviour
         }
         else if (other.CompareTag("unhealthy"))
         {
+            // Trigger overlay effect
+            overlayEffect.ShowOverlay();
             healthBar.TakeDamage(damageAmt);
         }
 
