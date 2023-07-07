@@ -227,6 +227,12 @@ MonoBehaviour:
   - {fileID: 5714874727870018112, guid: c43f5d6e9901a8548b23c45ddd0cab63, type: 3}
   - {fileID: 6433572402370586525, guid: 36dad2b86af865f4e94e0b6f61310c23, type: 3}
   - {fileID: 3782907605273161671, guid: 7c18722d1586e8c4892708daf428b761, type: 3}
+  nutrigrades:
+  - {fileID: 7698160097123463278, guid: 4800c1f7d12f35a4f8cac292c3ab496c, type: 3}
+  - {fileID: 457913576651866598, guid: e5d2106a627e04b4ca88c05e98bb57b5, type: 3}
+  - {fileID: 7517884460641653272, guid: 8403988dfb2d073448c1cbc7e1ad1768, type: 3}
+  - {fileID: 4083731795281474842, guid: 7b6ddc68a84579d4ba89e304aebac238, type: 3}
+  constantNutrigradeSpeed: 1
   spawnInterval: 2.4
   spawnSpeed: 0.9
   laneOffset: 2
@@ -377,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 4608989085131912663, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: overlayEffect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1690417694}
     - target: {fileID: 5611243757338291474, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -923,7 +929,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690417692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1301,6 +1307,10 @@ MonoBehaviour:
   pointsCollectedoffsetY: 5.37
   overlayEffect: {fileID: 1690417694}
   pointsTextSize: 5
+  nutriAText: 100
+  nutriBText: 50
+  nutriCText: 25
+  nutriDText: 5
 --- !u!114 &1929672896
 MonoBehaviour:
   m_ObjectHideFlags: 0
