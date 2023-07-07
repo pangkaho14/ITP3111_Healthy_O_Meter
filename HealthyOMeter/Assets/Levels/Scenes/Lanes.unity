@@ -178,7 +178,7 @@ MonoBehaviour:
   spawnSpeedIncreaseAmount: 1
   minSpawnInterval: 0.1
   spawnIntervalDecreaseAmount: 0.1
-  HealthBar: {fileID: 1929672894}
+  playerHP: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
 --- !u!4 &444182082
 Transform:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 4608989085131912663, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1929672894}
+      objectReference: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
     - target: {fileID: 5611243757338291474, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -424,6 +424,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6171af3378c116542992694d86be9eac, type: 3}
+--- !u!114 &1288956318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514539836847618256, guid: 6171af3378c116542992694d86be9eac, type: 3}
+  m_PrefabInstance: {fileID: 1288956317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a203cd4061345e0418a3da17da7620a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1340925958
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +791,7 @@ MonoBehaviour:
   healthBarFillImage: {fileID: 221125870}
   healthText: {fileID: 1628497341}
   healthBarSlider: {fileID: 1811224002}
-  GameOverScreen: {fileID: 2045596177}
+  playerHP: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
 --- !u!114 &1929672895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c06c448ab12dca45b23613eaa49072a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1929672894}
+  playerHp: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
   healAmt: 20
   damageAmt: 20
 --- !u!114 &1929672896
@@ -1037,14 +1048,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2045596177 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6514539836847618256, guid: 6171af3378c116542992694d86be9eac, type: 3}
-  m_PrefabInstance: {fileID: 1288956317}
+--- !u!1 &2138962645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138962647}
+  - component: {fileID: 2138962646}
+  m_Layer: 0
+  m_Name: TempGameOverScreenManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2138962646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138962645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a203cd4061345e0418a3da17da7620a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 03b396a666cc58c42bc301779905c7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1ac327a8d61a54345a489df3ea6bfc91, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1288956318}
+        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
+        m_MethodName: Setup
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 123
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &2138962647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138962645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

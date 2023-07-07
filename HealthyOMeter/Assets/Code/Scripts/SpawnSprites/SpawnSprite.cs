@@ -65,8 +65,8 @@ public class SpawnSprite : MonoBehaviour
     // Timer to track when to increase spawn speed and decrease spawn interval
     private float elapsedSpawnSpeedIncreaseInterval = 0f;
 
-    //Healthbar Object
-    public HealthBar HealthBar;
+    // Healthbar Object
+    public PlayerHealthPoints playerHP;
 
     // Update is called once per frame
     private void Update()
@@ -77,8 +77,8 @@ public class SpawnSprite : MonoBehaviour
         // Increment the elapsed time for spawn speed increase
         elapsedSpawnSpeedIncreaseInterval += Time.deltaTime;
 
-        //Getting current health
-        float currentHealth = HealthBar.GetCurrentHealth();
+        // Getting current health
+        float currentHealth = playerHP.GetCurrentHealth();
         // Check if it's time to spawn a new object
         if (spawnTimer >= spawnInterval && currentHealth > 0)
         {

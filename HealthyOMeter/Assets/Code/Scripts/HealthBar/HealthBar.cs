@@ -1,60 +1,32 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    private const float MIN_HEALTH = 0;
-    private const float MAX_HEALTH = 100;
-    
     [SerializeField] private Image healthBarFillImage;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Slider healthBarSlider;
-    
+    [SerializeField] private PlayerHealthPoints playerHP;
     private float lerpSpeed = 3f;
-    private float currentHealth = MAX_HEALTH;
-
-    public GameOverScreen GameOverScreen;
 
     private void Start()
     {
-        currentHealth = MAX_HEALTH;
+        playerHP.Heal(playerHP.GetMaxHealth());
     }
 
     private void Update()
     {
-        // never below min health, and never above max health
-        currentHealth = Mathf.Clamp(currentHealth, MIN_HEALTH, MAX_HEALTH);
-        
-        healthText.text = $"Health: {currentHealth}%";
+        healthText.text = $"Health: {playerHP.GetCurrentHealth()}%";
         
         // this will gradually reduce the health bar after taking damage or healing, instead of instant transformation
         // Mathf.Lerp(startValue, endValue, speed);
-        healthBarSlider.value = Mathf.Lerp(healthBarSlider.value, currentHealth / MAX_HEALTH, lerpSpeed * Time.deltaTime);
+        healthBarSlider.value = Mathf.Lerp(healthBarSlider.value, playerHP.GetCurrentHealth() / playerHP.GetMaxHealth(), lerpSpeed * Time.deltaTime);
         
         // this will gradually change the colour based on the health and the max health
         Color healthBarColor = Color.Lerp(Color.red, Color.green, healthBarSlider.value);
         healthBarFillImage.color = healthBarColor;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-        
-        if (currentHealth <= 0)
-        {
-            // Move to GameOver screen
-            GameOverScreen.Setup(100);
-        }
-    }
-    
-    public void Heal(float heal)
-    {
-        currentHealth += heal;
-    }
-    public float GetCurrentHealth()
-    {
-        return currentHealth;
     }
 }

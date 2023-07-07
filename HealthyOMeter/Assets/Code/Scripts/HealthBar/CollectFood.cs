@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollectFood : MonoBehaviour
 {
-    // assign the health bar instance you want from the UI Inspector
-    [SerializeField] private HealthBar healthBar;
-
+    // assign the PlayerHealthPoints Scriptable Object you want from the UI Inspector
+    [SerializeField] private PlayerHealthPoints playerHp;
     [SerializeField] private float healAmt = 20f;
     [SerializeField] private float damageAmt = 20f;
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
         {
-            healthBar.Heal(healAmt);
+            playerHp.Heal(healAmt);
         }
         else if (other.CompareTag("unhealthy"))
         {
-            healthBar.TakeDamage(damageAmt);
+            playerHp.TakeDamage(damageAmt);
         }
         
         Destroy(other.gameObject);
