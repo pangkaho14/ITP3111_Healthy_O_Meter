@@ -27,6 +27,11 @@ public class CollectFood : MonoBehaviour
     // Text size parameter
     [SerializeField] private float pointsTextSize = 30f;
 
+    [SerializeField] private string nutriAText;
+    [SerializeField] private string nutriBText;
+    [SerializeField] private string nutriCText;
+    [SerializeField] private string nutriDText;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
@@ -36,9 +41,8 @@ public class CollectFood : MonoBehaviour
             // Trigger text
             if (FloatingTextAddPointsPrefab)
             {
-                ShowFloatingText(); // No need to pass the collision position
+                ShowFloatingText(addPointsText); // Pass the custom text
             }
-
         }
         else if (other.CompareTag("unhealthy"))
         {
@@ -46,12 +50,47 @@ public class CollectFood : MonoBehaviour
             overlayEffect.ShowOverlay();
             healthBar.TakeDamage(damageAmt);
         }
-
-      
+       else if (other.CompareTag("Nutri-A"))
+        {
+            float scoreAmt = GetScoreFromText(nutriAText);  // Get the score amount from the nutriAText
+            scoreKeeper.Add(scoreAmt);
+            ShowFloatingText(nutriAText);
+        }
+        else if (other.CompareTag("Nutri-B"))
+        {
+            float scoreAmt = GetScoreFromText(nutriBText);  // Get the score amount from the nutriBText
+            scoreKeeper.Add(scoreAmt);
+            ShowFloatingText(nutriBText);
+        }
+        else if (other.CompareTag("Nutri-C"))
+        {
+            float scoreAmt = GetScoreFromText(nutriCText);  // Get the score amount from the nutriCText
+            scoreKeeper.Add(scoreAmt);
+            ShowFloatingText(nutriCText);
+        }
+        else if (other.CompareTag("Nutri-D"))
+        {
+            float scoreAmt = GetScoreFromText(nutriDText);  // Get the score amount from the nutriDText
+            scoreKeeper.Add(scoreAmt);
+            ShowFloatingText(nutriDText);
+        }
         Destroy(other.gameObject);
     }
+    private float GetScoreFromText(string text)
+    {
+        float scoreAmt = 0f;
+        if (float.TryParse(text, out scoreAmt))
+        {
+            return scoreAmt;
+        }
+        else
+        {
+            Debug.LogWarning("Invalid score amount: " + text);
+            return 0f;
+        }
+    }
 
-    void ShowFloatingText()
+    void ShowFloatingText(string text)
     {
         GameObject textObject = Instantiate(FloatingTextAddPointsPrefab, fixedPosition, Quaternion.identity);
 
@@ -60,7 +99,7 @@ public class CollectFood : MonoBehaviour
         if (textMesh != null)
         {
             textMesh.transform.position += new Vector3(pointsCollectedoffsetX, pointsCollectedoffsetY, 0f);
-            textMesh.text = addPointsText; // Set the custom text
+            textMesh.text = text; // Set the custom text
             textMesh.fontSize = pointsTextSize; // Set the text size
         }
     }

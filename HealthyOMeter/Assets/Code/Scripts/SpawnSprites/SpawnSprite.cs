@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -28,9 +29,9 @@ public class SpawnSprite : MonoBehaviour
     public GameObject[] ntucUnhealthyFoodPrefabs;
     public GameObject[] hawkerHealthyFoodPrefabs;
     public GameObject[] hawkerUnhealthyFoodPrefabs;
-   
 
-
+    public GameObject[] nutrigrades; // Array for the NutriGrade
+    public float constantNutrigradeSpeed;
     // Time interval between spawns (initially 1 second)
     public float spawnInterval = 1f;
 
@@ -116,7 +117,7 @@ public class SpawnSprite : MonoBehaviour
     private void SpawnObject()
     {
         // Randomly choose a lane (-1, 0, or 1)
-        float lanePosition = Random.Range(-1, 2);
+        float lanePosition = UnityEngine.Random.Range(-1, 2);
 
         // Calculate the spawn position based on the lane position and lane offset
         float spawnX = transform.position.x + lanePosition * laneOffset;
@@ -131,9 +132,10 @@ public class SpawnSprite : MonoBehaviour
             // NTUC scene
             GameObject[] unhealthyFoodPrefabs = ntucUnhealthyFoodPrefabs;
             GameObject[] healthyFoodPrefabs = ntucHealthyFoodPrefabs;
-            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length];
+            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length + nutrigrades.Length];
             unhealthyFoodPrefabs.CopyTo(selectedPrefabs, 0);
             healthyFoodPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length);
+            nutrigrades.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length); // Add nutrigrades to the selected prefabs
         }
         else if (selectedScene == 1)
         {
@@ -141,13 +143,14 @@ public class SpawnSprite : MonoBehaviour
             // Hawker scene: Concatenate both healthy and unhealthy arrays
             GameObject[] unhealthyFoodPrefabs = hawkerUnhealthyFoodPrefabs;
             GameObject[] healthyFoodPrefabs = hawkerHealthyFoodPrefabs;
-            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length];
+            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length + nutrigrades.Length];
             unhealthyFoodPrefabs.CopyTo(selectedPrefabs, 0);
             healthyFoodPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length);
+            nutrigrades.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length);
         }
 
         // Randomly choose an object from the selected prefab array
-        int randomIndex = Random.Range(0, selectedPrefabs.Length);
+        int randomIndex = UnityEngine.Random.Range(0, selectedPrefabs.Length);
 
         // Instantiate the selected object at the calculated spawn position
         GameObject newObject = Instantiate(selectedPrefabs[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
@@ -157,15 +160,22 @@ public class SpawnSprite : MonoBehaviour
             newObject.AddComponent<Rigidbody2D>();
 
         // Set the scale of the object
-        float height = Random.Range(minHeight, maxHeight);
+        float height = UnityEngine.Random.Range(minHeight, maxHeight);
         newObject.transform.localScale = new Vector3(laneWidth, height, 1f);
 
-        // Set the velocity of the object to move straight downwards
-        newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
-
-        
-
-
+        // Check if the spawned object is a nutrigrade prefab
+        if (Array.IndexOf(nutrigrades, selectedPrefabs[randomIndex]) != -1)
+        {
+            // Apply different behavior to nutrigrades
+            // For example, you can set their velocity to move upwards instead of downwards
+            newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * constantNutrigradeSpeed;
+        }
+    
+        else
+        {
+            // Set the velocity of non-nutrigrade objects to move straight downwards
+            newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+        }
     }
 
 

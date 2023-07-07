@@ -6,6 +6,10 @@ TagManager:
   tags:
   - healthy
   - unhealthy
+  - Nutri-A
+  - Nutri-B
+  - Nutri-C
+  - Nutri-D
   layers:
   - Default
   - TransparentFX
