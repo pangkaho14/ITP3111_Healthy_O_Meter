@@ -29,6 +29,7 @@ public class LeaderboardManager : MonoBehaviour
 
     public GameObject InputFieldUI;
     public GameObject LeaderboardUI;
+    public FunFactsManager FunFactsUI;
 
     [SerializeField] private LeaderboardUI leaderboardUI;
     [SerializeField] private TMP_InputField playerNameInput;
@@ -69,14 +70,24 @@ public class LeaderboardManager : MonoBehaviour
         // Save the PlayerPrefs to disk
         PlayerPrefs.Save();
 
+        //Display Leaderboard and FunFacts after saving
+        DisplayLeaderboardFunfacts();
+        
+    }
+
+    public void DisplayLeaderboardFunfacts()
+    {
         //Set the input field inactive 
         InputFieldUI.SetActive(false);
 
         //Update the leaderboard UI
         leaderboardUI.UpdateLeaderboard();
 
-        //Display the leaderboard from top 5
+        //Display the leaderboard Top 5
         LeaderboardUI.SetActive(true);
+
+        //Display Funfacts
+        FunFactsUI.ShowRandomFunFact();
     }
 }
 

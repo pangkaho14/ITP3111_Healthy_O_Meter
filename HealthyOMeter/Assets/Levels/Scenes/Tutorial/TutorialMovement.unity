@@ -639,7 +639,6 @@ GameObject:
   - component: {fileID: 1014966998}
   - component: {fileID: 1014966997}
   - component: {fileID: 1014966996}
-  - component: {fileID: 1014966999}
   m_Layer: 0
   m_Name: InstructionCanvas
   m_TagString: Untagged
@@ -735,18 +734,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1014966999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014966994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7058c1e99de6f2748944250d0a9be6eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1136699415 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3825633736191506348, guid: da5620552a3cb074ba3bf8ca89985d60, type: 3}
@@ -796,7 +783,9 @@ MonoBehaviour:
   healthBarFillImage: {fileID: 1136699415}
   healthText: {fileID: 723007830}
   healthBarSlider: {fileID: 695784351}
-  GameOverScreen: {fileID: 0}
+  OnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1146924951
 Transform:
   m_ObjectHideFlags: 0
@@ -839,8 +828,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1146924950}
+  scoreKeeper: {fileID: 0}
   healAmt: 20
   damageAmt: 20
+  FloatingTextAddPointsPrefab: {fileID: 0}
+  scoreAmt: 100
+  addPointsText: 
+  pointsCollectedoffsetX: 0
+  pointsCollectedoffsetY: 0
+  overlayEffect: {fileID: 0}
+  pointsTextSize: 30
 --- !u!114 &1146924954
 MonoBehaviour:
   m_ObjectHideFlags: 0
