@@ -696,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621644392205601039, guid: 6171af3378c116542992694d86be9eac, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 650
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 621644392205601039, guid: 6171af3378c116542992694d86be9eac, type: 3}
       propertyPath: m_SizeDelta.y
@@ -792,7 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1677058647870752348, guid: 6171af3378c116542992694d86be9eac, type: 3}
       propertyPath: m_text
-      value: '1/4 whole proteins
+      value: '1/4 whole grains
 
         1/2 proteins
 

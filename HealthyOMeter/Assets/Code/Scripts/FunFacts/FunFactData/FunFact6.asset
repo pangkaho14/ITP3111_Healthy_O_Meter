@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FunFact6
   m_EditorClassIdentifier: 
   header: 'SUGAR INTAKE:'
-  funFact: Ask for less/no sugar when ordering drinks or desserts
+  funFact: Ask for less or no sugar when ordering drinks or desserts
   image: {fileID: 0}

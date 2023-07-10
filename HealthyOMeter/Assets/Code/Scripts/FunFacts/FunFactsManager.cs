@@ -33,7 +33,7 @@ public class FunFactsManager : MonoBehaviour
         Header.text = currentFunFact.header;
 
         // Display the fun fact sentence
-        Funfacts.text = currentFunFact.funFact;
+        Funfacts.text = formattedFunFact;
 
         // Check if the fun fact has an image
         if (currentFunFact.image != null)

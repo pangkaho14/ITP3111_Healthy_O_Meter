@@ -11,6 +11,6 @@ public class FunFactData : ScriptableObject
     public string GetFormattedFunFact()
     {
         // Replace line break tags with actual line breaks
-        return funFact.Replace("\\n", "\n");
+        return funFact.Replace("\\n", "<br>");
     }
 }

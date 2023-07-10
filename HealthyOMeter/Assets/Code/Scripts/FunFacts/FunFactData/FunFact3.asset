@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FunFact3
   m_EditorClassIdentifier: 
   header: 'SALT & FAT INTAKE:'
-  funFact: Ask for less/no gravy!
+  funFact: Ask for less or no gravy!
   image: {fileID: 0}
