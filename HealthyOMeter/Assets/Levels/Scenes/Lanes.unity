@@ -239,7 +239,7 @@ MonoBehaviour:
   laneWidth: 0.2
   minHeight: 0.2
   maxHeight: 0.2
-  middleLaneObject: {fileID: 2021423260}
+  middleLaneObject: {fileID: 0}
   maxSpawnSpeed: 8
   spawnSpeedIncreaseInterval: 11
   spawnSpeedIncreaseAmount: 1
