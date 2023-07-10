@@ -69,7 +69,7 @@ public class SpawnSprite : MonoBehaviour
     // Timer to track when to spawn a new object
     private float spawnTimer = 0f;
 
-  
+    private int currentLaneIndex = 0; // Track the current lane index
 
     // Timer to track when to increase spawn speed and decrease spawn interval
     private float elapsedSpawnSpeedIncreaseInterval = 0f;
@@ -116,12 +116,18 @@ public class SpawnSprite : MonoBehaviour
     // Method to spawn a new object
     private void SpawnObject()
     {
-        // Randomly choose a lane (-1, 0, or 1)
-        float lanePosition = UnityEngine.Random.Range(-1, 2);
+        // Array of lane positions (-1, 0, 1)
+        int[] lanePositions = new int[] { -1, 0, 1 };
+
+        // Get the lane position at the current index
+        int lanePosition = lanePositions[currentLaneIndex];
 
         // Calculate the spawn position based on the lane position and lane offset
         float spawnX = transform.position.x + lanePosition * laneOffset;
         float spawnY = transform.position.y;
+
+        // Increment the current lane index
+        currentLaneIndex = (currentLaneIndex + 1) % lanePositions.Length;
 
         // Randomly choose an object from the prefab array based on the selected scene
         GameObject[] selectedPrefabs = null;

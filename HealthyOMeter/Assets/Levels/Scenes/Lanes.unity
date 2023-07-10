@@ -233,7 +233,7 @@ MonoBehaviour:
   - {fileID: 7517884460641653272, guid: 8403988dfb2d073448c1cbc7e1ad1768, type: 3}
   - {fileID: 4083731795281474842, guid: 7b6ddc68a84579d4ba89e304aebac238, type: 3}
   constantNutrigradeSpeed: 1
-  spawnInterval: 2.4
+  spawnInterval: 1.2
   spawnSpeed: 0.9
   laneOffset: 2
   laneWidth: 0.2
