@@ -239,7 +239,7 @@ MonoBehaviour:
   laneWidth: 0.2
   minHeight: 0.2
   maxHeight: 0.2
-  middleLaneObject: {fileID: 0}
+  middleLaneObject: {fileID: 2021423260}
   maxSpawnSpeed: 8
   spawnSpeedIncreaseInterval: 11
   spawnSpeedIncreaseAmount: 1
@@ -2001,6 +2001,7 @@ GameObject:
   - component: {fileID: 2094866239}
   - component: {fileID: 2094866238}
   - component: {fileID: 2094866237}
+  - component: {fileID: 2094866242}
   m_Layer: 5
   m_Name: CountDownUI
   m_TagString: Untagged
@@ -2107,6 +2108,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2094866242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094866236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164d96c588973dc4ea882eaf27f05fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2538978434936041440
 PrefabInstance:
   m_ObjectHideFlags: 0
