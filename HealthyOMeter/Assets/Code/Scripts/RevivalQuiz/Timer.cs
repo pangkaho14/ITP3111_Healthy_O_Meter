@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,7 +17,6 @@ public class Timer : MonoBehaviour
         if (timerValue.timeLeftToAnswerQuestionSeconds <= 0f)
         {
             questionTimeUpEvent.Invoke();
-            Debug.Log("Time's up!");
         }
     }
 }

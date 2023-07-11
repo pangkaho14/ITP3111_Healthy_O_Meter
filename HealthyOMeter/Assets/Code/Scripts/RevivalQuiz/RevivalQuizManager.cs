@@ -30,9 +30,9 @@ public class RevivalQuizManager : MonoBehaviour
     
     public void CheckAndTriggerOptionDialog()
     {
-        Debug.Log("CheckAndTriggerOptionDialog()");
+        // Debug.Log("CheckAndTriggerOptionDialog()");
         attempts--;
-        Debug.Log($"Attempts after decrementing: {attempts}");
+        // Debug.Log($"Attempts after decrementing: {attempts}");
         
         // only when the user has used up all of its attempts and has died again, then the game is over
         if (attempts < 0)
@@ -46,22 +46,22 @@ public class RevivalQuizManager : MonoBehaviour
         }
     }
     
-    private void UITearDown()
+    public void UITearDown()
     {
-        Debug.Log("UITearDown()");
+        // Debug.Log("UITearDown()");
         revivalQuiz.gameObject.SetActive(false);
         selectionDialog.gameObject.SetActive(false);
     }
     
     public void SetupOptionDialog()
     {
-        Debug.Log("SetupOptionDialog()");
+        // Debug.Log("SetupOptionDialog()");
         selectionDialog.gameObject.SetActive(true);
     }
 
     public void SetupRevivalQuiz()
     {
-        Debug.Log("SetupRevivalQuiz()");
+        // Debug.Log("SetupRevivalQuiz()");
         
         selectionDialog.gameObject.SetActive(false);
         

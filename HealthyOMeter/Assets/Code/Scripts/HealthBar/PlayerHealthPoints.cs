@@ -47,4 +47,9 @@ public class PlayerHealthPoints : ScriptableObject
     {
         return maxHealth;
     }
+    
+    public float GetMinHealth()
+    {
+        return minHealth;
+    }
 }

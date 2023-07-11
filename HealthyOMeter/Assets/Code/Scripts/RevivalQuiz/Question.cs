@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 // CreateAssetMenu adds a new option to the Menu dropdown list when you right click in the Project window
 [CreateAssetMenu(menuName = "Quiz Question", fileName = "New Question")]

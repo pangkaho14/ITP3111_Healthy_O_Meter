@@ -1,17 +1,12 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 // note to future self:
 // making everything events because I don't want hard dependencies between the scripts
 // not sure if best practice but we shall see
-
-// TODO:
-// 1. to handle multi select questions
-// 2. to establish game play loop
-// 3. respond to the QuestionTimeUp event to trigger and submit the last chosen answer ✅
 public class RevivalQuiz : MonoBehaviour
 {
     [Header("Questions")]
@@ -22,6 +17,8 @@ public class RevivalQuiz : MonoBehaviour
     // -1 means no answer has been chosen yet
     [SerializeField] private int playerAnswerChoiceIndex = -1;
     [SerializeField] private int currentQuestionCount = 0;
+    
+    // not making it a constant because I want to be able to change it in the inspector
     [SerializeField] private int maximumQuestions = 3;
 
     [Header("Answer Buttons")]
@@ -31,6 +28,7 @@ public class RevivalQuiz : MonoBehaviour
     [Header("Footer Button Group")]
     [SerializeField] private Button submitAnswerButton;
     [SerializeField] private Button nextQuestionButton;
+    [SerializeField] private Button resumeGameButton;
     
     [Header("Timer")]
     [SerializeField] private Image timerImage;
@@ -38,14 +36,16 @@ public class RevivalQuiz : MonoBehaviour
     [SerializeField] private float fillPercent;
     
     [Header("Quiz State")]
+    [SerializeField] private int numberOfCorrectAnswers = 0;
     [SerializeField] private bool loadNextQuestion = true;
     [SerializeField] private bool isAnsweringQuestion = true;
-
+    
     [SerializeField] private PlayerHealthPoints playerHealthPoints;
+    [SerializeField] private UnityEvent quizOverEvent;
     
     private void Start()
     {
-        Debug.Log("RevivalQuiz.Start()");
+        // Debug.Log("RevivalQuiz.Start()");
         
         // Set up answer toggle button text
         for (var i = 0; i < answerToggleButtons.Length; i++)
@@ -56,6 +56,7 @@ public class RevivalQuiz : MonoBehaviour
         // Set up footer button group
         submitAnswerButton.gameObject.SetActive(true);
         nextQuestionButton.gameObject.SetActive(false);
+        resumeGameButton.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -63,19 +64,12 @@ public class RevivalQuiz : MonoBehaviour
         if (currentQuestionCount == maximumQuestions)
         {
             // Debug.Log("No more questions to display!");
-            currentQuestionCount = 0;
             
-            // TODO:
-            // 1. calculate the number of correct answers
-            // 2. display text and encourage the player
-            // 3. change the question text to the score and encouragement
-            // DisplayPlayerScore();
-            
-            // 1. change submit button text to "PRESS TO RESUME GAME"
-            // 2. resume the game
-            
-            // broadcast quiz completed event (?)
-            // manager to respond to quiz completed event and teardown UI
+            DisplayPlayerScore();
+            SetAllAnswerChoiceButtonsIsActiveInHierarchy(false);
+            submitAnswerButton.gameObject.SetActive(false);
+            resumeGameButton.gameObject.SetActive(true);
+            ResetQuizState();
             return;
         }
         
@@ -94,9 +88,50 @@ public class RevivalQuiz : MonoBehaviour
             timerValue.timeLeftToAnswerQuestionSeconds = timerValue.maximumTimeToAnswerQuestionSeconds;
             
             timerValue.isActive = true;
-            currentQuestionCount++;
             loadNextQuestion = false;
         }
+    }
+
+    public void ResumeGame()
+    {
+        // manager to respond to quiz completed event and teardown UI
+        quizOverEvent.Invoke();
+
+        // if the player did not heal at all, this means the player is still dead
+        if (playerHealthPoints.GetCurrentHealth() <= playerHealthPoints.GetMinHealth())
+        {
+            // making the player take damage to trigger the DeathEvent
+            // the DeathEvent is only triggered when the player takes damage and dies (triggered by PlayerHealthPoints)
+            // 2 DeathEvents will trigger the game over screen (this is managed by the RevivalQuizManager)
+            playerHealthPoints.TakeDamage(10);
+        }
+        
+        // TODO: replace with Ryan's function to resume the game
+        Time.timeScale = 1;
+    }
+
+    private void ResetQuizState()
+    {
+        playerAnswerChoiceIndex = -1;
+        currentQuestionCount = 0;
+        numberOfCorrectAnswers = 0;
+        timerValue.ResetTimerValue();
+        timerValue.isActive = false;
+        loadNextQuestion = false;
+    }
+
+    private void DisplayPlayerScore()
+    {
+        string quizEndText = "You have completed the quiz!";
+        if (numberOfCorrectAnswers == maximumQuestions)
+        {
+            quizEndText += "\nYou have answered all questions correctly! Congratulations!";
+        }
+        else
+        {
+            quizEndText += $"\nYou have {numberOfCorrectAnswers} out of {maximumQuestions} questions correctly! Better luck next time!";
+        }
+        currentQuestionText.text = quizEndText;
     }
     
     private Question GetRandomQuestion()
@@ -135,6 +170,7 @@ public class RevivalQuiz : MonoBehaviour
     public void OnAnswerSelected(int index)
     {
         playerAnswerChoiceIndex = index;
+        // Debug.Log($"OnAnswerSelected() index: {index}");
         
         submitAnswerButton.interactable = true;
         
@@ -151,7 +187,6 @@ public class RevivalQuiz : MonoBehaviour
         SetAllAnswerChoiceButtonsIsInteractable(false);
         timerValue.isActive = false;
         isAnsweringQuestion = false;
-
         SwapSubmitButtonAndNextButton();
     }
     
@@ -168,6 +203,8 @@ public class RevivalQuiz : MonoBehaviour
         
         // this flag will trigger the Update() to load the next question
         loadNextQuestion = true;
+        
+        currentQuestionCount++;
     }
 
     private void CheckAndDisplayAnswer(int selectionIndex)
@@ -176,6 +213,7 @@ public class RevivalQuiz : MonoBehaviour
         bool isCorrect = selectionIndex == correctAnswerIndex;
         if (isCorrect)
         {
+            numberOfCorrectAnswers++;
             playerHealthPoints.Heal(10);
         }
         
