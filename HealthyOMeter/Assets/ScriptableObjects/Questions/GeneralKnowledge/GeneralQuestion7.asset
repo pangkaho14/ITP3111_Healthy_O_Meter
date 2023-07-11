@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
+  m_Name: GeneralQuestion7
+  m_EditorClassIdentifier: 
+  questionText: Whole fruit has a higher amount of dietary fibre compared to fruit
+    juices. True or false?
+  answerChoices:
+  - True
+  - False
+  correctAnswerIdx: 0

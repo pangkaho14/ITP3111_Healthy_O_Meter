@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
-  m_Name: Question6
+  m_Name: HawkerQuestion7
   m_EditorClassIdentifier: 
-  questionText: Which of the following foods is a good source of calcium?
+  questionText: Which is the CORRECT way to reduce fat intake?
   answerChoices:
-  - Bread
-  - Milk
-  - Apple
-  correctAnswerIndex: 1
+  - Removing skins and fats from meat
+  - Ask for brown rice instead of white rice
+  - Drink more water after meals
+  correctAnswerIndex: 0

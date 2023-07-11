@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
-  m_Name: Question3
+  m_Name: GeneralQuestion3
   m_EditorClassIdentifier: 
   questionText: Wholegrain food (e.g. wholemeal bread, brown rice) contains more
     nutrients than refined grain (e.g. white bread, white rice).

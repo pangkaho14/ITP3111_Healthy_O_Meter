@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
-  m_Name: Question9
+  m_Name: HawkerQuestion3
   m_EditorClassIdentifier: 
-  questionText: How much calcium should an adult aged 51 years and above consume
-    per day?
+  questionText: How much sugar is in 1 cup of Kopi/Teh?
   answerChoices:
-  - a. 1000mg
-  - b. 800mg
-  - c. 500mg
-  correctAnswerIdx: 0
+  - 1 tsp (5g)
+  - 2 tsp (10g)
+  - 5 tsp (25g)
+  correctAnswerIndex: 2

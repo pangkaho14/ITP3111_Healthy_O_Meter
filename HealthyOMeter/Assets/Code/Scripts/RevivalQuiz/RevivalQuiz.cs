@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+// nice to have: randomize answer choices button, they are now always fixed
+
 // note to future self:
 // making everything events because I don't want hard dependencies between the scripts
 // not sure if best practice but we shall see
