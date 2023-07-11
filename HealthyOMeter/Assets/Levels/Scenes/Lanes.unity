@@ -239,7 +239,7 @@ MonoBehaviour:
   laneWidth: 0.2
   minHeight: 0.2
   maxHeight: 0.2
-  middleLaneObject: {fileID: 0}
+  middleLaneObject: {fileID: 2021423260}
   maxSpawnSpeed: 8
   spawnSpeedIncreaseInterval: 11
   spawnSpeedIncreaseAmount: 1
@@ -1914,6 +1914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032914149}
   - component: {fileID: 2032914150}
+  - component: {fileID: 2032914151}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -1977,17 +1978,31 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4bac4406e6bea4c4e9045f9b77480d37, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12, y: 19.2}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2032914151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032914148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42eb436c30386ef47bfee486af062fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hawkerSceneSprite: {fileID: 21300000, guid: 338421a1e16f827418b6f7c2ea4396ac, type: 3}
+  ntucSceneSprite: {fileID: 21300000, guid: 7907e7e0456bbf64aacd01c6ab0537bd, type: 3}
 --- !u!1 &2094866236
 GameObject:
   m_ObjectHideFlags: 0
