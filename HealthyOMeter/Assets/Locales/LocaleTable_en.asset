@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LocaleTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c45e433d64c5b4acc879985ad320263e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 294942400512
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 332405923840
+    m_Localized: Leaderboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369718452224
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 402350137344
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 441797566464
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 511666282496
+    m_Localized: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546604834816
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 583774756864
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614200238080
+    m_Localized: Mandarin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659565830144
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 699202002944
+    m_Localized: Character Selection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 704021258240
+    m_Localized: Aunty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780286287872
+    m_Localized: Uncle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784082132992
+    m_Localized: Hawker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 852029857792
+    m_Localized: NTUC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 898897010688
+    m_Localized: Next >
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928680763392
+    m_Localized: Healthy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 977989001216
+    m_Localized: Unhealthy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1012009000960
+    m_Localized: There are two types of food!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043290120192
+    m_Localized: Swipe left and right to move between the 3 lanes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1045538267136
+    m_Localized: 'Health: 100%'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1047232765952
+    m_Localized: "Lets try the game out! \nMove left and right and collect only healthy
+      foods!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1170788573184
+    m_Localized: 'Health = + Health
+
+      Unhealthy = - Health'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207702642688
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1268834623488
+    m_Localized: Leaderboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1381724315648
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1413580054528
+    m_Localized: Play Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464582791168
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37693693091840
+    m_Localized: Choose Your Scenario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37861914042368
+    m_Localized: Hawker Center
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37970684928000
+    m_Localized: Sheng Siong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39375676104704
+    m_Localized: FUN FACT
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

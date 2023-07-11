@@ -38,4 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/ScenarioSelection.unity
     guid: 852652792e084e44f9d215a3e15bd100
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Levels/Scenes/LanguageSelection.unity
+    guid: ff7109612c6c044b9a34a7ec45ece970
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 66c6fe11ecc424fdba7d8d59ca5c71c0, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: b5807f057531a453bb6b970a82cfaef9, type: 2}
