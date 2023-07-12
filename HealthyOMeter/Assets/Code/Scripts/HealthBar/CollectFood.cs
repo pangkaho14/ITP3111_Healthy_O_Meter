@@ -31,7 +31,11 @@ public class CollectFood : MonoBehaviour
     [SerializeField] private string nutriBText;
     [SerializeField] private string nutriCText;
     [SerializeField] private string nutriDText;
+    // Speed decrease amount when an object with "unhealthy" tag is touched
+    [SerializeField] private float speedDecreaseAmount = 1f;
 
+    // Reference to the SpawnSprite script
+    public SpawnSprite spawnSprite; // Assign this reference in the Inspector
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
@@ -49,8 +53,20 @@ public class CollectFood : MonoBehaviour
             // Trigger overlay effect
             overlayEffect.ShowOverlay();
             healthBar.TakeDamage(damageAmt);
+
+            // Decrease the spawn speed
+            spawnSprite.spawnSpeed -= speedDecreaseAmount;
+
+            // Cap the spawn speed at the minimum value
+            if (spawnSprite.spawnSpeed < 0)
+            {
+                spawnSprite.spawnSpeed = 0;
+            }
+
+            // Update the spawn speed-related fields in SpawnSprite
+            spawnSprite.UpdateSpawnSpeedFields(spawnSprite.spawnInterval, spawnSprite.spawnSpeedIncreaseAmount, spawnSprite.spawnSpeedIncreaseInterval);
         }
-       else if (other.CompareTag("Nutri-A"))
+        else if (other.CompareTag("Nutri-A"))
         {
             float scoreAmt = GetScoreFromText(nutriAText);  // Get the score amount from the nutriAText
             scoreKeeper.Add(scoreAmt);
