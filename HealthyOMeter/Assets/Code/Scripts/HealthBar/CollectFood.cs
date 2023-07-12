@@ -32,6 +32,11 @@ public class CollectFood : MonoBehaviour
     [SerializeField] private string nutriCText;
     [SerializeField] private string nutriDText;
 
+    //Declaration of Food Collection SFX
+    [SerializeField] private AudioSource RightItem;
+    [SerializeField] private AudioSource WrongItem;
+    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
@@ -43,36 +48,42 @@ public class CollectFood : MonoBehaviour
             {
                 ShowFloatingText(addPointsText); // Pass the custom text
             }
+            RightItem.Play();
         }
         else if (other.CompareTag("unhealthy"))
         {
             // Trigger overlay effect
             overlayEffect.ShowOverlay();
             healthBar.TakeDamage(damageAmt);
+            WrongItem.Play();
         }
        else if (other.CompareTag("Nutri-A"))
         {
             float scoreAmt = GetScoreFromText(nutriAText);  // Get the score amount from the nutriAText
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriAText);
+            RightItem.Play();
         }
         else if (other.CompareTag("Nutri-B"))
         {
             float scoreAmt = GetScoreFromText(nutriBText);  // Get the score amount from the nutriBText
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriBText);
+            RightItem.Play();
         }
         else if (other.CompareTag("Nutri-C"))
         {
             float scoreAmt = GetScoreFromText(nutriCText);  // Get the score amount from the nutriCText
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriCText);
+            WrongItem.Play();
         }
         else if (other.CompareTag("Nutri-D"))
         {
             float scoreAmt = GetScoreFromText(nutriDText);  // Get the score amount from the nutriDText
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriDText);
+            WrongItem.Play();
         }
         Destroy(other.gameObject);
     }

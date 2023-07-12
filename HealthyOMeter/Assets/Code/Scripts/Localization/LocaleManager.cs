@@ -10,6 +10,8 @@ public class LocaleManager : MonoBehaviour
     //Create LocaleKey variable for assignment of English or Mandarin Selection
     private int LocaleKey = 0;
 
+    [SerializeField] private AudioSource ButtonClick;
+
     void Start()
     {
         //Checks whether there is a LocaleKey stored in PlayerPrefs
@@ -32,6 +34,7 @@ public class LocaleManager : MonoBehaviour
         Debug.Log("English");
         ChangeLocale(LocaleKey);;
         Save();
+        ButtonClick.Play();
     }
 
     //Mandarin Option
@@ -41,6 +44,7 @@ public class LocaleManager : MonoBehaviour
         Debug.Log("Mandarin");
         ChangeLocale(LocaleKey);;
         Save();
+        ButtonClick.Play();
     }
 
     private bool active = false;

@@ -16,6 +16,10 @@ public class LaneManager : MonoBehaviour
     private int CurrentLaneIndex = 1;
     private Vector3 TargetPosition;
 
+    //Declaration of Character Movement SFX
+    [SerializeField] private AudioSource LeftMovementEffect;
+    [SerializeField] private AudioSource RightMovementEffect;
+
     private void Start()
     {
         if (Lanes.Length == 0)
@@ -43,9 +47,15 @@ public class LaneManager : MonoBehaviour
                     {
                         int TargetLaneIndex = CurrentLaneIndex;
                         if (swipeDelta < 0)
+                        {
                             TargetLaneIndex--;
+                            LeftMovementEffect.Play();
+                        } 
                         else if (swipeDelta > 0)
+                        {
                             TargetLaneIndex++;
+                            RightMovementEffect.Play();
+                        }
 
                         TargetLaneIndex = Mathf.Clamp(TargetLaneIndex, 0, Lanes.Length - 1);
 
