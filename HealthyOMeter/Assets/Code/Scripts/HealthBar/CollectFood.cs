@@ -32,7 +32,7 @@ public class CollectFood : MonoBehaviour
     [SerializeField] private string nutriCText;
     [SerializeField] private string nutriDText;
     // Speed decrease amount when an object with "unhealthy" tag is touched
-    [SerializeField] private float speedDecreaseAmount = 1f;
+    [SerializeField] private float speedDecreaseAmount;
 
     // Reference to the SpawnSprite script
     public SpawnSprite spawnSprite; // Assign this reference in the Inspector
