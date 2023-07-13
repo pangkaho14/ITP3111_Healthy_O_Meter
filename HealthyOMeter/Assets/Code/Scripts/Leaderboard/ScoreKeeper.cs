@@ -7,7 +7,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     private float currentScore;
     private int currentCombo;
-    private int highestCombo; // Variable to track the highest combo
+    private int highestCombo = 0; // Variable to track the highest combo
     private float multiplier;
     private float currentMultiplier = 1f;
 
