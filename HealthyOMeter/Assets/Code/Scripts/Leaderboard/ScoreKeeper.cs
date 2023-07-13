@@ -7,13 +7,14 @@ public class ScoreKeeper : MonoBehaviour
 {
     private float currentScore;
     private int currentCombo;
+    private int highestCombo; // Variable to track the highest combo
     private float multiplier;
     private float currentMultiplier = 1f;
 
     [SerializeField] private TextMeshProUGUI scoreTextGame;
     [SerializeField] private TextMeshProUGUI scoreTextLeaderBoard;
-
     [SerializeField] private TextMeshProUGUI comboText;
+    [SerializeField] private TextMeshProUGUI comboGameOverText;
     [SerializeField] private int ComboIncrements = 50;
 
     public float GetCurrentScore()
@@ -23,12 +24,12 @@ public class ScoreKeeper : MonoBehaviour
 
     public void AddScore(float scoreAmt, bool isHealthyFood)
     {
-        //Get Combo multiplier when combo is a multiple of ComboIncrements
+        // Get Combo multiplier when combo is a multiple of ComboIncrements
         if (currentCombo % ComboIncrements == 0 && currentCombo != 0)
         {
-            UnityEngine.Debug.Log("In cals");
             currentMultiplier = CalculateScoreMultiplier(currentCombo);
         }
+
         if (isHealthyFood)
         {
             currentScore += CalculateScore(scoreAmt, currentMultiplier);
@@ -37,36 +38,39 @@ public class ScoreKeeper : MonoBehaviour
         {
             currentScore += scoreAmt;
         }
-        
+
         UpdateScoreText();
+
     }
-    
-    //Called by collision detector to update combo count
+
+    // Called by collision detector to update combo count
     public void AddCombo()
     {
         currentCombo++;
 
+        // Update highest combo if the current combo is higher
+        if (currentCombo > highestCombo)
+        {
+            highestCombo = currentCombo;
+        }
+
         UpdateComboText();
     }
 
-    private float CalculateScore(float scoreAmt, float multiplier) 
+    private float CalculateScore(float scoreAmt, float multiplier)
     {
-        UnityEngine.Debug.Log("mutlipliedScore:" + scoreAmt * currentMultiplier);
-        return (scoreAmt * multiplier);
+        return scoreAmt * multiplier;
     }
+
     private float CalculateScoreMultiplier(int combo)
     {
-        //When combo hits 50, find the quotient e.g 50 = 1 so multiplier is 1.1
         float quotient = (currentCombo / ComboIncrements) / 10f;
         multiplier = 1f + quotient;
-        UnityEngine.Debug.Log("Quotient:" + quotient);
-        UnityEngine.Debug.Log("Multiplier:" + multiplier);
         return multiplier;
-
     }
+
     public string GetNewScoreAmt(float scoreAmt)
     {
-        //Only for healthy objects and Nutrigrade A to update the floating text
         float newScore = currentMultiplier * scoreAmt;
         return newScore.ToString();
     }
@@ -79,13 +83,13 @@ public class ScoreKeeper : MonoBehaviour
         }
         if (scoreTextLeaderBoard != null)
         {
-            scoreTextLeaderBoard.text = "Score: " + currentScore.ToString();
+          scoreTextLeaderBoard.text = "Score: " + currentScore.ToString() + "\nHighest Combo: " + highestCombo.ToString();
         }
     }
 
+
     public void ResetScoreAndCombo()
     {
-       
         currentCombo = 0;
         UpdateComboText();
     }
@@ -100,5 +104,10 @@ public class ScoreKeeper : MonoBehaviour
         {
             comboText.text = string.Empty; // Clear the combo text
         }
+    }
+
+    public int GetHighestCombo()
+    {
+        return highestCombo;
     }
 }
