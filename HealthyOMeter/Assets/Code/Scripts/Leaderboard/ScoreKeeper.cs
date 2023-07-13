@@ -83,11 +83,22 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
 
+    public void ResetScoreAndCombo()
+    {
+       
+        currentCombo = 0;
+        UpdateComboText();
+    }
+
     private void UpdateComboText()
     {
-        if (comboText != null)
+        if (comboText != null && currentCombo > 0)
         {
             comboText.text = "COMBO\n\n" + currentCombo.ToString();
+        }
+        else
+        {
+            comboText.text = string.Empty; // Clear the combo text
         }
     }
 }

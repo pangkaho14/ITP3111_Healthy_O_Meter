@@ -8,6 +8,7 @@ public class Pit : MonoBehaviour
     // assign the health bar instance you want from the UI Inspector
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private DamageEffect overlayEffect;
+    [SerializeField] private ScoreKeeper scoreKeeper;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,6 +16,7 @@ public class Pit : MonoBehaviour
         {
             healthBar.TakeDamage(20);
             overlayEffect.ShowOverlay();
+            scoreKeeper.ResetScoreAndCombo();
         }
         
         Destroy(other.gameObject);

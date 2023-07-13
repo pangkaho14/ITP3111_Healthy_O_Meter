@@ -58,7 +58,7 @@ public class CollectFood : MonoBehaviour
             // Trigger overlay effect
             overlayEffect.ShowOverlay();
             healthBar.TakeDamage(damageAmt);
-
+            scoreKeeper.ResetScoreAndCombo();
             // Decrease the spawn speed
             spawnSprite.spawnSpeed -= speedDecreaseAmount;
 
