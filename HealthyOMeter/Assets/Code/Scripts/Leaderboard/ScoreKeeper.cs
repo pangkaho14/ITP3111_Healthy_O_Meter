@@ -94,7 +94,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         if (comboText != null && currentCombo > 0)
         {
-            comboText.text = "COMBO\n\n" + currentCombo.ToString();
+            comboText.text = "COMBO\n" + currentCombo.ToString();
         }
         else
         {

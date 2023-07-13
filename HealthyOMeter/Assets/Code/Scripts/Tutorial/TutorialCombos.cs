@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Threading;
+using System.Text.RegularExpressions;
 
-public class TutorialHealthmeter : MonoBehaviour
+public class TutorialCombos : MonoBehaviour
 {
     //CountDown UI
     public GameObject CountDownUI; // Reference to the countdown text UI element
@@ -15,7 +15,7 @@ public class TutorialHealthmeter : MonoBehaviour
     public TextMeshProUGUI textElement;
     public float delayInSeconds = 5f;
     public GameObject ButtonCanvas;
-    public TextMeshProUGUI score;
+    public TextMeshProUGUI combo;
     public GameObject Background;
 
     //Healthbar event subscribe
@@ -48,17 +48,28 @@ public class TutorialHealthmeter : MonoBehaviour
         }
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
 
+        // Extract numerals from the combo string
+        string comboString = combo.text;
+        string comboCount = "";
+
+        for (int i = 0; i < comboString.Length; i++)
+        {
+            if (char.IsDigit(comboString[i]))
+            {
+                comboCount += comboString[i];
+            }
+        }
         //Activate text
-        textElement.text = "Wow, you scored " + score.text + " points!\n\n" +
+        textElement.text = "Wow, the highest combo you got is " + comboCount + "!\n\n" +
                          "Try to beat that later!\n\n" +
-                         "Now we will teach you about combos!";
+                         "Remember it is possible to die now!";
         textElement.gameObject.SetActive(true);
         Background.SetActive(true);
 
         //Activate COMBOS button
         //Set the text of the child TextMeshProUGUI component
-        TextMeshProUGUI textComponent =ButtonCanvas.GetComponentInChildren<TextMeshProUGUI>();
-        textComponent.text = "COMBOS";
+        TextMeshProUGUI textComponent = ButtonCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        textComponent.text = "HOME";
         ButtonCanvas.SetActive(true);
 
         // Perform pausing logic for the Lanes scene
