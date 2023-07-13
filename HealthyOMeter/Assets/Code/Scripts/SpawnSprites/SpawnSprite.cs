@@ -76,6 +76,15 @@ public class SpawnSprite : MonoBehaviour
 
     //Healthbar Object
     public HealthBar HealthBar;
+ 
+    // Method to update the spawn speed-related fields
+    // Method to update spawn speed-related fields
+    public void UpdateSpawnSpeedFields(float interval, float increaseAmount, float increaseInterval)
+    {
+        spawnInterval = interval;
+        spawnSpeedIncreaseAmount = increaseAmount;
+        spawnSpeedIncreaseInterval = increaseInterval;
+    }
 
     // Update is called once per frame
     private void Update()
