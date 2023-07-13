@@ -41,11 +41,16 @@ public class CollectFood : MonoBehaviour
         if (other.CompareTag("healthy"))
         {
             healthBar.Heal(healAmt);
-            scoreKeeper.Add(scoreAmt);
+            scoreKeeper.AddScore(scoreAmt, true);
+            scoreKeeper.AddCombo();
+
+            //Update new score with current multiplier
+            string newScore = scoreKeeper.GetNewScoreAmt(scoreAmt);
+
             // Trigger text
             if (FloatingTextAddPointsPrefab)
             {
-                ShowFloatingText(addPointsText); // Pass the custom text
+                ShowFloatingText(newScore); // Pass the custom text
             }
         }
         else if (other.CompareTag("unhealthy"))
@@ -69,25 +74,28 @@ public class CollectFood : MonoBehaviour
         else if (other.CompareTag("Nutri-A"))
         {
             float scoreAmt = GetScoreFromText(nutriAText);  // Get the score amount from the nutriAText
-            scoreKeeper.Add(scoreAmt);
-            ShowFloatingText(nutriAText);
+            scoreKeeper.AddScore(scoreAmt, true);
+
+            //Update new score with current multiplier
+            string newScore = scoreKeeper.GetNewScoreAmt(scoreAmt);
+            ShowFloatingText(newScore);
         }
         else if (other.CompareTag("Nutri-B"))
         {
             float scoreAmt = GetScoreFromText(nutriBText);  // Get the score amount from the nutriBText
-            scoreKeeper.Add(scoreAmt);
+            scoreKeeper.AddScore(scoreAmt, false);
             ShowFloatingText(nutriBText);
         }
         else if (other.CompareTag("Nutri-C"))
         {
             float scoreAmt = GetScoreFromText(nutriCText);  // Get the score amount from the nutriCText
-            scoreKeeper.Add(scoreAmt);
+            scoreKeeper.AddScore(scoreAmt, false);
             ShowFloatingText(nutriCText);
         }
         else if (other.CompareTag("Nutri-D"))
         {
             float scoreAmt = GetScoreFromText(nutriDText);  // Get the score amount from the nutriDText
-            scoreKeeper.Add(scoreAmt);
+            scoreKeeper.AddScore(scoreAmt, false);
             ShowFloatingText(nutriDText);
         }
         Destroy(other.gameObject);
@@ -119,4 +127,5 @@ public class CollectFood : MonoBehaviour
             textMesh.fontSize = pointsTextSize; // Set the text size
         }
     }
+    
 }
