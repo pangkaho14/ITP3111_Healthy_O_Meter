@@ -30,6 +30,7 @@ public class LeaderboardManager : MonoBehaviour
     public GameObject InputFieldUI;
     public GameObject LeaderboardUI;
     public FunFactsManager FunFactsUI;
+    public GameObject InputError;
 
     [SerializeField] private LeaderboardUI leaderboardUI;
     [SerializeField] private TMP_InputField playerNameInput;
@@ -40,7 +41,15 @@ public class LeaderboardManager : MonoBehaviour
         string playerName = playerNameInput.text;
         float score = scoreKeeper.GetCurrentScore();
 
-        SaveScore(playerName, score);
+        //Check if playername is null or Enter Player name
+        if (string.IsNullOrEmpty(playerName) || playerName == "Enter Player Name")
+        {
+            InputError.SetActive(true);
+        }
+        else
+        {
+            SaveScore(playerName, score);
+        }
     }
 
     public void SaveScore(string playerName, float score)
