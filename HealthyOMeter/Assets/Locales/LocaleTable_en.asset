@@ -149,6 +149,14 @@ MonoBehaviour:
     m_Localized: FUN FACT
     m_Metadata:
       m_Items: []
+  - m_Id: 876796340854784
+    m_Localized: CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 876798911963136
+    m_Localized: QUIT X
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
