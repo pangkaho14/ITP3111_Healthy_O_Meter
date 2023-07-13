@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public CharacterDatabase characterDB;
     public SpriteRenderer artworkSprite;
     private int selectedOption = 0;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
         else
         {
             Load();
+            animator = GetComponent<Animator>();
         }
         UpdateCharacter(selectedOption);
     }
