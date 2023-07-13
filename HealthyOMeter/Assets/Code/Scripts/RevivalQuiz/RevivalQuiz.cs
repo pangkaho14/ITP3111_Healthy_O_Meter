@@ -53,6 +53,7 @@ public class RevivalQuiz : MonoBehaviour
         for (var i = 0; i < answerToggleButtons.Length; i++)
         {
             answerToggleButtonTexts[i] = answerToggleButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            answerToggleButtons[i].gameObject.SetActive(false);
         }
         
         // Set up footer button group
@@ -107,9 +108,6 @@ public class RevivalQuiz : MonoBehaviour
             // 2 DeathEvents will trigger the game over screen (this is managed by the RevivalQuizManager)
             playerHealthPoints.TakeDamage(10);
         }
-        
-        // TODO: replace with Ryan's function to resume the game
-        Time.timeScale = 1;
     }
 
     private void ResetQuizState()
@@ -151,6 +149,9 @@ public class RevivalQuiz : MonoBehaviour
             // Debug.Log("No questions to display!");
             return;
         }
+        
+        // TODO: To replace with XY's method of checking player option of English or Chinese
+        question.SetEnglishLocalization(true);
         
         currentQuestionText.text = question.GetQuestionText();
         for (var i = 0; i < question.GetAnswerCount(); i++)

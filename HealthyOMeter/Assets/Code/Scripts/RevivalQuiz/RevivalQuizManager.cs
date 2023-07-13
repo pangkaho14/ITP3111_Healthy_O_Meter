@@ -7,13 +7,15 @@ public class RevivalQuizManager : MonoBehaviour
     [SerializeField] private UnityEvent gameOverEvent;
 
     [SerializeField] private RevivalQuiz revivalQuiz;
-    [SerializeField] private SelectionDialog selectionDialog;
+    [SerializeField] private GameObject selectionDialog;
+    [SerializeField] private GameObject timer;
     
     // Start is called before the first frame update
     void Start()
     {
         revivalQuiz.gameObject.SetActive(false);
         selectionDialog.gameObject.SetActive(false);
+        timer.gameObject.SetActive(false);
     }
     
     public void IncrementAttempts()
@@ -40,6 +42,10 @@ public class RevivalQuizManager : MonoBehaviour
         }
         else
         {
+            // TODO: to replace with Ryan's function for pausing a game
+            // just for simulating a pause
+            Time.timeScale = 0f;
+            
             SetupOptionDialog();
         }
     }
@@ -47,6 +53,10 @@ public class RevivalQuizManager : MonoBehaviour
     public void UITearDown()
     {
         // Debug.Log("UITearDown()");
+        
+        // TODO: replace with Ryan's function to resume the game
+        Time.timeScale = 1;
+        
         revivalQuiz.gameObject.SetActive(false);
         selectionDialog.gameObject.SetActive(false);
     }

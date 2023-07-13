@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1112292150632928641
+--- !u!1001 &5328254263960353510
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -124,13 +124,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4954763837059089825, guid: ee9af931af818754697f4601b672323b, type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 8486381705546435778}
     - target: {fileID: 5383714594871103147, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_Name
-      value: HawkerRevivalQuizManager Variant
+      value: GeneralKnowledgeRevivalQuizManager Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6479079139109802598, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -158,36 +154,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.size
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: c5cd279f5e53cc941b142181cb455e3d, type: 2}
+      objectReference: {fileID: 11400000, guid: 7c8a40e79e9c37e4faec6fe041421d41, type: 2}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 4620def5465ea0b4dad71b9a201c64fe, type: 2}
+      objectReference: {fileID: 11400000, guid: 3a983123f99ee424388fcc20f3ac98e5, type: 2}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 5dd88e6a9188b234bb8cd36400304d5e, type: 2}
+      objectReference: {fileID: 11400000, guid: 5978694ea2b4baa4db6a0c6063de5644, type: 2}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 347c5270608931b4d883cd4b45ef15e7, type: 2}
+      objectReference: {fileID: 11400000, guid: a79bc1d76c5b20c4391757cf4d7f2025, type: 2}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: ee6947744e07fc847831cb793385a0ed, type: 2}
+      objectReference: {fileID: 11400000, guid: 726ae5120a5adf74a8a8ce5b25138061, type: 2}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: bc0b1c41a1e2424489092692c5d944dc, type: 2}
+      objectReference: {fileID: 11400000, guid: e3a263ae484cf344bb83a8ea1c0e9730, type: 2}
     - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: questions.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 7632c003c21917446842fb9ca5b10966, type: 2}
+      objectReference: {fileID: 11400000, guid: 40bc96e045c93964996b792cde12b974, type: 2}
+    - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
+      propertyPath: questions.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8153fbd39a05e144db4f76726821bccf, type: 2}
+    - target: {fileID: 6655455875057989581, guid: ee9af931af818754697f4601b672323b, type: 3}
+      propertyPath: questions.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ce4d51a4b80a12489e474ec5a379cd4, type: 2}
     - target: {fileID: 6967357545607344414, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -241,8 +245,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee9af931af818754697f4601b672323b, type: 3}
---- !u!1 &8486381705546435778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8838886992261830979, guid: ee9af931af818754697f4601b672323b, type: 3}
-  m_PrefabInstance: {fileID: 1112292150632928641}
-  m_PrefabAsset: {fileID: 0}

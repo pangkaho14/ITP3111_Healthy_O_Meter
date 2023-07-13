@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minHealth: 0
   maxHealth: 100
-  currentHealth: 20
+  currentHealth: 0
   DeathEvent:
     m_PersistentCalls:
       m_Calls:
