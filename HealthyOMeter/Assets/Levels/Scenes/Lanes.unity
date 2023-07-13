@@ -261,6 +261,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &455581305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3072601878110362514, guid: a455123bda27ee84f8d30e61b17998f6, type: 3}
+  m_PrefabInstance: {fileID: 2538978434936041440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &455581306 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5274937218243398989, guid: a455123bda27ee84f8d30e61b17998f6, type: 3}
+  m_PrefabInstance: {fileID: 2538978434936041440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455581305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &455581307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455581305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:c45e433d64c5b4acc879985ad320263e
+    m_TableEntryReference:
+      m_KeyId: 882562980372480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 455581306}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &582530783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3354,6 +3410,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5535263233069110200, guid: a455123bda27ee84f8d30e61b17998f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2538978434936041447}
+    - targetCorrespondingSourceObject: {fileID: 3072601878110362514, guid: a455123bda27ee84f8d30e61b17998f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 455581307}
   m_SourcePrefab: {fileID: 100100000, guid: a455123bda27ee84f8d30e61b17998f6, type: 3}
 --- !u!114 &2538978434936041441 stripped
 MonoBehaviour:

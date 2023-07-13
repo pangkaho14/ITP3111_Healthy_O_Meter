@@ -20,6 +20,8 @@ public class HealthBar : MonoBehaviour
     public UnityEvent OnHealthDepleted;
     private bool isHealthDepleted = false; // Flag to track if the health has been depleted
 
+    private int LocaleKey = 0;
+
     private void Awake()
     {
         currentHealth = MAX_HEALTH;
@@ -41,7 +43,16 @@ public class HealthBar : MonoBehaviour
             isHealthDepleted=true; // Set the flag to true after invoking the event
         }
 
-        healthText.text = $"Health: {currentHealth}%";
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+
+        if (LocaleKey == 0)
+        {
+            healthText.text = $"Health: {currentHealth}%";
+        }
+        else
+        {
+            healthText.text = $"健康: {currentHealth}%";
+        }
 
         // this will gradually reduce the health bar after taking damage or healing, instead of instant transformation
         // Mathf.Lerp(startValue, endValue, speed);
