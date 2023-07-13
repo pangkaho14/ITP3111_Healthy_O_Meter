@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SFXManager : MonoBehaviour
+public class MuteFunction : MonoBehaviour
 {
     [SerializeField] Image SoundOnIcon;
     [SerializeField] Image SoundOffIcon;
@@ -25,6 +25,7 @@ public class SFXManager : MonoBehaviour
         AudioListener.pause = muted;
     }
 
+    //Calls mute function upon button click
     public void OnButtonPress()
     {
         if(muted == false)
@@ -41,6 +42,7 @@ public class SFXManager : MonoBehaviour
         UpdateButtonIcon();
     }
 
+    //Changes button icon when clicked
     private void UpdateButtonIcon()
     {
         if(muted == false)

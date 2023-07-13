@@ -49,6 +49,7 @@ public class CollectFood : MonoBehaviour
                 ShowFloatingText(addPointsText); // Pass the custom text
             }
             RightItem.Play();
+            
         }
         else if (other.CompareTag("unhealthy"))
         {
@@ -56,6 +57,7 @@ public class CollectFood : MonoBehaviour
             overlayEffect.ShowOverlay();
             healthBar.TakeDamage(damageAmt);
             WrongItem.Play();
+            
         }
        else if (other.CompareTag("Nutri-A"))
         {
@@ -63,6 +65,7 @@ public class CollectFood : MonoBehaviour
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriAText);
             RightItem.Play();
+            
         }
         else if (other.CompareTag("Nutri-B"))
         {
@@ -76,14 +79,14 @@ public class CollectFood : MonoBehaviour
             float scoreAmt = GetScoreFromText(nutriCText);  // Get the score amount from the nutriCText
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriCText);
-            WrongItem.Play();
+            RightItem.Play();
         }
         else if (other.CompareTag("Nutri-D"))
         {
             float scoreAmt = GetScoreFromText(nutriDText);  // Get the score amount from the nutriDText
             scoreKeeper.Add(scoreAmt);
             ShowFloatingText(nutriDText);
-            WrongItem.Play();
+            RightItem.Play();
         }
         Destroy(other.gameObject);
     }
