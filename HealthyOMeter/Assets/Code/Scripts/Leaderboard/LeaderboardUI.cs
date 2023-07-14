@@ -20,11 +20,18 @@ public class LeaderboardUI : MonoBehaviour
         // Create a string to hold the leaderboard text
         string leaderboardTextString = "";
 
-        // Display the top 5 entries in the leaderboard
+        // Display the top 5 entries in the leaderboard, or as many as available
         int maxEntries = Mathf.Min(5, leaderboardData.scoreEntries.Count);
-        for (int i = 0; i < maxEntries; i++)
+        if (maxEntries > 0)
         {
-            leaderboardTextString += $"{i+1}: {leaderboardData.scoreEntries[i].playerName} {leaderboardData.scoreEntries[i].score}\n";
+            for (int i = 0; i < maxEntries; i++)
+            {
+                leaderboardTextString += $"{i + 1}: {leaderboardData.scoreEntries[i].playerName} {leaderboardData.scoreEntries[i].score}\n";
+            }
+        }
+        else
+        {
+            leaderboardTextString = "No leaderboard entries";
         }
 
         // Set the leaderboard text in the TextMeshProUGUI component

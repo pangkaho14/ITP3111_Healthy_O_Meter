@@ -20,13 +20,15 @@ public class CountDown : MonoBehaviour
 
     private IEnumerator CountdownCoroutine()
     {
-        while (currentCountdown > 0)
+        int countDown = currentCountdown;
+        while (countDown > 0)
         {
-            CountDownText.text = currentCountdown.ToString(); // Update the countdown text
+            CountDownText.text = countDown.ToString(); // Update the countdown text
             yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
-            currentCountdown--; // Decrement the countdown value
+            countDown--; // Decrement the countdown value
         }
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
+        // Reset currentCountdown
         // Perform unpausing logic for the Lanes scene
         Time.timeScale = 1;
     }

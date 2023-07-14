@@ -14,7 +14,7 @@ public class FunFactsManager : MonoBehaviour
     public TMPro.TextMeshProUGUI Funfacts;
     public Image FunFactsImage;
 
-    public void ShowRandomFunFact()
+    private void ShowRandomFunFact()
     {
         if (funFactDatabase.funFactsList.Count == 0)
         {
@@ -47,5 +47,10 @@ public class FunFactsManager : MonoBehaviour
             // Hide or disable the fun fact image
             FunFactsImage.gameObject.SetActive(false);
         }
+    }
+
+    public void DisplayFunFact()
+    {
+        ShowRandomFunFact();
     }
 }

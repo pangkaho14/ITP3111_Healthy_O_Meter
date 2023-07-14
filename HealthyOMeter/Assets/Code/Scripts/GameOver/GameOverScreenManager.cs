@@ -14,9 +14,14 @@ public class GameOverScreenManager : MonoBehaviour
     
     private void HandleHealthDepleted()
     {
-        //a Here can have a flag to see whether revival quiz have occured before?
-
         // if flag == true -> activate the gameover if not activate the quiz screen
         gameOverScreen.ActivateGameOverScreen();
+    }
+
+
+    public void ClearPreferences()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save(); // Make sure to call Save() after deleting preferences
     }
 }
