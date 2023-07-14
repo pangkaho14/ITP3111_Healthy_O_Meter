@@ -12,7 +12,6 @@ public class GameOverScreen : MonoBehaviour{
     public static GameOverScreen Instance { get; private set; }
 
     [SerializeField] private AudioSource GameOver;
-    // [SerializeField] private AudioSource GameStart;
 
     public void ActivateGameOverScreen()
     {
@@ -27,7 +26,6 @@ public class GameOverScreen : MonoBehaviour{
     {
         gameObject.SetActive(false);
         Time.timeScale = 1;
-        // GameStart.Play();
     }
 }
     
