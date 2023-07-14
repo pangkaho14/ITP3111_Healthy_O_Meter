@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -47,6 +48,7 @@ public class RevivalQuizManager : MonoBehaviour
             Time.timeScale = 0f;
             
             SetupOptionDialog();
+            timer.gameObject.SetActive(true);
         }
     }
     
