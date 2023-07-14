@@ -98,7 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15032547a71014469e5843b598f19b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  playerHealthPoints: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
+  overlayEffect: {fileID: 0}
+  scoreKeeper: {fileID: 0}
 --- !u!61 &8998856860280032386
 BoxCollider2D:
   m_ObjectHideFlags: 0

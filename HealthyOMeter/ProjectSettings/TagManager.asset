@@ -6,6 +6,10 @@ TagManager:
   tags:
   - healthy
   - unhealthy
+  - Nutri-A
+  - Nutri-B
+  - Nutri-C
+  - Nutri-D
   layers:
   - Default
   - TransparentFX
@@ -42,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2611157475
+    locked: 0
+  - name: Foreground
+    uniqueID: 512013277
     locked: 0

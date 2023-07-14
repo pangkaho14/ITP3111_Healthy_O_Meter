@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2378164610320230016, guid: ee9af931af818754697f4601b672323b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2657135622881679334, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -58,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3805970190778043622, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3805970190778043622, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,6 +196,10 @@ PrefabInstance:
       propertyPath: questions.Array.data[8]
       value: 
       objectReference: {fileID: 11400000, guid: 7ce4d51a4b80a12489e474ec5a379cd4, type: 2}
+    - target: {fileID: 6729621982485189790, guid: ee9af931af818754697f4601b672323b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6967357545607344414, guid: ee9af931af818754697f4601b672323b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

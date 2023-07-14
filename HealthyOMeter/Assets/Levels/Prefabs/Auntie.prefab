@@ -37,7 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3271060993670319338
 SpriteRenderer:
@@ -194,7 +194,7 @@ MonoBehaviour:
   healthBarFillImage: {fileID: 0}
   healthText: {fileID: 0}
   healthBarSlider: {fileID: 0}
-  GameOverScreen: {fileID: 0}
+  playerHP: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
 --- !u!114 &2459811716553940494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,9 +207,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c06c448ab12dca45b23613eaa49072a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 7797798485909451594}
+  playerHp: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
   healAmt: 20
   damageAmt: 20
+  scoreKeeper: {fileID: 0}
+  FloatingTextAddPointsPrefab: {fileID: 1190686605553596705, guid: 5878be484102ddd4f8c17dad9f36db3a, type: 3}
+  scoreAmt: 100
+  addPointsText: 100
+  pointsCollectedoffsetX: 9.37
+  pointsCollectedoffsetY: 5.37
+  overlayEffect: {fileID: 0}
+  pointsTextSize: 5
+  nutriAText: 100
+  nutriBText: 50
+  nutriCText: -100
+  nutriDText: -100
+  speedDecreaseAmount: 1
+  spawnSprite: {fileID: 0}
 --- !u!114 &4204335843643334605
 MonoBehaviour:
   m_ObjectHideFlags: 0

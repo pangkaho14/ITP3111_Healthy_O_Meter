@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image healthBarFillImage;
+    [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Slider healthBarSlider;
     [SerializeField] private PlayerHealthPoints playerHP;
     private float lerpSpeed = 3f;
