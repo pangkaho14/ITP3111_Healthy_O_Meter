@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: HawkerQuestion6
   m_EditorClassIdentifier: 
   englishQuestionText: Which of the following is FALSE when reducing sodium intake?
-  chineseQuestionText: "\u5168\u9EA6\u98DF\u54C1\uFF08\u4F8B\u5982\u5168\u9EA6\u9762\u5305\uFF0C\u7CD9\u7C73\uFF09\u542B\u6709\u6BD4\u7CBE\u81F4\u8C37\u7269\uFF08\u4F8B\u5982\u767D\u9762\u5305\uFF0C\u767D\u7C73\uFF09\u66F4\u591A\u7684\u8425\u517B.
-    \u771F\u7684/ \u9519\u7684"
+  chineseQuestionText: "\u51CF\u5C11\u94A0\u6444\u5165\u91CF\u65F6\uFF0C\u4EE5\u4E0B\u54EA\u9879\u662F\u9519\u8BEF\u7684\uFF1F"
   isEnglishLocalization: 1
   englishAnswerChoices:
   - Ask for less or no gravy
   - Limit adding sauces like chili or soy sauce
   - Drink more soup with meals
-  chineseAnswerChoices: []
+  chineseAnswerChoices:
+  - "\u8981\u6C42\u66F4\u5C11\u6216\u6CA1\u6709\u8089\u6C41"
+  - "\u9650\u5236\u6DFB\u52A0\u8FA3\u6912\u6216\u9171\u6CB9\u7B49\u8C03\u5473\u6599"
+  - "\u7528\u996D\u83DC\u591A\u559D\u6C64"
   correctAnswerIndex: 2

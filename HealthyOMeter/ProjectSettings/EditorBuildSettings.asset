@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Levels/Scenes/LanguageSelection.unity
+    guid: ff7109612c6c044b9a34a7ec45ece970
+  - enabled: 1
     path: Assets/Levels/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -33,9 +36,11 @@ EditorBuildSettings:
     path: Assets/Levels/Scenes/Tutorial/TutorialCombos.unity
     guid: bbe89ade5ddae0a49b04a047243244a4
   - enabled: 1
-    path: Assets/Levels/Scenes/Settings.unity
-    guid: 16fc9004880b141d3b8a33edd6519384
-  - enabled: 1
     path: Assets/Levels/Scenes/FoodGuide.unity
     guid: f0d44f54aae33164289bb894da04253c
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Levels/Scenes/Settings.unity
+    guid: 16fc9004880b141d3b8a33edd6519384
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 66c6fe11ecc424fdba7d8d59ca5c71c0, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: b5807f057531a453bb6b970a82cfaef9, type: 2}

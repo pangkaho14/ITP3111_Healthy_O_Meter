@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: GeneralQuestion8
   m_EditorClassIdentifier: 
   englishQuestionText: Which vitamin helps with calcium absorption?
-  chineseQuestionText: "\u5168\u9EA6\u98DF\u54C1\uFF08\u4F8B\u5982\u5168\u9EA6\u9762\u5305\uFF0C\u7CD9\u7C73\uFF09\u542B\u6709\u6BD4\u7CBE\u81F4\u8C37\u7269\uFF08\u4F8B\u5982\u767D\u9762\u5305\uFF0C\u767D\u7C73\uFF09\u66F4\u591A\u7684\u8425\u517B.
-    \u771F\u7684/ \u9519\u7684"
-  isEnglishLocalization: 1
+  chineseQuestionText: "\u54EA\u79CD\u7EF4\u751F\u7D20\u6709\u52A9\u4E8E\u9499\u5438\u6536\uFF1F"
+  isEnglishLocalization: 0
   englishAnswerChoices:
   - Vitamin A
   - Vitamin C
   - Vitamin D
-  chineseAnswerChoices: []
+  chineseAnswerChoices:
+  - "\u7EF4\u751F\u7D20A\u3002"
+  - "\u7EF4\u751F\u7D20C"
+  - "\u7EF4\u751F\u7D20D"
   correctAnswerIndex: 2

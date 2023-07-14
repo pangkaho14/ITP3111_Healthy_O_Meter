@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: GeneralQuestion4
   m_EditorClassIdentifier: 
   englishQuestionText: Which oil is high in monounsaturated fat?
-  chineseQuestionText: "\u5168\u9EA6\u98DF\u54C1\uFF08\u4F8B\u5982\u5168\u9EA6\u9762\u5305\uFF0C\u7CD9\u7C73\uFF09\u542B\u6709\u6BD4\u7CBE\u81F4\u8C37\u7269\uFF08\u4F8B\u5982\u767D\u9762\u5305\uFF0C\u767D\u7C73\uFF09\u66F4\u591A\u7684\u8425\u517B.
-    \u771F\u7684/ \u9519\u7684"
-  isEnglishLocalization: 1
+  chineseQuestionText: "\u54EA\u79CD\u6CB9\u4E2D\u7684\u5355\u4E0D\u9971\u548C\u8102\u80AA\uFF1F"
+  isEnglishLocalization: 0
   englishAnswerChoices:
   - Butter
   - Palm oil
   - Canola oil
-  chineseAnswerChoices: []
+  chineseAnswerChoices:
+  - "\u9EC4\u6CB9"
+  - "\u68D5\u6988\u6CB9"
+  - "\u83DC\u7C7D\u6CB9"
   correctAnswerIndex: 2

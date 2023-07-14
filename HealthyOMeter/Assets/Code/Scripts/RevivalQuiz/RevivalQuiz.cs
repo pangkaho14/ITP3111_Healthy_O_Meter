@@ -45,6 +45,8 @@ public class RevivalQuiz : MonoBehaviour
     [SerializeField] private PlayerHealthPoints playerHealthPoints;
     [SerializeField] private UnityEvent quizOverEvent;
     
+    private int LocaleKey = 0;
+    
     private void Start()
     {
         // Debug.Log("RevivalQuiz.Start()");
@@ -60,6 +62,9 @@ public class RevivalQuiz : MonoBehaviour
         submitAnswerButton.gameObject.SetActive(true);
         nextQuestionButton.gameObject.SetActive(false);
         resumeGameButton.gameObject.SetActive(false);
+        
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
     }
 
     private void Update()
@@ -150,9 +155,9 @@ public class RevivalQuiz : MonoBehaviour
             return;
         }
         
-        // TODO: To replace with XY's method of checking player option of English or Chinese
-        question.SetEnglishLocalization(true);
-        
+        // 0 means it is english, else it is chinese
+        question.SetEnglishLocalization(LocaleKey == 0);
+
         currentQuestionText.text = question.GetQuestionText();
         for (var i = 0; i < question.GetAnswerCount(); i++)
         {

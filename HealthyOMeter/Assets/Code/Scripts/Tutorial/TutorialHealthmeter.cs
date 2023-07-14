@@ -18,9 +18,6 @@ public class TutorialHealthmeter : MonoBehaviour
     public TextMeshProUGUI score;
     public GameObject Background;
 
-    //Healthbar event subscribe
-    public HealthBar healthBar;
-
     private void Start()
     {
         StartCoroutine(HideTextCoroutine());

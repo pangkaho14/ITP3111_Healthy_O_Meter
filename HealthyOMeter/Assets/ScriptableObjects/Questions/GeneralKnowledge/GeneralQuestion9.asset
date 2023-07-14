@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   englishQuestionText: How much calcium should an adult aged 51 years and above consume
     per day?
-  chineseQuestionText: "\u5168\u9EA6\u98DF\u54C1\uFF08\u4F8B\u5982\u5168\u9EA6\u9762\u5305\uFF0C\u7CD9\u7C73\uFF09\u542B\u6709\u6BD4\u7CBE\u81F4\u8C37\u7269\uFF08\u4F8B\u5982\u767D\u9762\u5305\uFF0C\u767D\u7C73\uFF09\u66F4\u591A\u7684\u8425\u517B.
-    \u771F\u7684/ \u9519\u7684"
+  chineseQuestionText: "51\u5C81\u53CA\u4EE5\u4E0A\u7684\u6210\u5E74\u6210\u5E74\u4EBA\u6BCF\u5929\u5E94\u591A\u591A\u5C11\u9499\uFF1F"
   isEnglishLocalization: 1
   englishAnswerChoices:
   - 1,000 mg
   - 800 mg
   - 500 mg
-  chineseAnswerChoices: []
+  chineseAnswerChoices:
+  - "1,000\u6BEB\u514B"
+  - "800\u6BEB\u514B"
+  - "500\u6BEB\u514B"
   correctAnswerIndex: 0

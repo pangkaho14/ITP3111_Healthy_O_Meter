@@ -10,6 +10,7 @@ TagManager:
   - Nutri-B
   - Nutri-C
   - Nutri-D
+  - gamemusic
   layers:
   - Default
   - TransparentFX

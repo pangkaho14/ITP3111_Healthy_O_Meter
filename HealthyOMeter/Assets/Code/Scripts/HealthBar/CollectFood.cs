@@ -32,8 +32,13 @@ public class CollectFood : MonoBehaviour
     // Speed decrease amount when an object with "unhealthy" tag is touched
     [SerializeField] private float speedDecreaseAmount;
 
+    //Declaration of Food Collection SFX
+    [SerializeField] private AudioSource RightItem;
+    [SerializeField] private AudioSource WrongItem;
+    
     // Reference to the SpawnSprite script
     public SpawnSprite spawnSprite; // Assign this reference in the Inspector
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
@@ -50,6 +55,7 @@ public class CollectFood : MonoBehaviour
             {
                 ShowFloatingText(newScore); // Pass the custom text
             }
+            RightItem.Play();
         }
         else if (other.CompareTag("unhealthy"))
         {
@@ -57,6 +63,8 @@ public class CollectFood : MonoBehaviour
             overlayEffect.ShowOverlay();
             playerHp.TakeDamage(damageAmt);
             scoreKeeper.ResetScoreAndCombo();
+            WrongItem.Play();
+            
             // Decrease the spawn speed
             spawnSprite.spawnSpeed -= speedDecreaseAmount;
 
@@ -73,6 +81,7 @@ public class CollectFood : MonoBehaviour
         {
             float scoreAmt = GetScoreFromText(nutriAText);  // Get the score amount from the nutriAText
             scoreKeeper.AddScore(scoreAmt, true);
+            RightItem.Play();
 
             //Update new score with current multiplier
             string newScore = scoreKeeper.GetNewScoreAmt(scoreAmt);
@@ -82,19 +91,21 @@ public class CollectFood : MonoBehaviour
         {
             float scoreAmt = GetScoreFromText(nutriBText);  // Get the score amount from the nutriBText
             scoreKeeper.AddScore(scoreAmt, false);
-            ShowFloatingText(nutriBText);
+            RightItem.Play();
         }
         else if (other.CompareTag("Nutri-C"))
         {
             float scoreAmt = GetScoreFromText(nutriCText);  // Get the score amount from the nutriCText
             scoreKeeper.AddScore(scoreAmt, false);
             ShowFloatingText(nutriCText);
+            WrongItem.Play();
         }
         else if (other.CompareTag("Nutri-D"))
         {
             float scoreAmt = GetScoreFromText(nutriDText);  // Get the score amount from the nutriDText
             scoreKeeper.AddScore(scoreAmt, false);
             ShowFloatingText(nutriDText);
+            WrongItem.Play();
         }
         Destroy(other.gameObject);
     }
@@ -125,5 +136,4 @@ public class CollectFood : MonoBehaviour
             textMesh.fontSize = pointsTextSize; // Set the text size
         }
     }
-    
 }

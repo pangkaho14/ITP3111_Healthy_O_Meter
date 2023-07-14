@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: GeneralQuestion2
   m_EditorClassIdentifier: 
   englishQuestionText: Sea salt is better than table salt.
-  chineseQuestionText: "\u5168\u9EA6\u98DF\u54C1\uFF08\u4F8B\u5982\u5168\u9EA6\u9762\u5305\uFF0C\u7CD9\u7C73\uFF09\u542B\u6709\u6BD4\u7CBE\u81F4\u8C37\u7269\uFF08\u4F8B\u5982\u767D\u9762\u5305\uFF0C\u767D\u7C73\uFF09\u66F4\u591A\u7684\u8425\u517B.
-    \u771F\u7684/ \u9519\u7684"
+  chineseQuestionText: "\u6D77\u76D0\u6BD4\u5976\u6CB9\u597D\u3002"
   isEnglishLocalization: 1
   englishAnswerChoices:
   - True
   - False
-  chineseAnswerChoices: []
+  chineseAnswerChoices:
+  - "\u771F\u7684"
+  - "\u9519\u8BEF\u7684"
   correctAnswerIndex: 1

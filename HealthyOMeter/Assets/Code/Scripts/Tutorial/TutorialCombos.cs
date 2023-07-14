@@ -13,17 +13,14 @@ public class TutorialCombos : MonoBehaviour
     [SerializeField] private int currentCountdown = 30; // Initial countdown 
     private bool comboCounted = false; // Flag to track if combo has been counted
 
-    //Tutorial UI
+    // Tutorial UI
     public TextMeshProUGUI textElement;
     public float delayInSeconds = 5f;
     public GameObject ButtonCanvas;
     public TextMeshProUGUI combo;
     public GameObject Background;
 
-    //Healthbar event subscribe
-    public HealthBar healthBar;
-
-    //ScoreKeeper script to get highest combo
+    // ScoreKeeper script to get highest combo
     public ScoreKeeper scoreKeeper;
 
     private void Start()

@@ -8,6 +8,9 @@ public class Pit : MonoBehaviour
     [SerializeField] private DamageEffect overlayEffect;
     [SerializeField] private ScoreKeeper scoreKeeper;
 
+    //Declaration of Uncollected Food SFX
+    [SerializeField] private AudioSource WrongItem;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
@@ -15,6 +18,7 @@ public class Pit : MonoBehaviour
             playerHealthPoints.TakeDamage(20);
             overlayEffect.ShowOverlay();
             scoreKeeper.ResetScoreAndCombo();
+            WrongItem.Play();
         }
         
         Destroy(other.gameObject);

@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LocaleTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: LocaleTable
+  m_TableCollectionNameGuidString: c45e433d64c5b4acc879985ad320263e
+  m_Entries:
+  - m_Id: 294942400512
+    m_Key: PlayText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 332405923840
+    m_Key: LeaderboardText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369718452224
+    m_Key: TutorialText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 402350137344
+    m_Key: SettingsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 441797566464
+    m_Key: TextSettings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 511666282496
+    m_Key: TextVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546604834816
+    m_Key: TextLanguage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 583774756864
+    m_Key: TextEnglish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614200238080
+    m_Key: TextMandarin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659565830144
+    m_Key: TextExit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 699202002944
+    m_Key: TextCharacterSelection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 704021258240
+    m_Key: TextAuntie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780286287872
+    m_Key: TextUncle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784082132992
+    m_Key: TextHawker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 852029857792
+    m_Key: TextNTUC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 898897010688
+    m_Key: TextNext1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928680763392
+    m_Key: Healthy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 977989001216
+    m_Key: Unhealthy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1012009000960
+    m_Key: Instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043290120192
+    m_Key: Instructions1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1045538267136
+    m_Key: HealthBarText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1047232765952
+    m_Key: Instructions2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1170788573184
+    m_Key: Legend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207702642688
+    m_Key: TextHome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1268834623488
+    m_Key: txt_ldrboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1381724315648
+    m_Key: TextBack1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1413580054528
+    m_Key: TextGameOver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464582791168
+    m_Key: TextMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37693693091840
+    m_Key: ScenarioTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37861914042368
+    m_Key: HawkerCentrePlaceholder2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37970684928000
+    m_Key: SuperMarketPlaceholder3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39375676104704
+    m_Key: FunFactHeader
+    m_Metadata:
+      m_Items: []
+  - m_Id: 876796340854784
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 876798911963136
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 882562980372480
+    m_Key: Header
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6335461018868121624
+  references:
+    version: 2
+    RefIds:
+    - rid: 6335461018868121624
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1689048045894
