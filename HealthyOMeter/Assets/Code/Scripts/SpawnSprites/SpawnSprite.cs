@@ -98,7 +98,7 @@ public class SpawnSprite : MonoBehaviour
         //Getting current health
         float currentHealth = HealthBar.GetCurrentHealth();
         // Check if it's time to spawn a new object
-        if (spawnTimer >= spawnInterval && currentHealth > 0)
+        if (spawnTimer >= spawnInterval)
         {
             // Call the method to spawn a new object
             SpawnObject();

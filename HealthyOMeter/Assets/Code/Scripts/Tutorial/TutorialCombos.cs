@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 public class TutorialCombos : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TutorialCombos : MonoBehaviour
     public GameObject CountDownUI; // Reference to the countdown text UI element
     public TextMeshProUGUI CountDownText;
     [SerializeField] private int currentCountdown = 30; // Initial countdown 
+    private bool comboCounted = false; // Flag to track if combo has been counted
 
     //Tutorial UI
     public TextMeshProUGUI textElement;
@@ -20,6 +22,9 @@ public class TutorialCombos : MonoBehaviour
 
     //Healthbar event subscribe
     public HealthBar healthBar;
+
+    //ScoreKeeper script to get highest combo
+    public ScoreKeeper scoreKeeper;
 
     private void Start()
     {
@@ -48,19 +53,11 @@ public class TutorialCombos : MonoBehaviour
         }
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
 
-        // Extract numerals from the combo string
-        string comboString = combo.text;
-        string comboCount = "";
+        //Get highest combo count
+        int comboCount = scoreKeeper.GetHighestCombo();
 
-        for (int i = 0; i < comboString.Length; i++)
-        {
-            if (char.IsDigit(comboString[i]))
-            {
-                comboCount += comboString[i];
-            }
-        }
         //Activate text
-        textElement.text = "Wow, the highest combo you got is " + comboCount + "!\n\n" +
+        textElement.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
                          "Try to beat that later!\n\n" +
                          "Remember it is possible to die now!";
         textElement.gameObject.SetActive(true);
@@ -79,12 +76,36 @@ public class TutorialCombos : MonoBehaviour
     public void HandleHealthDepleted()
     {
         //Pop up instructions to avoid unhealthy food & do not miss healthy food
+        PopUpMessage();
 
+        //Unsubscribe from the OnHealthDepleted event
+        healthBar.OnHealthDepleted.RemoveListener(HandleHealthDepleted);
+    }
+
+    private void Update()
+    {
+        if (!string.IsNullOrEmpty(combo.text))
+        {
+                comboCounted = true;
+        }
+        // Check if combo.text is null
+        if (string.IsNullOrEmpty(combo.text) && comboCounted)
+        {
+            ComboBroken();
+            comboCounted = false;
+        }
+    }
+
+    private void ComboBroken()
+    {
+        //Pop up instructions to avoid unhealthy food & do not miss healthy food
+        PopUpMessage();
+    }
+
+    private void PopUpMessage()
+    {
         textElement.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
         textElement.gameObject.SetActive(true);
         StartCoroutine(HideTextCoroutine());
-
-        // Unsubscribe from the OnHealthDepleted event
-        healthBar.OnHealthDepleted.RemoveListener(HandleHealthDepleted);
     }
 }
