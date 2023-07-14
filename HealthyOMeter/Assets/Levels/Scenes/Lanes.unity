@@ -887,6 +887,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1561956180665765163, guid: 9805fe5d81a4fc04a834da1659da774b, type: 3}
+      propertyPath: spawnSprite
+      value: 
+      objectReference: {fileID: 444182081}
     - target: {fileID: 2160434755655688934, guid: 9805fe5d81a4fc04a834da1659da774b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

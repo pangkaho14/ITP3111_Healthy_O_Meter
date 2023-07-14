@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -28,7 +29,7 @@ public class SpawnSprite : MonoBehaviour
     public GameObject[] ntucUnhealthyFoodPrefabs;
     public GameObject[] hawkerHealthyFoodPrefabs;
     public GameObject[] hawkerUnhealthyFoodPrefabs;
-
+    private List<GameObject> spawnedFoodObjects = new List<GameObject>();
     public GameObject[] nutrigrades; // Array for the NutriGrade
     public float constantNutrigradeSpeed;
     // Time interval between spawns (initially 1 second)
@@ -121,7 +122,7 @@ public class SpawnSprite : MonoBehaviour
     }
 
     // Method to spawn a new object
-    private void SpawnObject()
+    public void SpawnObject()
     {
         // Array of lane positions (-1, 0, 1)
         int[] lanePositions = new int[] { -1, 0, 1 };
@@ -167,10 +168,11 @@ public class SpawnSprite : MonoBehaviour
 
         // Instantiate the selected object at the calculated spawn position
         GameObject newObject = Instantiate(selectedPrefabs[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
-
+        // Add the spawned object to the list
+        spawnedFoodObjects.Add(newObject);
         // Add a Rigidbody2D component to the object if it doesn't have one
-        if (!newObject.GetComponent<Rigidbody2D>())
-            newObject.AddComponent<Rigidbody2D>();
+        //    if (!newObject.GetComponent<Rigidbody2D>())
+        //      newObject.AddComponent<Rigidbody2D>();
 
         // Set the scale of the object
         float height = UnityEngine.Random.Range(minHeight, maxHeight);
@@ -221,5 +223,14 @@ public class SpawnSprite : MonoBehaviour
         {
             spawnInterval = minSpawnInterval;
         }
+    }
+
+    public void DestroyCurrentFoodSpawns()
+    {
+        foreach (GameObject foodObject in spawnedFoodObjects)
+        {
+            Destroy(foodObject);
+        }
+        spawnedFoodObjects.Clear();
     }
 }

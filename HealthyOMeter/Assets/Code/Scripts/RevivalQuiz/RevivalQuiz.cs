@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,7 +16,7 @@ public class RevivalQuiz : MonoBehaviour
     [SerializeField] private List<Question> questions = new();
     private Question currentQuestion;
     [SerializeField] private TextMeshProUGUI currentQuestionText;
-    
+
     // -1 means no answer has been chosen yet
     [SerializeField] private int playerAnswerChoiceIndex = -1;
     [SerializeField] private int currentQuestionCount = 0;
@@ -46,7 +47,11 @@ public class RevivalQuiz : MonoBehaviour
     [SerializeField] private UnityEvent quizOverEvent;
     
     private int LocaleKey = 0;
-    
+
+
+    public SpawnSprite spawnSprite; // Reference to the SpawnSprite script( zw added)
+
+
     private void Start()
     {
         // Debug.Log("RevivalQuiz.Start()");
@@ -102,6 +107,12 @@ public class RevivalQuiz : MonoBehaviour
 
     public void ResumeGame()
     {
+
+        // Call DestroyCurrentFoodSpawns() from SpawnSprite component(zwadded)
+        spawnSprite.DestroyCurrentFoodSpawns();
+
+
+
         // manager to respond to quiz completed event and teardown UI
         quizOverEvent.Invoke();
 
