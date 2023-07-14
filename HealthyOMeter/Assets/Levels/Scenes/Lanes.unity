@@ -2702,6 +2702,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8934491828086475526, guid: 6bd59e36cb4cbef43ad5b8891e0cc913, type: 3}
+      propertyPath: comboGameOverText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934491828086475526, guid: 6bd59e36cb4cbef43ad5b8891e0cc913, type: 3}
       propertyPath: scoreTextLeaderBoard
       value: 
       objectReference: {fileID: 1178022466}
