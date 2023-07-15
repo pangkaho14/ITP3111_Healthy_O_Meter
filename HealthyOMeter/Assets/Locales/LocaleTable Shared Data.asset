@@ -155,6 +155,38 @@ MonoBehaviour:
     m_Key: Header
     m_Metadata:
       m_Items: []
+  - m_Id: 1517441342496768
+    m_Key: NutrigradeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517546921517056
+    m_Key: NutriAText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517618623143936
+    m_Key: NutriBText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517666517901312
+    m_Key: NutriCText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517721769467904
+    m_Key: NutriDText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517773921443840
+    m_Key: NutriGradeButtonText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521081167896576
+    m_Key: TutorialInstructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521755704254464
+    m_Key: ComboTutorialText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

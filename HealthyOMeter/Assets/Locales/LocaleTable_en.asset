@@ -103,8 +103,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1047232765952
-    m_Localized: "Lets try the game out! \nMove left and right and collect only healthy
-      foods!"
+    m_Localized: '"Collect food for 30s!
+
+      See how much score you can get!"'
     m_Metadata:
       m_Items: []
   - m_Id: 1170788573184
@@ -159,6 +160,48 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 882562980372480
     m_Localized: PAUSED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517441342496768
+    m_Localized: Nutri-Grade labels provide information about the sugar content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517546921517056
+    m_Localized: 'There is 0% sugar!
+
+      +100 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517618623143936
+    m_Localized: 'There is 4% sugar!
+
+      +75 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517666517901312
+    m_Localized: 'There is 8% sugar!
+
+      +50 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517721769467904
+    m_Localized: 'There is 12% sugar!
+
+      +25 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517773921443840
+    m_Localized: Nutri-Grade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521081167896576
+    m_Localized: 'Collect food for 30s!
+
+      Try to get the highest combo!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521755704254464
+    m_Localized: PRESS TO LEARN ABOUT COMBOS
     m_Metadata:
       m_Items: []
   references:

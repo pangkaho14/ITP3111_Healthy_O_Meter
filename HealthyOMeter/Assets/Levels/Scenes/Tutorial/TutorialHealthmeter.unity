@@ -1601,7 +1601,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c45e433d64c5b4acc879985ad320263e
     m_TableEntryReference:
-      m_KeyId: 1207702642688
+      m_KeyId: 1521755704254464
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2684,4 +2684,3 @@ MonoBehaviour:
   ButtonCanvas: {fileID: 1658855849}
   score: {fileID: 1321908608}
   Background: {fileID: 570162438}
-  healthBar: {fileID: 0}
