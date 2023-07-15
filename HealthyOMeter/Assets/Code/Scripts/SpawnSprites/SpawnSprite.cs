@@ -77,6 +77,8 @@ public class SpawnSprite : MonoBehaviour
     // PlayerHealthPoints scriptable object
     public PlayerHealthPoints playerHP;
 
+   
+
     // Update is called once per frame
     private void Update()
     {
@@ -88,6 +90,7 @@ public class SpawnSprite : MonoBehaviour
 
         // Getting current health
         float currentHealth = playerHP.GetCurrentHealth();
+
         // Check if it's time to spawn a new object
         if (spawnTimer >= spawnInterval)
         {
@@ -98,20 +101,46 @@ public class SpawnSprite : MonoBehaviour
             spawnTimer = 0f;
         }
 
-        // Check if it's time to increase spawn speed and decrease spawn interval
+        // Check if it's time to increase spawn speed
         if (elapsedSpawnSpeedIncreaseInterval >= spawnSpeedIncreaseInterval)
         {
             // Call the method to increase spawn speed
             IncreaseSpawnSpeed();
 
-            // Call the method to decrease spawn interval
-            DecreaseSpawnInterval();
-
             // Reset the elapsed time for spawn speed increase
             elapsedSpawnSpeedIncreaseInterval = 0f;
         }
+
+        // Check if the spawned objects are inside the camera's view and adjust their speed accordingly
+        foreach (GameObject foodObject in spawnedFoodObjects)
+        {
+            if (foodObject != null)
+            {
+                // Check if the object is visible to the camera
+                Vector3 viewportPosition = Camera.main.WorldToViewportPoint(foodObject.transform.position);
+                bool isVisible = (viewportPosition.x >= 0f && viewportPosition.x <= 1f && viewportPosition.y >= 0f && viewportPosition.y <= 1f);
+
+                // Adjust the speed based on visibility
+                Rigidbody2D rb2D = foodObject.GetComponent<Rigidbody2D>();
+                if (rb2D != null)
+                {
+                    if (isVisible)
+                    {
+                        // If the object is visible, set its velocity based on the current spawn speed
+                        rb2D.velocity = Vector2.down * spawnSpeed;
+                    }
+                    else
+                    {
+                        // If the object is not visible, keep its velocity constant (do not change its speed)
+                        rb2D.velocity = rb2D.velocity.normalized * spawnSpeed;
+                    }
+                }
+            }
+        }
     }
-    
+
+
+
     // Method to update the spawn speed-related fields
     // Method to update spawn speed-related fields
     public void UpdateSpawnSpeedFields(float interval, float increaseAmount, float increaseInterval)
@@ -126,74 +155,196 @@ public class SpawnSprite : MonoBehaviour
     {
         // Array of lane positions (-1, 0, 1)
         int[] lanePositions = new int[] { -1, 0, 1 };
-
-        // Get the lane position at the current index
-        int lanePosition = lanePositions[currentLaneIndex];
-
-        // Calculate the spawn position based on the lane position and lane offset
-        float spawnX = transform.position.x + lanePosition * laneOffset;
-        float spawnY = transform.position.y;
-
-        // Increment the current lane index
-        currentLaneIndex = (currentLaneIndex + 1) % lanePositions.Length;
-
-        // Randomly choose an object from the prefab array based on the selected scene
-        GameObject[] selectedPrefabs = null;
+        // Adjust the initial height based on the current spawn speed
+        float initialHeight = (maxHeight - minHeight) * (spawnSpeed / maxSpawnSpeed) + minHeight;
+        // Get the number of objects to spawn (1, 2, or 3)
+        int objectsToSpawn = UnityEngine.Random.Range(1, 4);
+        // Declare and initialize the selectedPrefabs array at the beginning of the function
+        GameObject[] selectedPrefabs = new GameObject[0];
+        // Check the selectedScene to initialize the selectedPrefabs array
         int selectedScene = PlayerPrefs.GetInt("selectedScenarioName");
-
         if (selectedScene == 0)
         {
             // NTUC scene
             GameObject[] unhealthyFoodPrefabs = ntucUnhealthyFoodPrefabs;
             GameObject[] healthyFoodPrefabs = ntucHealthyFoodPrefabs;
-            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length + nutrigrades.Length];
+            GameObject[] nutrigradesPrefabs = nutrigrades;
+
+            // Combine arrays for NTUC scene
+            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length + nutrigradesPrefabs.Length];
             unhealthyFoodPrefabs.CopyTo(selectedPrefabs, 0);
             healthyFoodPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length);
-            nutrigrades.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length); // Add nutrigrades to the selected prefabs
+            nutrigradesPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length);
         }
         else if (selectedScene == 1)
         {
             // Hawker scene
-            // Hawker scene: Concatenate both healthy and unhealthy arrays
             GameObject[] unhealthyFoodPrefabs = hawkerUnhealthyFoodPrefabs;
             GameObject[] healthyFoodPrefabs = hawkerHealthyFoodPrefabs;
-            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length + nutrigrades.Length];
+            GameObject[] nutrigradesPrefabs = nutrigrades;
+
+            // Combine arrays for Hawker scene
+            selectedPrefabs = new GameObject[unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length + nutrigradesPrefabs.Length];
             unhealthyFoodPrefabs.CopyTo(selectedPrefabs, 0);
             healthyFoodPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length);
-            nutrigrades.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length);
+            nutrigradesPrefabs.CopyTo(selectedPrefabs, unhealthyFoodPrefabs.Length + healthyFoodPrefabs.Length);
         }
-
-        // Randomly choose an object from the selected prefab array
-        int randomIndex = UnityEngine.Random.Range(0, selectedPrefabs.Length);
-
-        // Instantiate the selected object at the calculated spawn position
-        GameObject newObject = Instantiate(selectedPrefabs[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
-        // Add the spawned object to the list
-        spawnedFoodObjects.Add(newObject);
-        // Add a Rigidbody2D component to the object if it doesn't have one
-        //    if (!newObject.GetComponent<Rigidbody2D>())
-        //      newObject.AddComponent<Rigidbody2D>();
-
-        // Set the scale of the object
-        float height = UnityEngine.Random.Range(minHeight, maxHeight);
-        newObject.transform.localScale = new Vector3(laneWidth, height, 1f);
-
-        // Check if the spawned object is a nutrigrade prefab
-        if (Array.IndexOf(nutrigrades, selectedPrefabs[randomIndex]) != -1)
+        // Check if it's 2 objects and ensure they are in adjacent lanes (1 & 2 or 2 & 3)
+        if (objectsToSpawn == 2)
         {
-            // Apply different behavior to nutrigrades
-            // For example, you can set their velocity to move upwards instead of downwards
-            newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * constantNutrigradeSpeed;
+            // Spawn two objects in adjacent lanes (1 & 2 or 2 & 3)
+            int randomIndex = UnityEngine.Random.Range(0, 2); // 0 or 1
+            int lanePosition1 = lanePositions[(currentLaneIndex + randomIndex) % lanePositions.Length];
+            int lanePosition2 = lanePositions[(currentLaneIndex + randomIndex + 1) % lanePositions.Length];
+
+            // Calculate the spawn positions for the two objects
+            float spawnX1 = transform.position.x + lanePosition1 * laneOffset;
+            float spawnX2 = transform.position.x + lanePosition2 * laneOffset;
+            float spawnY = transform.position.y + initialHeight;
+
+            // Select one healthy and one unhealthy food prefab
+            GameObject healthyPrefab = null;
+            GameObject unhealthyPrefab = null;
+
+
+            if (selectedScene == 0)
+            {
+                // NTUC scene
+
+                healthyPrefab = ntucHealthyFoodPrefabs[UnityEngine.Random.Range(0, ntucHealthyFoodPrefabs.Length)];
+                unhealthyPrefab = ntucUnhealthyFoodPrefabs[UnityEngine.Random.Range(0, ntucUnhealthyFoodPrefabs.Length)];
+
+            }
+            else if (selectedScene == 1)
+            {
+                // Hawker scene
+
+                healthyPrefab = hawkerHealthyFoodPrefabs[UnityEngine.Random.Range(0, hawkerHealthyFoodPrefabs.Length)];
+                unhealthyPrefab = hawkerUnhealthyFoodPrefabs[UnityEngine.Random.Range(0, hawkerUnhealthyFoodPrefabs.Length)];
+            }
+
+            // Instantiate the selected healthy and unhealthy objects at the calculated spawn positions
+            GameObject healthyObject = Instantiate(healthyPrefab, new Vector3(spawnX1, spawnY, 0f), Quaternion.identity);
+            GameObject unhealthyObject = Instantiate(unhealthyPrefab, new Vector3(spawnX2, spawnY, 0f), Quaternion.identity);
+
+            // Set the scale of the objects
+            float height1 = UnityEngine.Random.Range(minHeight, maxHeight);
+            float height2 = UnityEngine.Random.Range(minHeight, maxHeight);
+            healthyObject.transform.localScale = new Vector3(laneWidth, height1, 1f);
+            unhealthyObject.transform.localScale = new Vector3(laneWidth, height2, 1f);
+
+            // Set the velocity of non-nutrigrade objects to move straight downwards
+            healthyObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+            unhealthyObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+
+            // Add the spawned objects to the list
+            spawnedFoodObjects.Add(healthyObject);
+            spawnedFoodObjects.Add(unhealthyObject);
+
+            // Increment the current lane index
+            currentLaneIndex = (currentLaneIndex + 1) % lanePositions.Length;
         }
-    
+        else if (objectsToSpawn == 3)
+        {
+            // Spawn three objects
+            int lanePosition1 = lanePositions[currentLaneIndex];
+            int lanePosition2 = lanePositions[(currentLaneIndex + 1) % lanePositions.Length];
+            int lanePosition3 = lanePositions[(currentLaneIndex + 2) % lanePositions.Length];
+
+            // Calculate the spawn positions for the three objects
+            float spawnX1 = transform.position.x + lanePosition1 * laneOffset;
+            float spawnX2 = transform.position.x + lanePosition2 * laneOffset;
+            float spawnX3 = transform.position.x + lanePosition3 * laneOffset;
+            float spawnY = transform.position.y + initialHeight;
+            // Select two unhealthy food prefabs and one healthy food prefab
+            GameObject healthyPrefab = null;
+            GameObject[] unhealthyPrefabs = null;
+
+
+            if (selectedScene == 0)
+            {
+                // NTUC scene
+                healthyPrefab = ntucHealthyFoodPrefabs[UnityEngine.Random.Range(0, ntucHealthyFoodPrefabs.Length)];
+                unhealthyPrefabs = new GameObject[2];
+                unhealthyPrefabs[0] = ntucUnhealthyFoodPrefabs[UnityEngine.Random.Range(0, ntucUnhealthyFoodPrefabs.Length)];
+                unhealthyPrefabs[1] = ntucUnhealthyFoodPrefabs[UnityEngine.Random.Range(0, ntucUnhealthyFoodPrefabs.Length)];
+            }
+            else if (selectedScene == 1)
+            {
+                // Hawker scene
+                healthyPrefab = hawkerHealthyFoodPrefabs[UnityEngine.Random.Range(0, hawkerHealthyFoodPrefabs.Length)];
+                unhealthyPrefabs = new GameObject[2];
+                unhealthyPrefabs[0] = hawkerUnhealthyFoodPrefabs[UnityEngine.Random.Range(0, hawkerUnhealthyFoodPrefabs.Length)];
+                unhealthyPrefabs[1] = hawkerUnhealthyFoodPrefabs[UnityEngine.Random.Range(0, hawkerUnhealthyFoodPrefabs.Length)];
+            }
+
+            // Instantiate the selected healthy and unhealthy objects at the calculated spawn positions
+            GameObject healthyObject = Instantiate(healthyPrefab, new Vector3(spawnX1, spawnY, 0f), Quaternion.identity);
+            GameObject unhealthyObject1 = Instantiate(unhealthyPrefabs[0], new Vector3(spawnX2, spawnY, 0f), Quaternion.identity);
+            GameObject unhealthyObject2 = Instantiate(unhealthyPrefabs[1], new Vector3(spawnX3, spawnY, 0f), Quaternion.identity);
+
+            // Set the scale of the objects
+            float height1 = UnityEngine.Random.Range(minHeight, maxHeight);
+            float height2 = UnityEngine.Random.Range(minHeight, maxHeight);
+            float height3 = UnityEngine.Random.Range(minHeight, maxHeight);
+            healthyObject.transform.localScale = new Vector3(laneWidth, height1, 1f);
+            unhealthyObject1.transform.localScale = new Vector3(laneWidth, height2, 1f);
+            unhealthyObject2.transform.localScale = new Vector3(laneWidth, height3, 1f);
+
+            // Set the velocity of non-nutrigrade objects to move straight downwards
+            healthyObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+            unhealthyObject1.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+            unhealthyObject2.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+
+            // Add the spawned objects to the list
+            spawnedFoodObjects.Add(healthyObject);
+            spawnedFoodObjects.Add(unhealthyObject1);
+            spawnedFoodObjects.Add(unhealthyObject2);
+
+            // Increment the current lane index
+            currentLaneIndex = (currentLaneIndex + 1) % lanePositions.Length;
+        }
         else
         {
-            // Set the velocity of non-nutrigrade objects to move straight downwards
-            newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+            // Spawn a single object (same as the original code)
+            // Randomly choose an object from the selected prefab array
+            int randomIndex = UnityEngine.Random.Range(0, selectedPrefabs.Length);
+
+            // Calculate the spawn position based on the lane position and lane offset
+            float spawnX = transform.position.x + lanePositions[currentLaneIndex] * laneOffset;
+            float spawnY = transform.position.y;
+
+            // Instantiate the selected object at the calculated spawn position
+            GameObject newObject = Instantiate(selectedPrefabs[randomIndex], new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+
+            // Add the spawned object to the list
+            spawnedFoodObjects.Add(newObject);
+
+            // Set the scale of the object
+            float height = UnityEngine.Random.Range(minHeight, maxHeight);
+            newObject.transform.localScale = new Vector3(laneWidth, height, 1f);
+
+            // Check if the spawned object is a nutrigrade prefab
+            if (Array.IndexOf(nutrigrades, selectedPrefabs[randomIndex]) != -1)
+            {
+                // Apply different behavior to nutrigrades
+                // For example, you can set their velocity to move upwards instead of downwards
+                newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * constantNutrigradeSpeed;
+            }
+            else
+            {
+                // Set the velocity of non-nutrigrade objects to move straight downwards
+                newObject.GetComponent<Rigidbody2D>().velocity = Vector2.down * spawnSpeed;
+            }
+
+            // Increment the current lane index
+            currentLaneIndex = (currentLaneIndex + 1) % lanePositions.Length;
         }
+
+
+
+
     }
-
-
     // Method to increase the spawn speed
     private void IncreaseSpawnSpeed()
     {
@@ -206,7 +357,7 @@ public class SpawnSprite : MonoBehaviour
             spawnSpeed = maxSpawnSpeed;
         }
     }
-    
+
     public void IncreaseSpawnInterval()
     {
         spawnInterval += 0.2f;

@@ -2978,11 +2978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.91
+      value: 5.72
       objectReference: {fileID: 0}
     - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3019,6 +3019,18 @@ PrefabInstance:
     - target: {fileID: 3567364235629594431, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: m_Name
       value: FoodSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: maxSpawnSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnInterval
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: middleLaneObject

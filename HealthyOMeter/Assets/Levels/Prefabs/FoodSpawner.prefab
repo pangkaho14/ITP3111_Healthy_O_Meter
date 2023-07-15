@@ -93,7 +93,7 @@ MonoBehaviour:
   - {fileID: 7517884460641653272, guid: 8403988dfb2d073448c1cbc7e1ad1768, type: 3}
   - {fileID: 4083731795281474842, guid: 7b6ddc68a84579d4ba89e304aebac238, type: 3}
   constantNutrigradeSpeed: 1
-  spawnInterval: 1
+  spawnInterval: 2
   spawnSpeed: 1
   laneOffset: 2
   laneWidth: 0.2
@@ -104,7 +104,7 @@ MonoBehaviour:
   spawnSpeedIncreaseInterval: 11
   spawnSpeedIncreaseAmount: 1
   minSpawnInterval: 0.1
-  spawnIntervalDecreaseAmount: 0.1
+  spawnIntervalDecreaseAmount: 0.17
   playerHP: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
 --- !u!114 &1297084294555911627
 MonoBehaviour:
