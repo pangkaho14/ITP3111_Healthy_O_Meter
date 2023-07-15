@@ -22,12 +22,15 @@ public class TutorialCombos : MonoBehaviour
 
     // ScoreKeeper script to get highest combo
     public ScoreKeeper scoreKeeper;
+    private int LocaleKey = 0;
 
     private void Start()
     {
         StartCoroutine(HideTextCoroutine());
         // Start the countdown and pause the game
         StartCoroutine(CountdownCoroutine());
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
     }
 
     private IEnumerator HideTextCoroutine()
@@ -50,10 +53,20 @@ public class TutorialCombos : MonoBehaviour
         //Get highest combo count
         int comboCount = scoreKeeper.GetHighestCombo();
 
-        //Activate text
-        textElement.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
+        if (LocaleKey == 0)
+        {
+            //Activate text
+            textElement.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
                          "Try to beat that later!\n\n" +
                          "Remember it is possible to die now!";
+        }
+        else
+        {
+            //Activate text
+            textElement.text = "哇，你得到的最高组合是 " + comboCount.ToString() + "!\n\n" +
+                         "稍后尝试击败它!\n\n" +
+                         "请记住，现在有可能死了!";
+        }
         textElement.gameObject.SetActive(true);
         Background.SetActive(true);
 
@@ -95,7 +108,14 @@ public class TutorialCombos : MonoBehaviour
 
     private void PopUpMessage()
     {
-        textElement.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
+        if (LocaleKey == 0)
+        {
+            textElement.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
+        }
+        else
+        {
+            textElement.text = "避免食物不健康!\n\n" + "不要错过健康食品!";
+        }
         textElement.gameObject.SetActive(true);
         StartCoroutine(HideTextCoroutine());
     }

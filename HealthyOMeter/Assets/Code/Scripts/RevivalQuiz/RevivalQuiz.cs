@@ -44,6 +44,8 @@ public class RevivalQuiz : MonoBehaviour
     
     [SerializeField] private PlayerHealthPoints playerHealthPoints;
     [SerializeField] private UnityEvent quizOverEvent;
+
+    private string quizEndText;
     
     private int LocaleKey = 0;
     
@@ -127,15 +129,31 @@ public class RevivalQuiz : MonoBehaviour
 
     private void DisplayPlayerScore()
     {
-        string quizEndText = "You have completed the quiz!";
-        if (numberOfCorrectAnswers == maximumQuestions)
+        if (LocaleKey == 0)
         {
-            quizEndText += "\nYou have answered all questions correctly! Congratulations!";
+            string quizEndText = "You have completed the quiz!";
+            if (numberOfCorrectAnswers == maximumQuestions)
+            {
+                quizEndText += "\nYou have answered all questions correctly! Congratulations!";
+            }
+            else
+            {
+                quizEndText += $"\nYou have {numberOfCorrectAnswers} out of {maximumQuestions} questions correctly! Better luck next time!";
+            }
         }
         else
         {
-            quizEndText += $"\nYou have {numberOfCorrectAnswers} out of {maximumQuestions} questions correctly! Better luck next time!";
+            string quizEndText = "您已经完成了测验!";
+            if (numberOfCorrectAnswers == maximumQuestions)
+            {
+                quizEndText += "\n您已经正确回答了所有问题!恭喜!";
+            }
+            else
+            {
+                quizEndText += $"\n您有{maximumQuestions}个问题中有{numberOfCorrectAnswers}个问题！下次好运!";
+            }
         }
+        
         currentQuestionText.text = quizEndText;
     }
     

@@ -204,6 +204,40 @@ MonoBehaviour:
     m_Localized: PRESS TO LEARN ABOUT COMBOS
     m_Metadata:
       m_Items: []
+  - m_Id: 1622159779684352
+    m_Localized: SUBMIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622237017792512
+    m_Localized: GO NEXT QUESTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622239169470464
+    m_Localized: PRESS TO RESUME GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625126465429504
+    m_Localized: You have X attempts left for the revival quiz. There will be 3 questions.
+      For every correct answer, you heal 10 hp and can continue playing the game
+      for a higher score!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625172908957696
+    m_Localized: QUIT TO MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625210020159488
+    m_Localized: CONTINUE TO QUIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1627594200965120
+    m_Localized: Enter Player Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1628087237206016
+    m_Localized: Enter text...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
