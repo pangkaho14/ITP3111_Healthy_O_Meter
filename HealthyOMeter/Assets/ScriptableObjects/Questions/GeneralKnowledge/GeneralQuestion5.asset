@@ -15,11 +15,11 @@ MonoBehaviour:
   englishQuestionText: Oily fish such tuna, salmon, mackerel are good sources of
     Omega 3.
   chineseQuestionText: "\u6CB9\u6027\u9C7C\u7C7B\u8FD9\u6837\u7684\u91D1\u67AA\u9C7C\uFF0C\u9C91\u9C7C\uFF0C\u9CAD\u9C7C\u662F\u6B27\u7C73\u8304\u7684\u826F\u597D\u6765\u6E903"
-  isEnglishLocalization: 1
+  isEnglishLocalization: 0
   englishAnswerChoices:
   - True
   - False
   chineseAnswerChoices:
   - "\u771F\u7684"
-  - 
+  - "\u9519\u8BEF\u7684"
   correctAnswerIndex: 0

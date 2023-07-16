@@ -53,7 +53,7 @@ public class RevivalQuizManager : MonoBehaviour
 
     public void triggerGameOverEvent()
     {
-        Debug.Log("triggerGameOverEvent()");
+        // Debug.Log("triggerGameOverEvent()");
         UITearDown();
         gameOverEvent.Invoke();
     }

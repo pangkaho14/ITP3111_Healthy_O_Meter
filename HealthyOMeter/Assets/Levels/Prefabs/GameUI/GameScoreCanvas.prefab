@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5033236924966516244}
   - component: {fileID: 3615437885406077934}
   - component: {fileID: 8934491828086475526}
+  - component: {fileID: 7226864430133534536}
   m_Layer: 5
   m_Name: GameScoreCanvas
   m_TagString: Untagged
@@ -34,7 +35,7 @@ RectTransform:
   m_Children:
   - {fileID: 5567046258203446278}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -116,11 +117,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78a0ff069c8ae2409d32e4946a5d7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScore: 0
   scoreTextGame: {fileID: 6431264758717748331}
   scoreTextLeaderBoard: {fileID: 0}
   comboText: {fileID: 0}
   comboGameOverText: {fileID: 0}
   ComboIncrements: 10
+--- !u!114 &7226864430133534536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260055865279087000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b396a666cc58c42bc301779905c7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e0110cfa42a768c43ae4c3ea747cfc4d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8934491828086475526}
+        m_TargetAssemblyTypeName: ScoreKeeper, Assembly-CSharp
+        m_MethodName: UpdateScoreText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6570505004617959141
 GameObject:
   m_ObjectHideFlags: 0

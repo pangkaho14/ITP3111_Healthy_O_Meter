@@ -103,9 +103,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1047232765952
-    m_Localized: 'Collect food for 30s!
+    m_Localized: '"Collect food for 30s!
 
-      See how much score you can get!'
+      See how much score you can get!"'
     m_Metadata:
       m_Items: []
   - m_Id: 1170788573184
@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1207702642688
-    m_Localized: PRESS TO LEARN ABOUT COMBOS
+    m_Localized: Home
     m_Metadata:
       m_Items: []
   - m_Id: 1268834623488
@@ -160,6 +160,82 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 882562980372480
     m_Localized: PAUSED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517441342496768
+    m_Localized: Nutri-Grade labels provide information about the sugar content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517546921517056
+    m_Localized: 'There is 0% sugar!
+
+      +100 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517618623143936
+    m_Localized: 'There is 4% sugar!
+
+      +75 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517666517901312
+    m_Localized: 'There is 8% sugar!
+
+      +50 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517721769467904
+    m_Localized: 'There is 12% sugar!
+
+      +25 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517773921443840
+    m_Localized: Nutri-Grade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521081167896576
+    m_Localized: 'Collect food for 30s!
+
+      Try to get the highest combo!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521755704254464
+    m_Localized: PRESS TO LEARN ABOUT COMBOS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622159779684352
+    m_Localized: SUBMIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622237017792512
+    m_Localized: GO NEXT QUESTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622239169470464
+    m_Localized: PRESS TO RESUME GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625126465429504
+    m_Localized: You have X attempts left for the revival quiz. There will be 3 questions.
+      For every correct answer, you heal 10 hp and can continue playing the game
+      for a higher score!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625172908957696
+    m_Localized: QUIT TO MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625210020159488
+    m_Localized: CONTINUE TO QUIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1627594200965120
+    m_Localized: Enter Player Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1628087237206016
+    m_Localized: Enter text...
     m_Metadata:
       m_Items: []
   references:

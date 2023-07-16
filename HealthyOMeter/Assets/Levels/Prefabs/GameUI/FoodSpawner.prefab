@@ -92,8 +92,8 @@ MonoBehaviour:
   - {fileID: 7517884460641653272, guid: 8403988dfb2d073448c1cbc7e1ad1768, type: 3}
   - {fileID: 4083731795281474842, guid: 7b6ddc68a84579d4ba89e304aebac238, type: 3}
   constantNutrigradeSpeed: 1
-  spawnInterval: 2.3
-  spawnSpeed: 1
+  spawnInterval: 4
+  spawnSpeed: 1.5
   laneOffset: 2
   laneWidth: 0.2
   minHeight: 0.2
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b396a666cc58c42bc301779905c7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: e0110cfa42a768c43ae4c3ea747cfc4d, type: 2}
+  Event: {fileID: 11400000, guid: eb2c94eaecf08054fb24eec268772de4, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

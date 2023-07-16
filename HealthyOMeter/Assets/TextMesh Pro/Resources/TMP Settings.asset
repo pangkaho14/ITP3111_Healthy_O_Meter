@@ -31,7 +31,13 @@ MonoBehaviour:
   m_autoSizeTextContainer: 0
   m_IsTextObjectScaleStatic: 0
   m_fallbackFontAssets:
+  - {fileID: 11400000, guid: 42e20c4039f8d3d4d98ca6dffffde3a1, type: 2}
   - {fileID: 11400000, guid: 46b2b7f85305f4e338fc58d0ef526307, type: 2}
+  - {fileID: 11400000, guid: 9401b71fa0b97401195fdf8146399f42, type: 2}
+  - {fileID: 11400000, guid: 3f9ccbb94e64341ecbc68eb203012ae1, type: 2}
+  - {fileID: 11400000, guid: 00e7813efa18f44658f70effb748d4bb, type: 2}
+  - {fileID: 11400000, guid: 3adf54bdcea494122b6030898fd2c498, type: 2}
+  - {fileID: 11400000, guid: b464efa5becce4751b7af593afc07daf, type: 2}
   m_matchMaterialPreset: 1
   m_defaultSpriteAsset: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45, type: 2}
   m_defaultSpriteAssetPath: Sprite Assets/

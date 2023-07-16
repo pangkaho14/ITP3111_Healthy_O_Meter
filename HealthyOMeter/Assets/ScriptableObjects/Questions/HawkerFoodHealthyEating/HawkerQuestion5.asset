@@ -21,7 +21,7 @@ MonoBehaviour:
   - 3 tsp (15g)
   - 4 tsp (20g)
   chineseAnswerChoices:
-  - "2\u8336\u5319\uFF0810g\uFF09"
+  - "2\u8336\u5319\uFF0810\u514B\uFF09"
   - "3\u8336\u5319\uFF0815\u514B\uFF09"
-  - "4\u8336\u5319\uFF0820G\uFF09"
+  - "4\u8336\u5319\uFF0820\u514B\uFF09"
   correctAnswerIndex: 1

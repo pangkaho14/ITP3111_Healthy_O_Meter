@@ -1112,6 +1112,10 @@ PrefabInstance:
       propertyPath: overlayEffect
       value: 
       objectReference: {fileID: 1897341333}
+    - target: {fileID: 4851604280743715789, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5611243757338291474, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1954,7 +1958,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c45e433d64c5b4acc879985ad320263e
     m_TableEntryReference:
-      m_KeyId: 1207702642688
+      m_KeyId: 1521755704254464
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

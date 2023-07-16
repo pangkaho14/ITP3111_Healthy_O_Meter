@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 public class LeaderboardManager : MonoBehaviour
 {
+
     [System.Serializable]
     public class ScoreEntry
     {
@@ -36,13 +37,13 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] private TMP_InputField playerNameInput;
     [SerializeField] private ScoreKeeper scoreKeeper;
 
+
     public void SaveScoreAndName()
     {
         string playerName = playerNameInput.text;
         float score = scoreKeeper.GetCurrentScore();
 
-        //Check if playername is null or Enter Player name
-        if (string.IsNullOrEmpty(playerName) || playerName == "Enter Player Name")
+         if (string.IsNullOrEmpty(playerName) || playerName == "Enter Player Name")
         {
             InputError.SetActive(true);
         }
@@ -50,6 +51,7 @@ public class LeaderboardManager : MonoBehaviour
         {
             SaveScore(playerName, score);
         }
+        
     }
 
     public void SaveScore(string playerName, float score)

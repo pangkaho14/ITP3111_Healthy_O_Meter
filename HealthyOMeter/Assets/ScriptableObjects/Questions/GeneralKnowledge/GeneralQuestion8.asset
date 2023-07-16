@@ -20,7 +20,7 @@ MonoBehaviour:
   - Vitamin C
   - Vitamin D
   chineseAnswerChoices:
-  - "\u7EF4\u751F\u7D20A\u3002"
+  - "\u7EF4\u751F\u7D20A"
   - "\u7EF4\u751F\u7D20C"
   - "\u7EF4\u751F\u7D20D"
   correctAnswerIndex: 2

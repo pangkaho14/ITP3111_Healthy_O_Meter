@@ -144,15 +144,83 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 876796340854784
-    m_Key: Continue
+    m_Key: ContinueText
     m_Metadata:
       m_Items: []
   - m_Id: 876798911963136
-    m_Key: Quit
+    m_Key: QuitText
     m_Metadata:
       m_Items: []
   - m_Id: 882562980372480
     m_Key: Header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517441342496768
+    m_Key: NutrigradeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517546921517056
+    m_Key: NutriAText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517618623143936
+    m_Key: NutriBText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517666517901312
+    m_Key: NutriCText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517721769467904
+    m_Key: NutriDText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517773921443840
+    m_Key: NutriGradeButtonText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521081167896576
+    m_Key: TutorialInstructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521755704254464
+    m_Key: ComboTutorialText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622159779684352
+    m_Key: SubmitText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622237017792512
+    m_Key: NextQuestionText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622239169470464
+    m_Key: ResumeGameText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625126465429504
+    m_Key: SelectionInformationText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625172908957696
+    m_Key: QuitToMenuText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625210020159488
+    m_Key: ContinueToRevivalQuizText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1627579990663168
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1627594200965120
+    m_Key: LeaderboardNameText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1628087237206016
+    m_Key: EnterTextText
     m_Metadata:
       m_Items: []
   m_Metadata:

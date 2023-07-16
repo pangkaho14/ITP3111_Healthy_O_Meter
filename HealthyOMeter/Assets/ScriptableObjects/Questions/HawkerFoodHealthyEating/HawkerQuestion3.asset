@@ -20,7 +20,7 @@ MonoBehaviour:
   - 2 tsp (10g)
   - 5 tsp (25g)
   chineseAnswerChoices:
-  - "1\u8336\u5319\uFF085G\uFF09"
-  - "2\u8336\u5319\uFF0810g\uFF09"
+  - "1\u8336\u5319\uFF085\u514B\uFF09"
+  - "2\u8336\u5319\uFF0810\u514B\uFF09"
   - "5\u8336\u5319\uFF0825\u514B\uFF09"
   correctAnswerIndex: 2

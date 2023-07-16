@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    private float currentScore;
+    [SerializeField] private float currentScore;
     private int currentCombo;
-    [SerializeField] private int highestCombo; // Variable to track the highest combo
+    private int highestCombo = 0; // Variable to track the highest combo
     private float multiplier;
     private float currentMultiplier = 1f;
 
@@ -18,9 +15,11 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI comboGameOverText;
     [SerializeField] private int ComboIncrements = 50;
 
+    private int LocaleKey = 0;
     private void Start()
     {
-        // highestCombo = 0;
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
     }
 
     public float GetCurrentScore()
@@ -43,10 +42,13 @@ public class ScoreKeeper : MonoBehaviour
         else
         {
             currentScore += scoreAmt;
+            if (currentScore <= 0)
+            {
+                currentScore = 0;
+            }
         }
 
         UpdateScoreText();
-
     }
 
     // Called by collision detector to update combo count
@@ -82,17 +84,22 @@ public class ScoreKeeper : MonoBehaviour
         return newScore.ToString();
     }
 
-    private void UpdateScoreText()
+    public void UpdateScoreText()
     {
-        Debug.Log($"highestCombo: {highestCombo}");
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         if (scoreTextGame != null)
         {
             scoreTextGame.text = currentScore.ToString();
         }
-        if (scoreTextLeaderBoard != null)
+        // Check if English Language Selected
+        if (scoreTextLeaderBoard != null && LocaleKey == 0)
         {
-            Debug.Log($"inside if: highestCombo: {highestCombo}");
-            scoreTextLeaderBoard.text = "Score: " + currentScore + "\nHighest Combo: " + highestCombo;
+          scoreTextLeaderBoard.text = "Score: " + currentScore.ToString() + "\nHighest Combo: " + highestCombo.ToString();
+        }
+        // Check if Chinese Language Selected
+        else if (scoreTextLeaderBoard != null && LocaleKey == 1)
+        {
+            scoreTextLeaderBoard.text = "分数: " + currentScore.ToString() + "\n最高组合: " + highestCombo.ToString();
         }
     }
 
@@ -106,9 +113,16 @@ public class ScoreKeeper : MonoBehaviour
 
     private void UpdateComboText()
     {
-        if (comboText != null && currentCombo > 0)
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+        //Check if English Language Selected
+        if (comboText != null && currentCombo > 0 && LocaleKey == 0)
         {
             comboText.text = "COMBO\n" + currentCombo.ToString();
+        }
+        //Check if Chinese Language Selected
+        else if(comboText != null && currentCombo > 0 && LocaleKey == 1)
+        {
+            comboText.text = "组合\n" + currentCombo.ToString();
         }
         else
         {

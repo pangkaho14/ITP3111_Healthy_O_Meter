@@ -45,11 +45,15 @@ public class RevivalQuiz : MonoBehaviour
     
     [SerializeField] private PlayerHealthPoints playerHealthPoints;
     [SerializeField] private UnityEvent quizOverEvent;
+
+    private string quizEndText;
     
     private int LocaleKey = 0;
 
     private void Start()
     {
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         // Debug.Log("RevivalQuiz.Start()");
         
         // Set up answer toggle button text
@@ -63,9 +67,6 @@ public class RevivalQuiz : MonoBehaviour
         submitAnswerButton.gameObject.SetActive(true);
         nextQuestionButton.gameObject.SetActive(false);
         resumeGameButton.gameObject.SetActive(false);
-        
-        // check localization from player prefs
-        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
     }
 
     private void Update()
@@ -73,8 +74,16 @@ public class RevivalQuiz : MonoBehaviour
         if (currentQuestionCount == maximumQuestions)
         {
             // Debug.Log("No more questions to display!");
+            LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+            if (LocaleKey == 1)
+            {
+                DisplayPlayerScoreCN();
+            }
+            else
+            {
+                DisplayPlayerScore();
+            }
             
-            DisplayPlayerScore();
             SetAllAnswerChoiceButtonsIsActiveInHierarchy(false);
             submitAnswerButton.gameObject.SetActive(false);
             resumeGameButton.gameObject.SetActive(true);
@@ -126,6 +135,7 @@ public class RevivalQuiz : MonoBehaviour
         loadNextQuestion = false;
     }
 
+    // English Method
     private void DisplayPlayerScore()
     {
         string quizEndText = "You have completed the quiz!";
@@ -139,7 +149,22 @@ public class RevivalQuiz : MonoBehaviour
         }
         currentQuestionText.text = quizEndText;
     }
-    
+
+    // Chinese Method
+    private void DisplayPlayerScoreCN()
+    {
+        string quizEndText = "您已经完成了测验!";
+        if (numberOfCorrectAnswers == maximumQuestions)
+        {
+            quizEndText += "\n您已经正确回答了所有问题!恭喜!";
+        }
+        else
+        {
+            quizEndText += $"\n您有{maximumQuestions}个问题中有{numberOfCorrectAnswers}个问题！下次好运!";
+        }    
+        currentQuestionText.text = quizEndText;
+    }
+
     private Question GetRandomQuestion()
     {
         int index = Random.Range(0, questions.Count);
@@ -156,15 +181,18 @@ public class RevivalQuiz : MonoBehaviour
             return;
         }
         
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         // 0 means it is english, else it is chinese
         question.SetEnglishLocalization(LocaleKey == 0);
-
+        
         currentQuestionText.text = question.GetQuestionText();
         for (var i = 0; i < question.GetAnswerCount(); i++)
         {
             answerToggleButtons[i].gameObject.SetActive(true);
             answerToggleButtonTexts[i].text = question.GetAnswerChoiceText(i);
         }
+
+        ResetAllAnswerChoiceButtonsColour();
         
         submitAnswerButton.interactable = false;
     }

@@ -16,11 +16,11 @@ MonoBehaviour:
   chineseQuestionText: "\u4E00\u6C64\u5319\u9171\u6CB9\u542B\u6709\u51E0\u6B21\u6BEB\u514B\u94A0?"
   isEnglishLocalization: 1
   englishAnswerChoices:
-  - 500mg
-  - 1000mg
-  - 1500mg
+  - 500 mg
+  - 1000 mg
+  - 1500 mg
   chineseAnswerChoices:
-  - 500mg
-  - 1000mg
-  - 1500mg
+  - "500\u6BEB\u514B"
+  - "1000\u6BEB\u514B"
+  - "1500\u6BEB\u514B"
   correctAnswerIndex: 1
