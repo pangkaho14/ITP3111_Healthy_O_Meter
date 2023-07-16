@@ -80,11 +80,11 @@ public class LeaderboardManager : MonoBehaviour
         PlayerPrefs.Save();
 
         //Display Leaderboard and FunFacts after saving
-        DisplayLeaderboardFunfacts();
-        
+        FunFactsUI.DisplayFunFact();
+        DisplayTop5LeaderBoard();
     }
 
-    public void DisplayLeaderboardFunfacts()
+    public void DisplayTop5LeaderBoard()
     {
         //Set the input field inactive 
         InputFieldUI.SetActive(false);
@@ -94,9 +94,6 @@ public class LeaderboardManager : MonoBehaviour
 
         //Display the leaderboard Top 5
         LeaderboardUI.SetActive(true);
-
-        //Display Funfacts
-        FunFactsUI.ShowRandomFunFact();
     }
 }
 

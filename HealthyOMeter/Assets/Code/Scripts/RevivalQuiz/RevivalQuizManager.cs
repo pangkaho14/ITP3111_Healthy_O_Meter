@@ -38,8 +38,7 @@ public class RevivalQuizManager : MonoBehaviour
         // only when the user has used up all of its attempts and has died again, then the game is over
         if (attempts < 0)
         {
-            UITearDown();
-            gameOverEvent.Invoke();
+            triggerGameOverEvent();
         }
         else
         {
@@ -50,6 +49,13 @@ public class RevivalQuizManager : MonoBehaviour
             SetupOptionDialog();
             timer.gameObject.SetActive(true);
         }
+    }
+
+    public void triggerGameOverEvent()
+    {
+        Debug.Log("triggerGameOverEvent()");
+        UITearDown();
+        gameOverEvent.Invoke();
     }
     
     public void UITearDown()

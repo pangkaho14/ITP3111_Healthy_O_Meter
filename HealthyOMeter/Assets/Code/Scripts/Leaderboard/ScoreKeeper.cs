@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     private float currentScore;
     private int currentCombo;
-    private int highestCombo = 0; // Variable to track the highest combo
+    [SerializeField] private int highestCombo; // Variable to track the highest combo
     private float multiplier;
     private float currentMultiplier = 1f;
 
@@ -16,6 +17,11 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI comboText;
     [SerializeField] private TextMeshProUGUI comboGameOverText;
     [SerializeField] private int ComboIncrements = 50;
+
+    private void Start()
+    {
+        // highestCombo = 0;
+    }
 
     public float GetCurrentScore()
     {
@@ -52,6 +58,7 @@ public class ScoreKeeper : MonoBehaviour
         if (currentCombo > highestCombo)
         {
             highestCombo = currentCombo;
+            UpdateScoreText();
         }
 
         UpdateComboText();
@@ -77,13 +84,15 @@ public class ScoreKeeper : MonoBehaviour
 
     private void UpdateScoreText()
     {
+        Debug.Log($"highestCombo: {highestCombo}");
         if (scoreTextGame != null)
         {
             scoreTextGame.text = currentScore.ToString();
         }
         if (scoreTextLeaderBoard != null)
         {
-          scoreTextLeaderBoard.text = "Score: " + currentScore.ToString() + "\nHighest Combo: " + highestCombo.ToString();
+            Debug.Log($"inside if: highestCombo: {highestCombo}");
+            scoreTextLeaderBoard.text = "Score: " + currentScore + "\nHighest Combo: " + highestCombo;
         }
     }
 
@@ -91,6 +100,7 @@ public class ScoreKeeper : MonoBehaviour
     public void ResetScoreAndCombo()
     {
         currentCombo = 0;
+        currentMultiplier = 1;
         UpdateComboText();
     }
 

@@ -7,7 +7,7 @@ public class CollectFood : MonoBehaviour
     [SerializeField] private PlayerHealthPoints playerHp;
     [SerializeField] private float healAmt = 20f;
     [SerializeField] private float damageAmt = 20f;
-    
+
     [SerializeField] private ScoreKeeper scoreKeeper;
     public GameObject FloatingTextAddPointsPrefab;
     [SerializeField] private float scoreAmt = 100f;
@@ -24,7 +24,8 @@ public class CollectFood : MonoBehaviour
 
     // Text size parameter
     [SerializeField] private float pointsTextSize = 30f;
-
+    // Calculate the percentage amount to decrease from the current spawn speed
+    [SerializeField] private float percentageDecrease = 0.10f; // 10% decrease, you can adjust this value as needed
     [SerializeField] private string nutriAText;
     [SerializeField] private string nutriBText;
     [SerializeField] private string nutriCText;
@@ -35,10 +36,10 @@ public class CollectFood : MonoBehaviour
     //Declaration of Food Collection SFX
     [SerializeField] private AudioSource RightItem;
     [SerializeField] private AudioSource WrongItem;
-    
+
     // Reference to the SpawnSprite script
     public SpawnSprite spawnSprite; // Assign this reference in the Inspector
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("healthy"))
@@ -46,7 +47,7 @@ public class CollectFood : MonoBehaviour
             playerHp.Heal(healAmt);
             scoreKeeper.AddScore(scoreAmt, true);
             scoreKeeper.AddCombo();
-            
+
             // Update new score with current multiplier
             string newScore = scoreKeeper.GetNewScoreAmt(scoreAmt);
 
@@ -64,14 +65,15 @@ public class CollectFood : MonoBehaviour
             playerHp.TakeDamage(damageAmt);
             scoreKeeper.ResetScoreAndCombo();
             WrongItem.Play();
-            
-            // Decrease the spawn speed
-            spawnSprite.spawnSpeed -= speedDecreaseAmount;
+
+            float spawnSpeedDecreaseAmount = spawnSprite.spawnSpeed * percentageDecrease;
+            spawnSprite.spawnSpeed -= spawnSpeedDecreaseAmount;
+
 
             // Cap the spawn speed at the minimum value
-            if (spawnSprite.spawnSpeed < 0)
+            if (spawnSprite.spawnSpeed < 1.3f)
             {
-                spawnSprite.spawnSpeed = 0;
+                spawnSprite.spawnSpeed = 1.3f;
             }
 
             // Update the spawn speed-related fields in SpawnSprite
@@ -91,7 +93,9 @@ public class CollectFood : MonoBehaviour
         {
             float scoreAmt = GetScoreFromText(nutriBText);  // Get the score amount from the nutriBText
             scoreKeeper.AddScore(scoreAmt, false);
+            ShowFloatingText(nutriBText);
             RightItem.Play();
+
         }
         else if (other.CompareTag("Nutri-C"))
         {
@@ -134,6 +138,13 @@ public class CollectFood : MonoBehaviour
             textMesh.transform.position += new Vector3(pointsCollectedoffsetX, pointsCollectedoffsetY, 0f);
             textMesh.text = text; // Set the custom text
             textMesh.fontSize = pointsTextSize; // Set the text size
+
+            // Change text color to red if the amount is negative
+            float amount = float.Parse(text);
+            if (amount < 0)
+            {
+                textMesh.color = Color.red;
+            }
         }
     }
 }
