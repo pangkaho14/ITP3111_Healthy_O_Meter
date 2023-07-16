@@ -103,8 +103,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1047232765952
-    m_Localized: "Lets try the game out! \nMove left and right and collect only healthy
-      foods!"
+    m_Localized: 'Collect food for 30s!
+
+      See how much score you can get!'
     m_Metadata:
       m_Items: []
   - m_Id: 1170788573184
@@ -114,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1207702642688
-    m_Localized: Home
+    m_Localized: PRESS TO LEARN ABOUT COMBOS
     m_Metadata:
       m_Items: []
   - m_Id: 1268834623488

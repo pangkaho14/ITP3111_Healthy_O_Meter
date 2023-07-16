@@ -47,18 +47,18 @@ public class TutorialCombos : MonoBehaviour
         }
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
 
-        //Get highest combo count
+        // Get highest combo count
         int comboCount = scoreKeeper.GetHighestCombo();
         UnityEngine.Debug.Log(comboCount);
-        //Activate text
+        // Activate text
         textElement.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
                          "Try to beat that later!\n\n" +
-                         "Remember it is possible to die now!";
+                         "Now, let's dive into the real game!";
         textElement.gameObject.SetActive(true);
         Background.SetActive(true);
 
-        //Activate COMBOS button
-        //Set the text of the child TextMeshProUGUI component
+        // Activate COMBOS button
+        // Set the text of the child TextMeshProUGUI component
         TextMeshProUGUI textComponent = ButtonCanvas.GetComponentInChildren<TextMeshProUGUI>();
         textComponent.text = "HOME";
         ButtonCanvas.SetActive(true);
@@ -89,7 +89,7 @@ public class TutorialCombos : MonoBehaviour
 
     private void ComboBroken()
     {
-        //Pop up instructions to avoid unhealthy food & do not miss healthy food
+        // Pop up instructions to avoid unhealthy food & do not miss healthy food
         PopUpMessage();
     }
 
