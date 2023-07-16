@@ -71,11 +71,20 @@ public class RevivalQuiz : MonoBehaviour
 
     private void Update()
     {
-        if (currentQuestionCount == maximumQuestions)
+        if (currentQuestionCount == maximumQuestions && LocaleKey == 0)
         {
             // Debug.Log("No more questions to display!");
             
             DisplayPlayerScore();
+            SetAllAnswerChoiceButtonsIsActiveInHierarchy(false);
+            submitAnswerButton.gameObject.SetActive(false);
+            resumeGameButton.gameObject.SetActive(true);
+            ResetQuizState();
+            return;
+        }
+        else if (currentQuestionCount == maximumQuestions && LocaleKey == 1)
+        {
+            DisplayPlayerScoreCN();
             SetAllAnswerChoiceButtonsIsActiveInHierarchy(false);
             submitAnswerButton.gameObject.SetActive(false);
             resumeGameButton.gameObject.SetActive(true);
@@ -129,33 +138,33 @@ public class RevivalQuiz : MonoBehaviour
 
     private void DisplayPlayerScore()
     {
-        if (LocaleKey == 0)
+        string quizEndText = "You have completed the quiz!";
+        if (numberOfCorrectAnswers == maximumQuestions)
         {
-            string quizEndText = "You have completed the quiz!";
-            if (numberOfCorrectAnswers == maximumQuestions)
-            {
-                quizEndText += "\nYou have answered all questions correctly! Congratulations!";
-            }
-            else
-            {
-                quizEndText += $"\nYou have {numberOfCorrectAnswers} out of {maximumQuestions} questions correctly! Better luck next time!";
-            }
+            quizEndText += "\nYou have answered all questions correctly! Congratulations!";
         }
         else
         {
-            string quizEndText = "您已经完成了测验!";
-            if (numberOfCorrectAnswers == maximumQuestions)
-            {
-                quizEndText += "\n您已经正确回答了所有问题!恭喜!";
-            }
-            else
-            {
-                quizEndText += $"\n您有{maximumQuestions}个问题中有{numberOfCorrectAnswers}个问题！下次好运!";
-            }
+            quizEndText += $"\nYou have {numberOfCorrectAnswers} out of {maximumQuestions} questions correctly! Better luck next time!";
         }
-        
         currentQuestionText.text = quizEndText;
     }
+
+    private void DisplayPlayerScoreCN()
+    {
+        string quizEndText = "您已经完成了测验!";
+        if (numberOfCorrectAnswers == maximumQuestions)
+        {
+            quizEndText += "\n您已经正确回答了所有问题!恭喜!";
+        }
+        else
+        {
+            quizEndText += $"\n您有{maximumQuestions}个问题中有{numberOfCorrectAnswers}个问题！下次好运!";
+        }    
+        currentQuestionText.text = quizEndText;
+    }
+
+    
     
     private Question GetRandomQuestion()
     {

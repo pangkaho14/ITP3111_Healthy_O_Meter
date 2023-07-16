@@ -17,6 +17,13 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI comboGameOverText;
     [SerializeField] private int ComboIncrements = 50;
 
+    private int LocaleKey = 0;
+    private void Start()
+    {
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+    }
+
     public float GetCurrentScore()
     {
         return currentScore;
@@ -81,9 +88,13 @@ public class ScoreKeeper : MonoBehaviour
         {
             scoreTextGame.text = currentScore.ToString();
         }
-        if (scoreTextLeaderBoard != null)
+        if (scoreTextLeaderBoard != null && LocaleKey == 0)
         {
           scoreTextLeaderBoard.text = "Score: " + currentScore.ToString() + "\nHighest Combo: " + highestCombo.ToString();
+        }
+        else if (scoreTextLeaderBoard != null && LocaleKey == 1)
+        {
+            scoreTextLeaderBoard.text = "分数: " + currentScore.ToString() + "\n最高组合: " + highestCombo.ToString();
         }
     }
 
@@ -96,9 +107,13 @@ public class ScoreKeeper : MonoBehaviour
 
     private void UpdateComboText()
     {
-        if (comboText != null && currentCombo > 0)
+        if (comboText != null && currentCombo > 0 && LocaleKey == 0)
         {
             comboText.text = "COMBO\n" + currentCombo.ToString();
+        }
+        else if(comboText != null && currentCombo > 0 && LocaleKey == 1)
+        {
+            comboText.text = "组合\n" + currentCombo.ToString();
         }
         else
         {
