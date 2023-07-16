@@ -181,16 +181,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c5cd279f5e53cc941b142181cb455e3d, type: 2}
+  - {fileID: 11400000, guid: 4620def5465ea0b4dad71b9a201c64fe, type: 2}
+  - {fileID: 11400000, guid: 5dd88e6a9188b234bb8cd36400304d5e, type: 2}
+  - {fileID: 11400000, guid: 347c5270608931b4d883cd4b45ef15e7, type: 2}
+  - {fileID: 11400000, guid: ee6947744e07fc847831cb793385a0ed, type: 2}
+  - {fileID: 11400000, guid: bc0b1c41a1e2424489092692c5d944dc, type: 2}
+  - {fileID: 11400000, guid: 7632c003c21917446842fb9ca5b10966, type: 2}
   currentQuestionText: {fileID: 6235596238142657411}
   playerAnswerChoiceIndex: -1
   currentQuestionCount: 0
@@ -1971,7 +1968,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &3096775689400601905
 MonoBehaviour:
@@ -2558,7 +2555,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &5851872519672177039
 MonoBehaviour:

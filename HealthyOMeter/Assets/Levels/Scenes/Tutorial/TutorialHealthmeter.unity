@@ -2684,4 +2684,3 @@ MonoBehaviour:
   ButtonCanvas: {fileID: 1658855849}
   score: {fileID: 1321908608}
   Background: {fileID: 570162438}
-  healthBar: {fileID: 0}
