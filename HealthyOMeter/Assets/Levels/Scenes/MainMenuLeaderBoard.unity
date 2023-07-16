@@ -482,6 +482,14 @@ PrefabInstance:
       value: 197
       objectReference: {fileID: 0}
     - target: {fileID: 4360735886589740766, guid: d497268d0550741488290f68c482f7be, type: 3}
+      propertyPath: FunFactWithImage
+      value: 
+      objectReference: {fileID: 1281091731}
+    - target: {fileID: 4360735886589740766, guid: d497268d0550741488290f68c482f7be, type: 3}
+      propertyPath: FunFactWithouImage
+      value: 
+      objectReference: {fileID: 2056749184}
+    - target: {fileID: 4360735886589740766, guid: d497268d0550741488290f68c482f7be, type: 3}
       propertyPath: hawkerFunFactDatabase
       value: 
       objectReference: {fileID: 11400000, guid: 9fb972010072d89419794fdea902861c, type: 2}
@@ -672,6 +680,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1281091731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8411743969717620572, guid: d497268d0550741488290f68c482f7be, type: 3}
+  m_PrefabInstance: {fileID: 540975193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458063504
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,3 +964,14 @@ RectTransform:
   m_AnchoredPosition: {x: -321, y: 831}
   m_SizeDelta: {x: 225, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2056749184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 130450414878653345, guid: d497268d0550741488290f68c482f7be, type: 3}
+  m_PrefabInstance: {fileID: 540975193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
