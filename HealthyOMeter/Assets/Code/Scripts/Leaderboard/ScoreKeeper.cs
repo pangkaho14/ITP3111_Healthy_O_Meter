@@ -84,14 +84,18 @@ public class ScoreKeeper : MonoBehaviour
 
     private void UpdateScoreText()
     {
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+
         if (scoreTextGame != null)
         {
             scoreTextGame.text = currentScore.ToString();
         }
+        // Check if English Language Selected
         if (scoreTextLeaderBoard != null && LocaleKey == 0)
         {
           scoreTextLeaderBoard.text = "Score: " + currentScore.ToString() + "\nHighest Combo: " + highestCombo.ToString();
         }
+        // Check if Chinese Language Selected
         else if (scoreTextLeaderBoard != null && LocaleKey == 1)
         {
             scoreTextLeaderBoard.text = "分数: " + currentScore.ToString() + "\n最高组合: " + highestCombo.ToString();
@@ -107,10 +111,13 @@ public class ScoreKeeper : MonoBehaviour
 
     private void UpdateComboText()
     {
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+        //Check if English Language Selected
         if (comboText != null && currentCombo > 0 && LocaleKey == 0)
         {
             comboText.text = "COMBO\n" + currentCombo.ToString();
         }
+        //Check if Chinese Language Selected
         else if(comboText != null && currentCombo > 0 && LocaleKey == 1)
         {
             comboText.text = "组合\n" + currentCombo.ToString();

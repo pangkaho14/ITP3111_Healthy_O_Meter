@@ -820,6 +820,10 @@ PrefabInstance:
       propertyPath: overlayEffect
       value: 
       objectReference: {fileID: 1897341333}
+    - target: {fileID: 4851604280743715789, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5611243757338291474, guid: 81b1ec729eaf0cb4fb24ca6950bcfaf5, type: 3}
       propertyPath: m_RootOrder
       value: 2

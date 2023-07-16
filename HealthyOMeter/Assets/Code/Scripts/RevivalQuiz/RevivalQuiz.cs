@@ -51,6 +51,8 @@ public class RevivalQuiz : MonoBehaviour
     
     private void Start()
     {
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         // Debug.Log("RevivalQuiz.Start()");
         
         // Set up answer toggle button text
@@ -64,13 +66,11 @@ public class RevivalQuiz : MonoBehaviour
         submitAnswerButton.gameObject.SetActive(true);
         nextQuestionButton.gameObject.SetActive(false);
         resumeGameButton.gameObject.SetActive(false);
-        
-        // check localization from player prefs
-        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
     }
 
     private void Update()
     {
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         if (currentQuestionCount == maximumQuestions && LocaleKey == 0)
         {
             // Debug.Log("No more questions to display!");
@@ -136,6 +136,7 @@ public class RevivalQuiz : MonoBehaviour
         loadNextQuestion = false;
     }
 
+    //English Method
     private void DisplayPlayerScore()
     {
         string quizEndText = "You have completed the quiz!";
@@ -150,6 +151,7 @@ public class RevivalQuiz : MonoBehaviour
         currentQuestionText.text = quizEndText;
     }
 
+    //Chinese Method
     private void DisplayPlayerScoreCN()
     {
         string quizEndText = "您已经完成了测验!";
@@ -176,6 +178,7 @@ public class RevivalQuiz : MonoBehaviour
 
     private void DisplayRandomQuestion(Question question)
     {
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         if (questions.Count == 0)
         {
             // Debug.Log("No questions to display!");
@@ -184,6 +187,7 @@ public class RevivalQuiz : MonoBehaviour
         
         // 0 means it is english, else it is chinese
         question.SetEnglishLocalization(LocaleKey == 0);
+        
 
         currentQuestionText.text = question.GetQuestionText();
         for (var i = 0; i < question.GetAnswerCount(); i++)

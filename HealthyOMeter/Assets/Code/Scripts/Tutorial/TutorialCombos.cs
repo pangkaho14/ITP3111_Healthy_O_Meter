@@ -53,6 +53,7 @@ public class TutorialCombos : MonoBehaviour
         //Get highest combo count
         int comboCount = scoreKeeper.GetHighestCombo();
 
+        //Check if language selected is english
         if (LocaleKey == 0)
         {
             //Activate text
@@ -60,6 +61,7 @@ public class TutorialCombos : MonoBehaviour
                          "Try to beat that later!\n\n" +
                          "Remember it is possible to die now!";
         }
+        //Check if language selected is chinese
         else
         {
             //Activate text

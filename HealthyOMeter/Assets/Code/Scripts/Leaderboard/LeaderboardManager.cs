@@ -8,12 +8,6 @@ using System.Diagnostics;
 
 public class LeaderboardManager : MonoBehaviour
 {
-    // private int LocaleKey = 0;
-    // private void Start()
-    // {
-    //     // check localization from player prefs
-    //     LocaleKey = PlayerPrefs.GetInt("LocaleKey");
-    // }
 
     [System.Serializable]
     public class ScoreEntry
@@ -57,31 +51,6 @@ public class LeaderboardManager : MonoBehaviour
         {
             SaveScore(playerName, score);
         }
-
-        // if (LocaleKey == 0)
-        // {
-        //     //Check if playername is null or Enter Player name
-        //     if (string.IsNullOrEmpty(playerName) || playerName == "Enter Player Name")
-        //     {
-        //         InputError.SetActive(true);
-        //     }
-        //     else
-        //     {
-        //         SaveScore(playerName, score);
-        //     }
-        // }
-        // else
-        // {
-        //     if (string.IsNullOrEmpty(playerName) || playerName == "输入播放器名称")
-        //     {
-        //         InputError.SetActive(true);
-        //     }
-        //     else
-        //     {
-        //         SaveScore(playerName, score);
-        //     }
-        // }
-
         
     }
 
