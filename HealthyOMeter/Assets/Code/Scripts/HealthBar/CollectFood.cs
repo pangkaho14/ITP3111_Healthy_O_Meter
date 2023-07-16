@@ -24,7 +24,8 @@ public class CollectFood : MonoBehaviour
 
     // Text size parameter
     [SerializeField] private float pointsTextSize = 30f;
-
+    // Calculate the percentage amount to decrease from the current spawn speed
+    [SerializeField] private float percentageDecrease = 0.10f; // 10% decrease, you can adjust this value as needed
     [SerializeField] private string nutriAText;
     [SerializeField] private string nutriBText;
     [SerializeField] private string nutriCText;
@@ -65,13 +66,14 @@ public class CollectFood : MonoBehaviour
             scoreKeeper.ResetScoreAndCombo();
             WrongItem.Play();
 
-            // Decrease the spawn speed
-            spawnSprite.spawnSpeed -= speedDecreaseAmount;
+            float spawnSpeedDecreaseAmount = spawnSprite.spawnSpeed * percentageDecrease;
+            spawnSprite.spawnSpeed -= spawnSpeedDecreaseAmount;
+
 
             // Cap the spawn speed at the minimum value
-            if (spawnSprite.spawnSpeed < 0)
+            if (spawnSprite.spawnSpeed < 1.3f)
             {
-                spawnSprite.spawnSpeed = 0;
+                spawnSprite.spawnSpeed = 1.3f;
             }
 
             // Update the spawn speed-related fields in SpawnSprite
