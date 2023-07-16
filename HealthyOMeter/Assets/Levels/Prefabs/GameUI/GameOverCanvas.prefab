@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &419619800453739292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   groceryFunFactDatabase: {fileID: 11400000, guid: cd8ec59499f5370458486482c88cba8c, type: 2}
   Header: {fileID: 3704863803691682988}
   FunFactWithImage: {fileID: 1677058647870752348}
-  FunFactWithouImage: {fileID: 5411955955764490598}
+  FunFactWithoutImage: {fileID: 5411955955764490598}
   FunFactsImage: {fileID: 4648066164587471549}
 --- !u!1 &2874776282028253874
 GameObject:
@@ -1633,7 +1633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2580275437931101564
 RectTransform:
   m_ObjectHideFlags: 0

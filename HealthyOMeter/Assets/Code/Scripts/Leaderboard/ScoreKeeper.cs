@@ -91,6 +91,7 @@ public class ScoreKeeper : MonoBehaviour
     public void ResetScoreAndCombo()
     {
         currentCombo = 0;
+        currentMultiplier = 1;
         UpdateComboText();
     }
 

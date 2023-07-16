@@ -123,6 +123,207 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &229731464
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340205024465494742, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567364235629594431, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: m_Name
+      value: FoodSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: maxSpawnSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnInterval
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: middleLaneObject
+      value: 
+      objectReference: {fileID: 610461275}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 5439021351005054200, guid: 8eb160996fb233841a4b4bbfb7b4c4c2, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1596798489449022313, guid: 2f3e123b078d87243b862d0edcb3a314, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2999516925809976716, guid: 49472b8cdbada854a96f8021af7ae11d, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1221848992511168857, guid: eeb2b6d4057c7714eb617980018cc990, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 6912800354243738135, guid: 505b536d68bac1a449a2311078317bd6, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 4637418020032292326, guid: 9fdc63d7b91378347bba6f9310c45187, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 7918059172281055551, guid: 6c8d1555dfafb0b45902b27c912030e0, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6138692463557755135, guid: 760c45abd3488664bbd048d5226b67d4, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1066661404045373235, guid: d8e0c49e3ee205b4d9b64cae77bde3f3, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1198720405374504938, guid: 67644cc180c1c9c41b5f8f520205902c, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 8814391073041419747, guid: e2c58016d85a04e41be3ede700c50c11, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 5014423639285410825, guid: 15282a22f862fcc449ff01c446ef01f9, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 5665681468495811309, guid: 235e04a71eb586243a19aa569579b447, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 8236815253378323273, guid: abb3fbc9791ec4b4396982ec12dbaf79, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 59029803634476132, guid: 718a24ef3d3efb5428a9fa07ebc93989, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucUnhealthyFoodPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 1122519085892580718, guid: ee62f75508446b544ab1494b5e7d2503, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7762041456139908445, guid: b3a668d34e04a8b4f93c00a4b23776be, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 3188165355274969046, guid: 7a3034eeec368664bbaa5acf042e63d2, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4259609643352381931, guid: ef7e0c6db48ba0f47bcad8c1bd2d91ae, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1179686455631087686, guid: a8f75c095d344a84babd1d25ecfae716, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1082672682206297467, guid: 518ce087e0a6b484fbfc8a3c249f6455, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 9159967026228210223, guid: 3d9b00e3229203740b44aab196ad918b, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 5714874727870018112, guid: c43f5d6e9901a8548b23c45ddd0cab63, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 6433572402370586525, guid: 36dad2b86af865f4e94e0b6f61310c23, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 3782907605273161671, guid: 7c18722d1586e8c4892708daf428b761, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 7189426066329140387, guid: fc76cecddfb9d64448ecf7761ba624ae, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerUnhealthyFoodPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 8367877358971163636, guid: d756121e1ebf7a1449074d3d2d99e3f6, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
 --- !u!1001 &309067075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,7 +343,7 @@ PrefabInstance:
     - target: {fileID: 2459811716553940494, guid: 08523c1bf67523340b71a04e335e1a3b, type: 3}
       propertyPath: spawnSprite
       value: 
-      objectReference: {fileID: 1898021635}
+      objectReference: {fileID: 0}
     - target: {fileID: 2459811716553940494, guid: 08523c1bf67523340b71a04e335e1a3b, type: 3}
       propertyPath: overlayEffect
       value: 
@@ -774,6 +975,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 956f676d2b5ba324cacc733c3abec262, type: 3}
+--- !u!1 &610461275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6173932776064915810, guid: 956f676d2b5ba324cacc733c3abec262, type: 3}
+  m_PrefabInstance: {fileID: 610461274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &757566413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2159,111 +2365,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897341331}
   m_CullTransparentMesh: 1
---- !u!1 &1898021634
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1898021636}
-  - component: {fileID: 1898021635}
-  m_Layer: 0
-  m_Name: FoodSpawner
-  m_TagString: healthy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1898021635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898021634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5d554919cb4394c8d9a4e8c3654530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ntucHealthyFoodPrefabs:
-  - {fileID: 8361906750589784291, guid: b694c7e0cc7d1c6479b60fc1e0ea1105, type: 3}
-  - {fileID: 7460842411694064795, guid: 718cd33d2da955146a54d1ef3b0da50a, type: 3}
-  - {fileID: 5165193933321168126, guid: eed5e78f672fcca44832f347a863511e, type: 3}
-  - {fileID: 5165203787184571013, guid: b44238686f4b7e44dae74c084308a6b9, type: 3}
-  - {fileID: 3317258596026676390, guid: fdff936b117721e4d84a2739ed58043c, type: 3}
-  - {fileID: 5912425341979283478, guid: d71d1c48d8db3074898aab509c41561b, type: 3}
-  - {fileID: 4911459791876360710, guid: f1a77ca0821f8af45bb1edf5af1b050e, type: 3}
-  - {fileID: 568131623661751671, guid: b28e458534388334e9928fa8a5b55873, type: 3}
-  - {fileID: 8219104493189890581, guid: 1eddbed33ce45534dab6367480728457, type: 3}
-  - {fileID: 7605070923302744506, guid: e37eca6e885574b4fbf72f92d0eaefba, type: 3}
-  ntucUnhealthyFoodPrefabs:
-  - {fileID: 7240982387260463589, guid: 15c95e49e4a828b42bda336070226a8c, type: 3}
-  - {fileID: 6138692463557755135, guid: 760c45abd3488664bbd048d5226b67d4, type: 3}
-  - {fileID: 1066661404045373235, guid: d8e0c49e3ee205b4d9b64cae77bde3f3, type: 3}
-  - {fileID: 1198720405374504938, guid: 67644cc180c1c9c41b5f8f520205902c, type: 3}
-  - {fileID: 8814391073041419747, guid: e2c58016d85a04e41be3ede700c50c11, type: 3}
-  - {fileID: 5014423639285410825, guid: 15282a22f862fcc449ff01c446ef01f9, type: 3}
-  - {fileID: 5665681468495811309, guid: 235e04a71eb586243a19aa569579b447, type: 3}
-  - {fileID: 8236815253378323273, guid: abb3fbc9791ec4b4396982ec12dbaf79, type: 3}
-  - {fileID: 59029803634476132, guid: 718a24ef3d3efb5428a9fa07ebc93989, type: 3}
-  - {fileID: 1122519085892580718, guid: ee62f75508446b544ab1494b5e7d2503, type: 3}
-  hawkerHealthyFoodPrefabs:
-  - {fileID: 1981273511202149072, guid: d236b4b9179efc84397ba65557043928, type: 3}
-  - {fileID: 1596798489449022313, guid: 2f3e123b078d87243b862d0edcb3a314, type: 3}
-  - {fileID: 5838703906202078932, guid: 951a5eb9ce687774b97a7cfb0f16e7d4, type: 3}
-  - {fileID: 2999516925809976716, guid: 49472b8cdbada854a96f8021af7ae11d, type: 3}
-  - {fileID: 1221848992511168857, guid: eeb2b6d4057c7714eb617980018cc990, type: 3}
-  - {fileID: 4588214648618663624, guid: 7e6d3534508fc5f4b9d7121cc1a360ba, type: 3}
-  - {fileID: 7918059172281055551, guid: 6c8d1555dfafb0b45902b27c912030e0, type: 3}
-  hawkerUnhealthyFoodPrefabs:
-  - {fileID: 8155706432165635683, guid: 000d646e464de0b438a7a266ebea64ad, type: 3}
-  - {fileID: 7762041456139908445, guid: b3a668d34e04a8b4f93c00a4b23776be, type: 3}
-  - {fileID: 3188165355274969046, guid: 7a3034eeec368664bbaa5acf042e63d2, type: 3}
-  - {fileID: 4259609643352381931, guid: ef7e0c6db48ba0f47bcad8c1bd2d91ae, type: 3}
-  - {fileID: 3368850945709246336, guid: 6321e066eaaebf749a6a51943484a88f, type: 3}
-  - {fileID: 1179686455631087686, guid: a8f75c095d344a84babd1d25ecfae716, type: 3}
-  - {fileID: 1082672682206297467, guid: 518ce087e0a6b484fbfc8a3c249f6455, type: 3}
-  - {fileID: 9159967026228210223, guid: 3d9b00e3229203740b44aab196ad918b, type: 3}
-  - {fileID: 5714874727870018112, guid: c43f5d6e9901a8548b23c45ddd0cab63, type: 3}
-  - {fileID: 6433572402370586525, guid: 36dad2b86af865f4e94e0b6f61310c23, type: 3}
-  - {fileID: 3782907605273161671, guid: 7c18722d1586e8c4892708daf428b761, type: 3}
-  nutrigrades:
-  - {fileID: 7698160097123463278, guid: 4800c1f7d12f35a4f8cac292c3ab496c, type: 3}
-  - {fileID: 457913576651866598, guid: e5d2106a627e04b4ca88c05e98bb57b5, type: 3}
-  - {fileID: 7517884460641653272, guid: 8403988dfb2d073448c1cbc7e1ad1768, type: 3}
-  - {fileID: 4083731795281474842, guid: 7b6ddc68a84579d4ba89e304aebac238, type: 3}
-  constantNutrigradeSpeed: 1
-  spawnInterval: 1.2
-  spawnSpeed: 0.9
-  laneOffset: 2
-  laneWidth: 0.2
-  minHeight: 0.2
-  maxHeight: 0.2
-  middleLaneObject: {fileID: 0}
-  maxSpawnSpeed: 8
-  spawnSpeedIncreaseInterval: 11
-  spawnSpeedIncreaseAmount: 1
-  minSpawnInterval: 0.1
-  spawnIntervalDecreaseAmount: 0.1
-  playerHP: {fileID: 11400000, guid: b6caf1747503ded45b2aad6e2f6c9414, type: 2}
---- !u!4 &1898021636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898021634}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 5.91, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083514819
 GameObject:
   m_ObjectHideFlags: 0
