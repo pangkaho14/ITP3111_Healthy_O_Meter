@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
-  m_Name: FunFact4
+  m_Name: FunFact7
   m_EditorClassIdentifier: 
-  header: 'FAT INTAKE:'
-  funFact: Replace fried noodles with soup noodles!
+  EnglishHeader: 'CALCIUM INTAKE:'
+  ChineseHeader: "\u9499\u6444\u5165\u91CF\uFF1A"
+  EnglishFunFact: Milk, soy milk and yoghurt are good sources of calcium!
+  ChineseFunFact: "\u725B\u5976\uFF0C\u8C46\u6D46\u548C\u9178\u5976\u662F\u9499\u7684\u826F\u597D\u6765\u6E90\uFF01"
+  isEnglishLocalization: 1
   image: {fileID: 0}

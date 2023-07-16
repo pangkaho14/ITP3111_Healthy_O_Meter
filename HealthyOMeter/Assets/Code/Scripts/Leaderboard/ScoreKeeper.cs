@@ -52,6 +52,7 @@ public class ScoreKeeper : MonoBehaviour
         if (currentCombo > highestCombo)
         {
             highestCombo = currentCombo;
+            UnityEngine.Debug.Log(highestCombo);
         }
 
         UpdateComboText();
@@ -108,6 +109,7 @@ public class ScoreKeeper : MonoBehaviour
 
     public int GetHighestCombo()
     {
+        UnityEngine.Debug.Log("in function: " + highestCombo);
         return highestCombo;
     }
 }

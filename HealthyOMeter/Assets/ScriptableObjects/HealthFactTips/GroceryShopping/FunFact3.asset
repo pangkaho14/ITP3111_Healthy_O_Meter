@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
-  m_Name: FunFact6
+  m_Name: FunFact3
   m_EditorClassIdentifier: 
-  header: 'SUGAR INTAKE:'
-  funFact: Ask for less or no sugar when ordering drinks or desserts
+  EnglishHeader: 'BALANCED DIET:'
+  ChineseHeader: "\u5747\u8861\u996E\u98DF\uFF1A"
+  EnglishFunFact: Choose wholegrains like oats, brown rice or wholemeal bread!
+  ChineseFunFact: "\u9009\u62E9\u5168\u9EA6\uFF0C\u4F8B\u5982\u71D5\u9EA6\uFF0C\u7CD9\u7C73\u6216\u5168\u9EA6\u9762\u5305\uFF01"
+  isEnglishLocalization: 1
   image: {fileID: 0}

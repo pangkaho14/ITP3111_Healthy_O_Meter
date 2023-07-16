@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
-  m_Name: FunFact3
+  m_Name: FunFact12
   m_EditorClassIdentifier: 
-  header: 'SALT & FAT INTAKE:'
-  funFact: Ask for less or no gravy!
+  EnglishHeader: 'SUGAR INTAKE:'
+  ChineseHeader: "\u7CD6\u7684\u6444\u5165\u91CF\uFF1A"
+  EnglishFunFact: Enjoy protein and calcium-rich soya beancurd with less sugar syrup!
+  ChineseFunFact: "\u4EAB\u53D7\u86CB\u767D\u8D28\u548C\u5BCC\u542B\u9499\u7684\u5927\u8C46\u8C46\u86CB\u767D\uFF0C\u7CD6\u6D46\u66F4\u5C11\uFF01"
+  isEnglishLocalization: 1
   image: {fileID: 0}

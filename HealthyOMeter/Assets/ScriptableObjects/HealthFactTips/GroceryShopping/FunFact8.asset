@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
   m_Name: FunFact8
   m_EditorClassIdentifier: 
-  header: 'BALANCED DIET:'
-  funFact: Adults aged 55 and above should aim to have 3 servings of protein a day!
+  EnglishHeader: 'BALANCED DIET:'
+  ChineseHeader: "\u5747\u8861\u996E\u98DF\uFF1A"
+  EnglishFunFact: Baked or natural nuts are healthy snacks that contain good fats
+    and dietary fibre!
+  ChineseFunFact: "\u70E4\u6216\u5929\u7136\u575A\u679C\u662F\u5065\u5EB7\u7684\u96F6\u98DF\uFF0C\u542B\u6709\u826F\u597D\u7684\u8102\u80AA\u548C\u996E\u98DF\u7EA4\u7EF4\uFF01"
+  isEnglishLocalization: 1
   image: {fileID: 0}

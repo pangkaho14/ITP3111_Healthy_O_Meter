@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
   m_Name: FunFact5
   m_EditorClassIdentifier: 
-  header: 'BALANCED DIET:'
-  funFact: 2 servings of fruit\n2 servings of leafy vegetables\nEvery day!
+  EnglishHeader: 'BALANCED DIET:'
+  ChineseHeader: "\u5747\u8861\u996E\u98DF\uFF1A"
+  EnglishFunFact: '2 servings of fruit\n2 servings of leafy vegetables\nEvery day!  '
+  ChineseFunFact: "2\u4EFD\u6C34\u679C\\n2\u4EFD\u53F6\u852C\u83DC\\n\u6BCF\u5929!"
+  isEnglishLocalization: 1
   image: {fileID: 0}

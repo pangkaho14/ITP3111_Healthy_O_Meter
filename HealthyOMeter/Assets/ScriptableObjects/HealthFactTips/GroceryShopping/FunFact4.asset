@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
-  m_Name: FunFact10
+  m_Name: FunFact4
   m_EditorClassIdentifier: 
-  header: 'BALANCED DIET:'
-  funFact: Protein maintains muscle mass and strength as you age!
+  EnglishHeader: 'PROTEIN INTAKE:'
+  ChineseHeader: "\u86CB\u767D\u8D28\u6444\u5165\u91CF\uFF1A"
+  EnglishFunFact: Canned sardines, tuna and chickpeas are good sources of protein!
+  ChineseFunFact: "\u6C99\u4E01\u9C7C\uFF0C\u91D1\u67AA\u9C7C\u548C\u9E70\u5634\u8C46\u7F50\u5934\u662F\u86CB\u767D\u8D28\u7684\u826F\u597D\u6765\u6E90\uFF01"
+  isEnglishLocalization: 1
   image: {fileID: 0}

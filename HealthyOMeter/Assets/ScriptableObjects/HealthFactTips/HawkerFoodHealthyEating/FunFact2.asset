@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
-  m_Name: FunFact1
+  m_Name: FunFact2
   m_EditorClassIdentifier: 
-  header: 'BALANCED DIET:'
-  funFact: 1/4 whole grains\n1/2 proteins\n1/2 fruits & vegetables
-  image: {fileID: 21300000, guid: 7b72c703f13b99546b067e5cae7a5379, type: 3}
+  EnglishHeader: 'SALT INTAKE:'
+  ChineseHeader: "\u76D0\u7684\u6444\u5165\u91CF\uFF1A"
+  EnglishFunFact: Reduce it by seasoning food with herbs and spices!
+  ChineseFunFact: "\u901A\u8FC7\u7528\u8349\u836F\u548C\u9999\u6599\u8C03\u5473\u98DF\u7269\u6765\u51CF\u5C11\u5B83\uFF01"
+  isEnglishLocalization: 1
+  image: {fileID: 0}

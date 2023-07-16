@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7f7f8d3e0431ad42ac309fc6ed40953, type: 3}
-  m_Name: Fun Fact Database
+  m_Name: Hawker Fun Fact Database
   m_EditorClassIdentifier: 
   funFactsList:
   - {fileID: 11400000, guid: e6e6e5655b401d248bd3ca0611eba279, type: 2}

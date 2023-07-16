@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
-  m_Name: FunFact12
+  m_Name: FunFact1
   m_EditorClassIdentifier: 
-  header: 'SUGAR INTAKE:'
-  funFact: Enjoy protein and calcium-rich soya beancurd with less sugar syrup!
-  image: {fileID: 0}
+  EnglishHeader: 'BALANCED DIET:'
+  ChineseHeader: "\u5747\u8861\u996E\u98DF\uFF1A"
+  EnglishFunFact: 1/4 wholegrains\n1/4 protein\n1/2 fruits & vegetables
+  ChineseFunFact: "1/4\u5168\u683C\u6797\\n1/4\u86CB\u767D\\n1/2\u6C34\u679C\u548C\u852C\u83DC"
+  isEnglishLocalization: 1
+  image: {fileID: 21300000, guid: 7b72c703f13b99546b067e5cae7a5379, type: 3}

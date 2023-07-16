@@ -49,7 +49,7 @@ public class TutorialCombos : MonoBehaviour
 
         //Get highest combo count
         int comboCount = scoreKeeper.GetHighestCombo();
-
+        UnityEngine.Debug.Log(comboCount);
         //Activate text
         textElement.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
                          "Try to beat that later!\n\n" +
