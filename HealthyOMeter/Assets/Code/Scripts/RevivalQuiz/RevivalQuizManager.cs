@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,12 +12,36 @@ public class RevivalQuizManager : MonoBehaviour
     [SerializeField] private GameObject selectionDialog;
     [SerializeField] private GameObject timer;
     
+    [SerializeField] private TextMeshProUGUI selectionDialogText;
+    [SerializeField] private RevivalQuizData revivalQuizData;
+    
+    private int LocaleKey;
+    
     // Start is called before the first frame update
     void Start()
     {
         revivalQuiz.gameObject.SetActive(false);
         selectionDialog.gameObject.SetActive(false);
         timer.gameObject.SetActive(false);
+
+        // check localization from player prefs
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+        
+        // 0 means it is english
+        if (LocaleKey == 0)
+        {
+            selectionDialogText.text =
+                $"You have {revivalQuizData.Attempts} attempt(s) left for the revival quiz. " +
+                $"There will be 3 questions. " +
+                $"For every correct answer, you heal {revivalQuizData.HealAmount} hp and can continue playing the game for a higher score!";
+        }
+        else
+        {
+            selectionDialogText.text = 
+                $"您有{revivalQuizData.Attempts}尝试进行复兴测验。" +
+                $"将有3个问题。" +
+                $"对于每个正确的答案，您都可以治愈{revivalQuizData.HealAmount}hp，并且可以继续玩游戏以更高的分数！";
+        }
     }
     
     public void IncrementAttempts()

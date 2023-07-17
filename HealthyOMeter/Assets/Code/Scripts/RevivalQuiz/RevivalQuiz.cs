@@ -3,6 +3,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 // nice to have: randomize answer choices button, they are now always fixed
@@ -45,15 +46,18 @@ public class RevivalQuiz : MonoBehaviour
     
     [SerializeField] private PlayerHealthPoints playerHealthPoints;
     [SerializeField] private UnityEvent quizOverEvent;
+    
+    [SerializeField] private RevivalQuizData revivalQuizData;
 
     private string quizEndText;
     
-    private int LocaleKey = 0;
+    private int LocaleKey;
 
     private void Start()
     {
         // check localization from player prefs
         LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+        
         // Debug.Log("RevivalQuiz.Start()");
         
         // Set up answer toggle button text
@@ -251,7 +255,7 @@ public class RevivalQuiz : MonoBehaviour
         if (isCorrect)
         {
             numberOfCorrectAnswers++;
-            playerHealthPoints.Heal(10);
+            playerHealthPoints.Heal(revivalQuizData.HealAmount);
         }
         
         for (var i = 0; i < answerToggleButtons.Length; i++)
