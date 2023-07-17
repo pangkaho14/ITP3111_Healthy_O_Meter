@@ -76,10 +76,9 @@ public class SpawnSprite : MonoBehaviour
 
     // PlayerHealthPoints scriptable object
     public PlayerHealthPoints playerHP;
+    private float constantSpeed = 6f;
 
-   
 
-    // Update is called once per frame
     private void Update()
     {
         // Increment the spawn timer by the time since the last frame
@@ -101,11 +100,11 @@ public class SpawnSprite : MonoBehaviour
             spawnTimer = 0f;
         }
 
-        // Check if it's time to increase spawn speed
+        // Check if it's time to increase spawn speed and decrease spawn interval
         if (elapsedSpawnSpeedIncreaseInterval >= spawnSpeedIncreaseInterval)
         {
-            // Call the method to increase spawn speed
-            IncreaseSpawnSpeed();
+            // Call the method to increase spawn speed and decrease spawn interval
+            IncreaseSpawnSpeedAndDecreaseSpawnInterval();
 
             // Reset the elapsed time for spawn speed increase
             elapsedSpawnSpeedIncreaseInterval = 0f;
@@ -124,23 +123,42 @@ public class SpawnSprite : MonoBehaviour
                 Rigidbody2D rb2D = foodObject.GetComponent<Rigidbody2D>();
                 if (rb2D != null)
                 {
+                    // If the object is visible, set its velocity based on the current spawn speed
                     if (isVisible)
                     {
-                        // If the object is visible, set its velocity based on the current spawn speed
                         rb2D.velocity = Vector2.down * spawnSpeed;
                     }
+                    // If the object is not visible, set its velocity to the updated constant speed
                     else
                     {
-                        // If the object is not visible, keep its velocity constant (do not change its speed)
-                        rb2D.velocity = rb2D.velocity.normalized * spawnSpeed;
+                        rb2D.velocity = Vector2.down * constantSpeed;
                     }
                 }
             }
         }
     }
 
+    // Method to increase the spawn speed and decrease the spawn interval
+    private void IncreaseSpawnSpeedAndDecreaseSpawnInterval()
+    {
+        // Increase the spawn speed by the specified amount
+        spawnSpeed += spawnSpeedIncreaseAmount;
 
+        // Decrease the spawn interval by the specified amount
+        spawnInterval -= spawnIntervalDecreaseAmount;
 
+        // Cap the spawn speed at the maximum value
+        if (spawnSpeed > maxSpawnSpeed)
+        {
+            spawnSpeed = maxSpawnSpeed;
+        }
+
+        // Cap the spawn interval at the minimum value
+        if (spawnInterval < minSpawnInterval)
+        {
+            spawnInterval = minSpawnInterval;
+        }
+    }
     // Method to update the spawn speed-related fields
     // Method to update spawn speed-related fields
     public void UpdateSpawnSpeedFields(float interval, float increaseAmount, float increaseInterval)
@@ -385,3 +403,4 @@ public class SpawnSprite : MonoBehaviour
         spawnedFoodObjects.Clear();
     }
 }
+

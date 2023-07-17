@@ -66,18 +66,18 @@ public class CollectFood : MonoBehaviour
             scoreKeeper.ResetScoreAndCombo();
             WrongItem.Play();
 
-            float spawnSpeedDecreaseAmount = spawnSprite.spawnSpeed * percentageDecrease;
-            spawnSprite.spawnSpeed -= spawnSpeedDecreaseAmount;
+           // float spawnSpeedDecreaseAmount = spawnSprite.spawnSpeed * percentageDecrease;
+          //  spawnSprite.spawnSpeed -= spawnSpeedDecreaseAmount;
 
 
             // Cap the spawn speed at the minimum value
-            if (spawnSprite.spawnSpeed < 1.3f)
-            {
-                spawnSprite.spawnSpeed = 1.3f;
-            }
+          //  if (spawnSprite.spawnSpeed < 1.3f)
+          //  {
+              //  spawnSprite.spawnSpeed = 1.3f;
+         //   }
 
             // Update the spawn speed-related fields in SpawnSprite
-            spawnSprite.UpdateSpawnSpeedFields(spawnSprite.spawnInterval, spawnSprite.spawnSpeedIncreaseAmount, spawnSprite.spawnSpeedIncreaseInterval);
+           // spawnSprite.UpdateSpawnSpeedFields(spawnSprite.spawnInterval, spawnSprite.spawnSpeedIncreaseAmount, spawnSprite.spawnSpeedIncreaseInterval);
         }
         else if (other.CompareTag("Nutri-A"))
         {

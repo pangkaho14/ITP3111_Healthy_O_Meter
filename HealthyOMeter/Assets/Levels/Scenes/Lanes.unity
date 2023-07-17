@@ -2312,9 +2312,25 @@ PrefabInstance:
       value: FoodSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: maxSpawnSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnInterval
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: middleLaneObject
       value: 
       objectReference: {fileID: 2021423260}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: minSpawnInterval
+      value: 0.74
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
