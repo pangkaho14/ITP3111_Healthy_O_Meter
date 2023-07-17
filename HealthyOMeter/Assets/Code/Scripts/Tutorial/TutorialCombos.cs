@@ -14,12 +14,15 @@ public class TutorialCombos : MonoBehaviour
     private bool comboCounted = false; // Flag to track if combo has been counted
 
     // Tutorial UI
-    public TextMeshProUGUI textElement;
+    public TextMeshProUGUI textElement1;
+    public TextMeshProUGUI textElement2;
+    public TextMeshProUGUI textElement3;
     public float delayInSeconds = 5f;
     public GameObject ButtonCanvas;
     public TextMeshProUGUI combo;
     public GameObject Background;
     private bool isPaused = false;
+    
 
     // ScoreKeeper script to get highest combo
     public ScoreKeeper scoreKeeper;
@@ -37,7 +40,8 @@ public class TutorialCombos : MonoBehaviour
     private IEnumerator HideTextCoroutine()
     {
         yield return new WaitForSeconds(delayInSeconds);
-        textElement.gameObject.SetActive(false);
+        textElement1.gameObject.SetActive(false);
+        textElement3.gameObject.SetActive(false);
     }
 
     private IEnumerator CountdownCoroutine()
@@ -68,20 +72,20 @@ public class TutorialCombos : MonoBehaviour
         if (LocaleKey == 0)
         {
             //Activate text
-            textElement.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
+            textElement2.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
                          "Try to beat that later!\n\n" +
                          "Now, let's dive into the real game!";
         }
         //Check if language selected is chinese
         else
         {
-            // TODO: to change last sentence text because English text has changed
             //Activate text
-            textElement.text = "哇，你得到的最高组合是 " + comboCount.ToString() + "!\n\n" +
+            textElement2.text = "哇，你得到的最高组合是 " + comboCount.ToString() + "!\n\n" +
                          "稍后尝试击败它!\n\n" +
-                         "请记住，现在有可能死了!";
+                         "现在，让我们深入了解真正的游戏！";
         }
-        textElement.gameObject.SetActive(true);
+        textElement3.gameObject.SetActive(false);
+        textElement2.gameObject.SetActive(true);
         Background.SetActive(true);
 
         // Activate COMBOS button
@@ -124,13 +128,13 @@ public class TutorialCombos : MonoBehaviour
     {
         if (LocaleKey == 0)
         {
-            textElement.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
+            textElement3.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
         }
         else
         {
-            textElement.text = "避免食物不健康!\n\n" + "不要错过健康食品!";
+            textElement3.text = "避免食物不健康!\n\n" + "不要错过健康食品!";
         }
-        textElement.gameObject.SetActive(true);
+        textElement3.gameObject.SetActive(true);
         StartCoroutine(HideTextCoroutine());
     }
 

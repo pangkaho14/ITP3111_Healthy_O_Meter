@@ -12,7 +12,9 @@ public class TutorialHealthmeter : MonoBehaviour
     [SerializeField] private int currentCountdown = 30; // Initial countdown 
 
     //Tutorial UI
-    public TextMeshProUGUI textElement;
+    public TextMeshProUGUI textElement1;
+    public TextMeshProUGUI textElement2;
+    public TextMeshProUGUI textElement3;
     public float delayInSeconds = 5f;
     public GameObject ButtonCanvas;
     public TextMeshProUGUI score;
@@ -30,7 +32,8 @@ public class TutorialHealthmeter : MonoBehaviour
     private IEnumerator HideTextCoroutine()
     {
         yield return new WaitForSeconds(delayInSeconds);
-        textElement.gameObject.SetActive(false);
+        textElement1.gameObject.SetActive(false);
+        textElement3.gameObject.SetActive(false);
     }
 
     private IEnumerator CountdownCoroutine()
@@ -54,22 +57,23 @@ public class TutorialHealthmeter : MonoBehaviour
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
 
         LocaleKey = PlayerPrefs.GetInt("LocaleKey");
+        
         if (LocaleKey == 0)
         {
             // Activate text
-        textElement.text = "Wow, you scored " + score.text + " points!\n\n" +
+            textElement2.text = "Wow, you scored " + score.text + " points!\n\n" +
                          "Try to beat that later!\n\n" +
                          "Now we will teach you about combos!";
         }
         else
         {
             // Activate text
-        textElement.text = "哇，你得到的最高组合是 " + score.text + "!\n\n" +
+            textElement2.text = "哇，你得到的最高组合是 " + score.text + "!\n\n" +
                          "稍后尝试击败它!\n\n" +
                          "现在，我们将教您有关连击的信息!";
         }
-        
-        textElement.gameObject.SetActive(true);
+        textElement3.gameObject.SetActive(false);
+        textElement2.gameObject.SetActive(true);
         Background.SetActive(true);
 
         // Activate COMBOS button
@@ -95,13 +99,13 @@ public class TutorialHealthmeter : MonoBehaviour
 
         if (LocaleKey == 0)
         {
-            textElement.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
+            textElement3.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
         }
         else
         {
-            textElement.text = "避免食物不健康!\n\n" + "不要错过健康食品!";
+            textElement3.text = "避免食物不健康!\n\n" + "不要错过健康食品!";
         }
-        textElement.gameObject.SetActive(true);
+        textElement3.gameObject.SetActive(true);
         StartCoroutine(HideTextCoroutine());
     }
 

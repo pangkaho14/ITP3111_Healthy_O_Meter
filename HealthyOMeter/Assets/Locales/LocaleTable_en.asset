@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1012009000960
-    m_Localized: There are two types of food!
+    m_Localized: There are different types of items!
     m_Metadata:
       m_Items: []
   - m_Id: 1043290120192
@@ -103,9 +103,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1047232765952
-    m_Localized: '"Collect food for 30s!
+    m_Localized: 'Collect food for 30s!
 
-      See how much score you can get!"'
+      See how much score you can get!'
     m_Metadata:
       m_Items: []
   - m_Id: 1170788573184
@@ -181,13 +181,13 @@ MonoBehaviour:
   - m_Id: 1517666517901312
     m_Localized: 'There is 8% sugar!
 
-      +50 points'
+      -75 points'
     m_Metadata:
       m_Items: []
   - m_Id: 1517721769467904
     m_Localized: 'There is 12% sugar!
 
-      +25 points'
+      -100 points'
     m_Metadata:
       m_Items: []
   - m_Id: 1517773921443840
