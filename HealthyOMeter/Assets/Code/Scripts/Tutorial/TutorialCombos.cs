@@ -19,6 +19,7 @@ public class TutorialCombos : MonoBehaviour
     public GameObject ButtonCanvas;
     public TextMeshProUGUI combo;
     public GameObject Background;
+    private bool isPaused = false;
 
     // ScoreKeeper script to get highest combo
     public ScoreKeeper scoreKeeper;
@@ -44,9 +45,18 @@ public class TutorialCombos : MonoBehaviour
         CountDownUI.SetActive(true);
         while (currentCountdown > 0)
         {
-            CountDownText.text = currentCountdown.ToString(); // Update the countdown text
-            yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
-            currentCountdown--; // Decrement the countdown value
+            if (!isPaused)
+            {
+                CountDownUI.SetActive(true);
+                CountDownText.text = currentCountdown.ToString(); // Update the countdown text
+                yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
+                currentCountdown--; // Decrement the countdown value
+            }
+            else
+            {
+                CountDownUI.SetActive(false);
+                yield return null; // Wait for the next frame if the game is paused
+            }
         }
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
 
@@ -122,5 +132,17 @@ public class TutorialCombos : MonoBehaviour
         }
         textElement.gameObject.SetActive(true);
         StartCoroutine(HideTextCoroutine());
+    }
+
+    public void HandlePauseEvent()
+    {
+        // stop the countdown
+        isPaused = true;
+    }
+
+    public void HandleResumeEvent()
+    {
+        // continue the countdown
+        isPaused = false;
     }
 }

@@ -18,7 +18,7 @@ public class TutorialHealthmeter : MonoBehaviour
     public TextMeshProUGUI score;
     public GameObject Background;
     private int LocaleKey = 0;
-
+    private bool isPaused = false;
     private void Start()
     {
         StartCoroutine(HideTextCoroutine());
@@ -38,9 +38,18 @@ public class TutorialHealthmeter : MonoBehaviour
         CountDownUI.SetActive(true);
         while (currentCountdown > 0)
         {
-            CountDownText.text = currentCountdown.ToString(); // Update the countdown text
-            yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
-            currentCountdown--; // Decrement the countdown value
+            if (!isPaused)
+            {
+                CountDownUI.SetActive(true);
+                CountDownText.text = currentCountdown.ToString(); // Update the countdown text
+                yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
+                currentCountdown--; // Decrement the countdown value
+            }
+            else
+            {
+                CountDownUI.SetActive(false);
+                yield return null; // Wait for the next frame if the game is paused
+            }
         }
         CountDownUI.SetActive(false); // Deactivate the countdown text UI element
 
@@ -94,5 +103,17 @@ public class TutorialHealthmeter : MonoBehaviour
         }
         textElement.gameObject.SetActive(true);
         StartCoroutine(HideTextCoroutine());
+    }
+
+    public void HandlePauseEvent()
+    {
+        // stop the countdown
+        isPaused = true;
+    }
+
+    public void HandleResumeEvent()
+    {
+        // continue the countdown
+        isPaused = false;
     }
 }

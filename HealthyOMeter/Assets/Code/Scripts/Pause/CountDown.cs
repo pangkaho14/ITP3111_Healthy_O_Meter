@@ -5,12 +5,14 @@ using TMPro;
 using System.Threading;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class CountDown : MonoBehaviour
 {
     public GameObject CountDownUI; // Reference to the countdown text UI element
     public TextMeshProUGUI CountDownText;
     [SerializeField] private int currentCountdown = 3; // Initial countdown 
+    [SerializeField] private UnityEvent ResumeEvent;
 
     public void StartCountdown()
     {
@@ -31,5 +33,6 @@ public class CountDown : MonoBehaviour
         // Reset currentCountdown
         // Perform unpausing logic for the Lanes scene
         Time.timeScale = 1;
+        ResumeEvent.Invoke();
     }
 }
