@@ -223,6 +223,174 @@ MonoBehaviour:
     m_Key: EnterTextText
     m_Metadata:
       m_Items: []
+  - m_Id: 2510532782317568
+    m_Key: OrangeJuiceText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510591221555200
+    m_Key: SaladText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510619612798976
+    m_Key: SandwichText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510656774332416
+    m_Key: SoftBoiledEggsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510697719128064
+    m_Key: WaterText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510721777655808
+    m_Key: BurgerText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510751058092032
+    m_Key: ChickenDrumsticksText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510782427291648
+    m_Key: ChickenRiceText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510808008351744
+    m_Key: CurryPuffText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510842401644544
+    m_Key: FrenchFriesText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510880527867904
+    m_Key: IceKachangText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510911104344064
+    m_Key: KuehText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510933220909056
+    m_Key: NasiLemakText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510957661118464
+    m_Key: RotiPrataText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510987520368640
+    m_Key: SatayText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2511008823238656
+    m_Key: TehPengText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513168893992960
+    m_Key: AppleText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513171964223488
+    m_Key: BreadText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513173818105856
+    m_Key: BroccoliText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513175080591360
+    m_Key: CarrotText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513267602743296
+    m_Key: CornText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513283528515584
+    m_Key: MilkText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513302851674112
+    m_Key: MushroomText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513334363480064
+    m_Key: OrangeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513352831000576
+    m_Key: PumpkinText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513379548717056
+    m_Key: TomatoText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513406732001280
+    m_Key: WatermelonText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513434573791232
+    m_Key: ChocolateBarText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513464286240768
+    m_Key: CocaColaText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513499765858304
+    m_Key: CookiesText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513530124230656
+    m_Key: CupNoodlesText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513564140036096
+    m_Key: DonutText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513586311127040
+    m_Key: IceCreamText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513615662866432
+    m_Key: LollipopText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513642770653184
+    m_Key: MuffinText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513668758560768
+    m_Key: PotatoChipsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2515304339988480
+    m_Key: FoodGuideText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517546413580288
+    m_Key: HawkerHealthyText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517576226693120
+    m_Key: HawkerUnhealthyText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517606341795840
+    m_Key: SupermarketHealthyText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517667125649408
+    m_Key: SupermarketUnhealthyText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2518263564066816
+    m_Key: HealthyPlateText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
