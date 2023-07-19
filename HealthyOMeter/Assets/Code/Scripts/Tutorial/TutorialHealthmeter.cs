@@ -95,6 +95,8 @@ public class TutorialHealthmeter : MonoBehaviour
 
     public void HandleHealthDepleted()
     {
+        //Check LocaleKey once again to ensure language changes are made
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         // Pop up instructions to avoid unhealthy food & do not miss healthy food
 
         if (LocaleKey == 0)

@@ -126,6 +126,8 @@ public class TutorialCombos : MonoBehaviour
 
     private void PopUpMessage()
     {
+        //Check LocaleKey once again to apply language change
+        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         if (LocaleKey == 0)
         {
             textElement3.text = "Avoid unhealthy food!\n\n" + "Do not miss healthy food!";
