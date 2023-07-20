@@ -238,6 +238,18 @@ MonoBehaviour:
     m_Localized: Enter text...
     m_Metadata:
       m_Items: []
+  - m_Id: 3405676037529600
+    m_Localized: "Good job! \nYou ate healthy food!\n+100 points & +20 health!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3405711135465472
+    m_Localized: "Oh no! \nYou missed healthy food!\n-20 health :("
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3405737375031296
+    m_Localized: "Oh no! \nYou ate unhealthy food!\n-20 health :("
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
