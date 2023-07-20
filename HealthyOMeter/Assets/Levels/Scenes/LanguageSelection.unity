@@ -283,6 +283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466d40d936c954dc4a7f1eb31ae9800f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+  NonSelectedColor: {r: 0, g: 0, b: 0, a: 1}
+  EnglishLanguageButton: {fileID: 1389215401}
+  MandarinLanguageButton: {fileID: 1696036456}
 --- !u!82 &46803276
 AudioSource:
   m_ObjectHideFlags: 0
@@ -379,6 +383,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &115161694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9019148201983781713, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+  m_PrefabInstance: {fileID: 1326125637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &196515312
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466d40d936c954dc4a7f1eb31ae9800f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+  NonSelectedColor: {r: 0, g: 0, b: 0, a: 1}
+  EnglishLanguageButton: {fileID: 1389215401}
+  MandarinLanguageButton: {fileID: 1696036456}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466d40d936c954dc4a7f1eb31ae9800f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+  NonSelectedColor: {r: 0, g: 0, b: 0, a: 1}
+  EnglishLanguageButton: {fileID: 1389215401}
+  MandarinLanguageButton: {fileID: 1696036456}
 --- !u!4 &955486658
 Transform:
   m_ObjectHideFlags: 0
@@ -1196,6 +1219,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 344812127123697718, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: EnglishLanguageButton
+      value: 
+      objectReference: {fileID: 1389215401}
+    - target: {fileID: 344812127123697718, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: MandarinLanguageButton
+      value: 
+      objectReference: {fileID: 1696036456}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: MuteButton
+      value: 
+      objectReference: {fileID: 115161694}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: SelectedMuteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: SelectedMuteColor.b
+      value: 0.8117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: SelectedMuteColor.g
+      value: 0.8117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: SelectedMuteColor.r
+      value: 0.8117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: NonSelectedMuteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: NonSelectedMuteColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: NonSelectedMuteColor.g
+      value: 0.7176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778377466482617944, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: NonSelectedMuteColor.r
+      value: 0.9333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019924390506190327, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: EnglishLanguageButton
+      value: 
+      objectReference: {fileID: 1389215401}
+    - target: {fileID: 4019924390506190327, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+      propertyPath: MandarinLanguageButton
+      value: 
+      objectReference: {fileID: 1696036456}
     - target: {fileID: 4873116053547102153, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1273,6 +1348,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+--- !u!114 &1389215401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6180492623130535671, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+  m_PrefabInstance: {fileID: 1326125637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461271032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1494,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461271032}
   m_CullTransparentMesh: 1
+--- !u!114 &1696036456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 71015850510502175, guid: 5b5b0454bed9b420c914d3f3db37d441, type: 3}
+  m_PrefabInstance: {fileID: 1326125637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1924002616
 GameObject:
   m_ObjectHideFlags: 0

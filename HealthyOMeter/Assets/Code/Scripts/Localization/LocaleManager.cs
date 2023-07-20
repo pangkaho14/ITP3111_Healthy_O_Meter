@@ -2,11 +2,16 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LocaleManager : MonoBehaviour
 {
     //Create LocaleKey variable for assignment of English or Mandarin Selection
     private int LocaleKey = 0;
+    public Color SelectedColor;
+    public Color NonSelectedColor;
+    public Button EnglishLanguageButton;
+    public Button MandarinLanguageButton;
 
     // [SerializeField] private AudioSource ButtonClick;
 
@@ -22,7 +27,20 @@ public class LocaleManager : MonoBehaviour
             //If there is a LocaleKey, load the selection made by User
             Load();
         }
-        ChangeLocale(LocaleKey);;
+        ChangeLocale(LocaleKey);
+        //Check if it is in mandarin
+        if (LocaleKey == 1)
+        {
+            //Mandarin Button becomes grey, English Button becomes orange
+            SelectedMandarinButtonColor();
+            NonSelectedEnglishButtonColor();
+        }
+        else
+        {
+            //English Button becomes grey, Mandarin Button becomes orange
+            SelectedEnglishButtonColor();
+            NonSelectedMandarinButtonColor();
+        }
     }
 
     //English Option
@@ -32,7 +50,16 @@ public class LocaleManager : MonoBehaviour
         Debug.Log("English");
         ChangeLocale(LocaleKey);;
         Save();
-        // ButtonClick.Play();
+        if (LocaleKey == 1)
+        {
+            SelectedMandarinButtonColor();
+            NonSelectedEnglishButtonColor();
+        }
+        else
+        {
+            SelectedEnglishButtonColor();
+            NonSelectedMandarinButtonColor();
+        }
     }
 
     //Mandarin Option
@@ -42,7 +69,16 @@ public class LocaleManager : MonoBehaviour
         Debug.Log("Mandarin");
         ChangeLocale(LocaleKey);;
         Save();
-        // ButtonClick.Play();
+        if (LocaleKey == 1)
+        {
+            SelectedMandarinButtonColor();
+            NonSelectedEnglishButtonColor();
+        }
+        else
+        {
+            SelectedEnglishButtonColor();
+            NonSelectedMandarinButtonColor();
+        }
     }
 
     private bool active = false;
@@ -66,6 +102,46 @@ public class LocaleManager : MonoBehaviour
         //Set the Locale ID according the LocaleKey in PlayerPrefs
         PlayerPrefs.SetInt("LocaleKey", _localeID);
         active = false;
+    }
+
+    //Grey English Color
+    public void SelectedEnglishButtonColor()
+    {
+        ColorBlock cb = EnglishLanguageButton.colors;
+        cb.normalColor = SelectedColor;
+        cb.highlightedColor = SelectedColor;
+        cb.pressedColor = SelectedColor;
+        EnglishLanguageButton.colors = cb;
+    }
+
+    //Grey Mandarin Color
+    public void SelectedMandarinButtonColor()
+    {
+        ColorBlock cb = MandarinLanguageButton.colors;
+        cb.normalColor = SelectedColor;
+        cb.highlightedColor = SelectedColor;
+        cb.pressedColor = SelectedColor;
+        MandarinLanguageButton.colors = cb;
+    }
+
+    //Orange English Color
+    public void NonSelectedEnglishButtonColor()
+    {
+        ColorBlock cb = EnglishLanguageButton.colors;
+        cb.normalColor = NonSelectedColor;
+        cb.highlightedColor = NonSelectedColor;
+        cb.pressedColor = NonSelectedColor;
+        EnglishLanguageButton.colors = cb;
+    }
+
+    //Orange Mandarin Color
+    public void NonSelectedMandarinButtonColor()
+    {
+        ColorBlock cb = MandarinLanguageButton.colors;
+        cb.normalColor = NonSelectedColor;
+        cb.highlightedColor = NonSelectedColor;
+        cb.pressedColor = NonSelectedColor;
+        MandarinLanguageButton.colors = cb;
     }
 
     private void Load()
