@@ -181,9 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Wow, the highest combo you got is 1!\nTry to beat that later! \n\nA surprise
-    can be found when u first lose all health points!\n\nNow, let's dive into the
-    real game!"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42e20c4039f8d3d4d98ca6dffffde3a1, type: 2}
   m_sharedMaterial: {fileID: -7539109241469109365, guid: 42e20c4039f8d3d4d98ca6dffffde3a1, type: 2}
@@ -2402,7 +2400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1658855850
 RectTransform:
   m_ObjectHideFlags: 0

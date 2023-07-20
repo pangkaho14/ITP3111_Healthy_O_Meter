@@ -74,6 +74,7 @@ public class TutorialCombos : MonoBehaviour
             //Activate text
             textElement2.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
                          "Try to beat that later!\n\n" +
+                         "A surprise can be found when u first lose all health points!\n\n"+
                          "Now, let's dive into the real game!";
         }
         //Check if language selected is chinese
@@ -82,6 +83,7 @@ public class TutorialCombos : MonoBehaviour
             //Activate text
             textElement2.text = "哇，你得到的最高组合是 " + comboCount.ToString() + "!\n\n" +
                          "稍后尝试击败它!\n\n" +
+                         "当你第一次失去所有生命值时，可以找到一个惊喜！\n\n"+
                          "现在，让我们深入了解真正的游戏！";
         }
         textElement3.gameObject.SetActive(false);

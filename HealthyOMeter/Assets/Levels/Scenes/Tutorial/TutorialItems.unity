@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1593052821}
         m_TargetAssemblyTypeName: TutorialItems, Assembly-CSharp
         m_MethodName: NutrigradeButton
         m_Mode: 1
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1593052821}
         m_TargetAssemblyTypeName: TutorialItems, Assembly-CSharp
         m_MethodName: NTUCButton
         m_Mode: 1
@@ -3161,7 +3161,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1593052821}
         m_TargetAssemblyTypeName: TutorialItems, Assembly-CSharp
         m_MethodName: HawkerButton
         m_Mode: 1
