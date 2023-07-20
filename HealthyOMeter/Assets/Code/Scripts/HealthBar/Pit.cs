@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Pit : MonoBehaviour
 {
@@ -8,8 +9,12 @@ public class Pit : MonoBehaviour
     [SerializeField] private DamageEffect overlayEffect;
     [SerializeField] private ScoreKeeper scoreKeeper;
 
-    //Declaration of Uncollected Food SFX
+    // Declaration of Uncollected Food SFX
     [SerializeField] private AudioSource WrongItem;
+
+    // For tutorial popup message
+    [SerializeField] private UnityEvent HealthyMissedEvent;
+    private bool isHealthyMissedEvent = true;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,6 +24,13 @@ public class Pit : MonoBehaviour
             overlayEffect.ShowOverlay();
             scoreKeeper.ResetScoreAndCombo();
             WrongItem.Play();
+
+            // Invoke event to pop up text
+            if (isHealthyMissedEvent)
+            {
+                HealthyMissedEvent.Invoke();
+                isHealthyMissedEvent = false;
+            }
         }
         
         Destroy(other.gameObject);

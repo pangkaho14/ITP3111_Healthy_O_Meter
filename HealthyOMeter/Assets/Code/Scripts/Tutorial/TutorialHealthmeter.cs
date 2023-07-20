@@ -3,24 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Threading;
+using UnityEngine.Events;
 
 public class TutorialHealthmeter : MonoBehaviour
 {
-    //CountDown UI
+    // CountDown UI
     public GameObject CountDownUI; // Reference to the countdown text UI element
     public TextMeshProUGUI CountDownText;
     [SerializeField] private int currentCountdown = 30; // Initial countdown 
 
-    //Tutorial UI
+    // Tutorial UI
     public TextMeshProUGUI textElement1;
     public TextMeshProUGUI textElement2;
     public TextMeshProUGUI textElement3;
+    public TextMeshProUGUI healthyContact;
+    public TextMeshProUGUI healthyMissed;
+    public TextMeshProUGUI unhealthyContact;
+    public GameObject textBackground;
     public float delayInSeconds = 5f;
     public GameObject ButtonCanvas;
     public TextMeshProUGUI score;
     public GameObject Background;
     private int LocaleKey = 0;
     private bool isPaused = false;
+    private bool isHealthyContacted = false;
+    private bool isUnhealthyContacted = false;
+
+    // Pausebutton script
+    public PauseButton pauseButton;
+
     private void Start()
     {
         StartCoroutine(HideTextCoroutine());
@@ -31,9 +42,13 @@ public class TutorialHealthmeter : MonoBehaviour
 
     private IEnumerator HideTextCoroutine()
     {
-        yield return new WaitForSeconds(delayInSeconds);
+        yield return new WaitForSecondsRealtime(delayInSeconds);
         textElement1.gameObject.SetActive(false);
         textElement3.gameObject.SetActive(false);
+        healthyContact.gameObject.SetActive(false);
+        unhealthyContact.gameObject.SetActive(false);
+        healthyMissed.gameObject.SetActive(false);
+        textBackground.SetActive(false);
     }
 
     private IEnumerator CountdownCoroutine()
@@ -121,5 +136,44 @@ public class TutorialHealthmeter : MonoBehaviour
     {
         // continue the countdown
         isPaused = false;
+    }
+
+    public void HandleHealthyContactEvent()
+    {
+        // Set text to active and pause the game
+        pauseButton.Pause();
+        healthyContact.gameObject.SetActive(true);
+        textBackground.SetActive(true);
+        StartCoroutine(HideTextCoroutine());
+
+        // Unpause the game with a delay of 1 second
+        float delay = 1f;
+        StartCoroutine(pauseButton.UnpauseWithDelay(delay));
+    }
+
+    public void HandleUnhealthyContactEvent()
+    {
+        // Set text to active and pause the game
+        pauseButton.Pause();
+        unhealthyContact.gameObject.SetActive(true);
+        textBackground.SetActive(true);
+        StartCoroutine(HideTextCoroutine());
+
+        // Unpause the game with a delay of 1 second
+        float delay = 1f;
+        StartCoroutine(pauseButton.UnpauseWithDelay(delay));
+    }
+
+    public void HandleHealthyMissedEvent()
+    {
+        // Set text to active and pause the game
+        pauseButton.Pause();
+        healthyMissed.gameObject.SetActive(true);
+        textBackground.SetActive(true);
+        StartCoroutine(HideTextCoroutine());
+
+        // Unpause the game with a delay of 1 second
+        float delay = 1f;
+        StartCoroutine(pauseButton.UnpauseWithDelay(delay));
     }
 }

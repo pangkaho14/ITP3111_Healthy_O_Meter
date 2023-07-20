@@ -39,4 +39,12 @@ public class PauseButton : MonoBehaviour
         // Start the countdown an unpause the game
         countDown.StartCountdown();
     }
+
+    public IEnumerator UnpauseWithDelay(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+
+        // Unpause the game
+        Unpause();
+    }
 }
