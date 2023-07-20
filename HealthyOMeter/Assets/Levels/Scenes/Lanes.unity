@@ -1135,9 +1135,9 @@ MonoBehaviour:
   - {fileID: 1340925959}
   - {fileID: 2021423261}
   - {fileID: 1893571962}
-  LaneChangeSpeed: 5
+  LaneChangeSpeed: 8
   Threshold: 10
-  SwipeBufferTime: 0.5
+  SwipeBufferTime: 0.3
   Player: {fileID: 809565302}
   LeftMovementEffect: {fileID: 1205082183}
   RightMovementEffect: {fileID: 1205082182}
