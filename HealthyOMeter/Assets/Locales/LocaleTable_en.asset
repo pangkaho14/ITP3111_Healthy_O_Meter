@@ -63,11 +63,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 704021258240
-    m_Localized: Aunty
+    m_Localized: LUCY
     m_Metadata:
       m_Items: []
   - m_Id: 780286287872
-    m_Localized: Uncle
+    m_Localized: RAYMOND
     m_Metadata:
       m_Items: []
   - m_Id: 784082132992
@@ -227,7 +227,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1625210020159488
-    m_Localized: CONTINUE TO QUIZ
+    m_Localized: CONTINUE TO REVIVAL QUIZ
     m_Metadata:
       m_Items: []
   - m_Id: 1627594200965120
@@ -412,6 +412,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2518263564066816
     m_Localized: Healthy Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3272579128221696
+    m_Localized: Revival Quiz
     m_Metadata:
       m_Items: []
   references:
