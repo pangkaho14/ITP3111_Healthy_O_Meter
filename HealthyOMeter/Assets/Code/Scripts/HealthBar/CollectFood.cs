@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollectFood : MonoBehaviour
 {
@@ -33,12 +34,18 @@ public class CollectFood : MonoBehaviour
     // Speed decrease amount when an object with "unhealthy" tag is touched
     [SerializeField] private float speedDecreaseAmount;
 
-    //Declaration of Food Collection SFX
+    // Declaration of Food Collection SFX
     [SerializeField] private AudioSource RightItem;
     [SerializeField] private AudioSource WrongItem;
 
     // Reference to the SpawnSprite script
     public SpawnSprite spawnSprite; // Assign this reference in the Inspector
+
+    // Events for tutorial popup messages
+    [SerializeField] private UnityEvent HealthyContactEvent;
+    [SerializeField] private UnityEvent UnhealthyContactEvent;
+    private bool isHealthyContactEvent = true;
+    private bool isUnhealthyContactEvent = true;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -57,6 +64,14 @@ public class CollectFood : MonoBehaviour
                 ShowFloatingText(newScore); // Pass the custom text
             }
             RightItem.Play();
+
+            // Invoke event to pop up text
+            if (isHealthyContactEvent)
+            {
+                HealthyContactEvent.Invoke();
+                isHealthyContactEvent = false;
+            }
+            
         }
         else if (other.CompareTag("unhealthy"))
         {
@@ -78,6 +93,13 @@ public class CollectFood : MonoBehaviour
 
             // Update the spawn speed-related fields in SpawnSprite
             spawnSprite.UpdateSpawnSpeedFields(spawnSprite.spawnInterval, spawnSprite.spawnSpeedIncreaseAmount, spawnSprite.spawnSpeedIncreaseInterval);
+
+            // Invoke event to pop up text
+            if (isUnhealthyContactEvent)
+            {
+                UnhealthyContactEvent.Invoke();
+                isUnhealthyContactEvent = false;
+            }
         }
         else if (other.CompareTag("Nutri-A"))
         {
@@ -146,5 +168,10 @@ public class CollectFood : MonoBehaviour
                 textMesh.color = Color.red;
             }
         }
+    }
+
+    private void EventTriggered()
+    {
+
     }
 }

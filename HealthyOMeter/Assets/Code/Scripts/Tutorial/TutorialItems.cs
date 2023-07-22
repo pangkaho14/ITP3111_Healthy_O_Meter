@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class TutorialItems : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class TutorialItems : MonoBehaviour
     public GameObject NutrigradeLabel;
     public GameObject Healthy;
     public GameObject Unhealthy;
+    public UnityEngine.UI.Button defaultSelectedButton;
+
+    void Start()
+    {
+        defaultSelectedButton.Select();
+    }
 
     public void HawkerButton()
     {

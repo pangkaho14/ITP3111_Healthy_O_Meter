@@ -223,6 +223,18 @@ MonoBehaviour:
     m_Key: EnterTextText
     m_Metadata:
       m_Items: []
+  - m_Id: 3405676037529600
+    m_Key: HealthyContactText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3405711135465472
+    m_Key: HealthyMissText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3405737375031296
+    m_Key: UnhealthyContactText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
