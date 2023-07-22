@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
 
 public class TutorialCombos : MonoBehaviour
 {
@@ -52,7 +49,7 @@ public class TutorialCombos : MonoBehaviour
             {
                 CountDownUI.SetActive(true);
                 CountDownText.text = currentCountdown.ToString(); // Update the countdown text
-                yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
+                yield return new WaitForSeconds(1f); // Wait for 1 second
                 currentCountdown--; // Decrement the countdown value
             }
             else

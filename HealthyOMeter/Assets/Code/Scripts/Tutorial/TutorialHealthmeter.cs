@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Threading;
-using UnityEngine.Events;
 
 public class TutorialHealthmeter : MonoBehaviour
 {
@@ -60,7 +57,7 @@ public class TutorialHealthmeter : MonoBehaviour
             {
                 CountDownUI.SetActive(true);
                 CountDownText.text = currentCountdown.ToString(); // Update the countdown text
-                yield return new WaitForSecondsRealtime(1f); // Wait for 1 second
+                yield return new WaitForSeconds(1f); // Wait for 1 second
                 currentCountdown--; // Decrement the countdown value
             }
             else

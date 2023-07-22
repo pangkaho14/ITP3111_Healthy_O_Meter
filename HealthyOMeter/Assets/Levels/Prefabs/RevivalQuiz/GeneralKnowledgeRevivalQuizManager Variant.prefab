@@ -203,5 +203,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4130768396998814940, guid: ee9af931af818754697f4601b672323b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8397375363155562168}
   m_SourcePrefab: {fileID: 100100000, guid: ee9af931af818754697f4601b672323b, type: 3}
+--- !u!114 &5559042011163913192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 348022112049746190, guid: ee9af931af818754697f4601b672323b, type: 3}
+  m_PrefabInstance: {fileID: 5328254263960353510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116239683196229178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8116239683196229178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4130768396998814940, guid: ee9af931af818754697f4601b672323b, type: 3}
+  m_PrefabInstance: {fileID: 5328254263960353510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8397375363155562168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116239683196229178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:c45e433d64c5b4acc879985ad320263e
+    m_TableEntryReference:
+      m_KeyId: 3272579128221696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5559042011163913192}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []

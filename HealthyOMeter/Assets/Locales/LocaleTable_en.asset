@@ -63,11 +63,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 704021258240
-    m_Localized: Aunty
+    m_Localized: LUCY
     m_Metadata:
       m_Items: []
   - m_Id: 780286287872
-    m_Localized: Uncle
+    m_Localized: RAYMOND
     m_Metadata:
       m_Items: []
   - m_Id: 784082132992
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1012009000960
-    m_Localized: There are different types of items!
+    m_Localized: There are two types of food!
     m_Metadata:
       m_Items: []
   - m_Id: 1043290120192
@@ -103,9 +103,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1047232765952
-    m_Localized: 'Collect food for 30s!
+    m_Localized: '"Collect food for 30s!
 
-      See how much score you can get!'
+      See how much score you can get!"'
     m_Metadata:
       m_Items: []
   - m_Id: 1170788573184
@@ -181,13 +181,13 @@ MonoBehaviour:
   - m_Id: 1517666517901312
     m_Localized: 'There is 8% sugar!
 
-      -75 points'
+      +50 points'
     m_Metadata:
       m_Items: []
   - m_Id: 1517721769467904
     m_Localized: 'There is 12% sugar!
 
-      -100 points'
+      +25 points'
     m_Metadata:
       m_Items: []
   - m_Id: 1517773921443840
@@ -227,7 +227,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1625210020159488
-    m_Localized: CONTINUE TO QUIZ
+    m_Localized: CONTINUE TO REVIVAL QUIZ
     m_Metadata:
       m_Items: []
   - m_Id: 1627594200965120
@@ -238,16 +238,184 @@ MonoBehaviour:
     m_Localized: Enter text...
     m_Metadata:
       m_Items: []
-  - m_Id: 3405676037529600
-    m_Localized: "Good job! \nYou ate healthy food!\n+100 points & +20 health!"
+  - m_Id: 2510532782317568
+    m_Localized: Orange Juice
     m_Metadata:
       m_Items: []
-  - m_Id: 3405711135465472
-    m_Localized: "Oh no! \nYou missed healthy food!\n-20 health :("
+  - m_Id: 2510591221555200
+    m_Localized: Salad
     m_Metadata:
       m_Items: []
-  - m_Id: 3405737375031296
-    m_Localized: "Oh no! \nYou ate unhealthy food!\n-20 health :("
+  - m_Id: 2510619612798976
+    m_Localized: Sandwich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510656774332416
+    m_Localized: Soft Boiled Eggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510697719128064
+    m_Localized: Water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510721777655808
+    m_Localized: Burger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510751058092032
+    m_Localized: Chicken Drumsticks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510782427291648
+    m_Localized: Chicken Rice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510808008351744
+    m_Localized: Curry Puff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510842401644544
+    m_Localized: French Fries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510880527867904
+    m_Localized: Ice Kachang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510911104344064
+    m_Localized: Kueh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510933220909056
+    m_Localized: Nasi Lemak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510957661118464
+    m_Localized: Roti Prata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510987520368640
+    m_Localized: Satay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2511008823238656
+    m_Localized: Ice Teh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513668758560768
+    m_Localized: Potato Chips
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513642770653184
+    m_Localized: Muffin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513615662866432
+    m_Localized: Lollipop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513586311127040
+    m_Localized: Ice Cream
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513564140036096
+    m_Localized: Donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513530124230656
+    m_Localized: Cup Noodles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513499765858304
+    m_Localized: Cookies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513464286240768
+    m_Localized: Coca Cola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513434573791232
+    m_Localized: Chocolate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513406732001280
+    m_Localized: Watermelon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513379548717056
+    m_Localized: Tomato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513352831000576
+    m_Localized: Pumpkin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513334363480064
+    m_Localized: Orange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513302851674112
+    m_Localized: Mushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513283528515584
+    m_Localized: Milk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513267602743296
+    m_Localized: Corn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513175080591360
+    m_Localized: Carrot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513173818105856
+    m_Localized: Broccoli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513171964223488
+    m_Localized: Bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513168893992960
+    m_Localized: Apple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2515304339988480
+    m_Localized: Food Guide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517546413580288
+    m_Localized: 'Hawker
+
+      (Healthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517576226693120
+    m_Localized: 'Hawker
+
+      (Unhealthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517606341795840
+    m_Localized: 'NTUC
+
+      (Healthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517667125649408
+    m_Localized: 'NTUC
+
+      (Unhealthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2518263564066816
+    m_Localized: Healthy Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3272579128221696
+    m_Localized: Revival Quiz
     m_Metadata:
       m_Items: []
   references:

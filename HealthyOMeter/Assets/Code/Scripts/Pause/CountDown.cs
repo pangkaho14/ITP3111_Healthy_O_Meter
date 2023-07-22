@@ -1,10 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Threading;
-using System;
-using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
 public class CountDown : MonoBehaviour
