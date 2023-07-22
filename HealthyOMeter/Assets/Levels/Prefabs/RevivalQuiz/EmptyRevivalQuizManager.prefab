@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5891786, b: 0.5137255, a: 1}
+  m_Color: {r: 0.972549, g: 0.7490196, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -224,7 +224,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  revivalQuizData: {fileID: 0}
+  revivalQuizData: {fileID: 11400000, guid: aa60b52113c668a49b6a697cafc02ca9, type: 2}
 --- !u!114 &4913594292644234807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5886792, g: 1, b: 0.84785265, a: 1}
+  m_Color: {r: 0.972549, g: 0.7490196, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5886792, g: 1, b: 0.84785265, a: 1}
+  m_Color: {r: 0.972549, g: 0.7490196, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5886792, g: 1, b: 0.84785265, a: 1}
+  m_Color: {r: 0.972549, g: 0.7490196, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6676128, g: 0.99215686, b: 0.29411772, a: 1}
+  m_Color: {r: 0.972549, g: 0.7490196, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3404,21 +3404,9 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6655455875057989581}
-    - target: {fileID: 4869184952761523937, guid: e0260fc5c509a7b4cbb8604ef61ab05c, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 46b2b7f85305f4e338fc58d0ef526307, type: 2}
-    - target: {fileID: 4869184952761523937, guid: e0260fc5c509a7b4cbb8604ef61ab05c, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 7745488510324820131, guid: 46b2b7f85305f4e338fc58d0ef526307, type: 2}
     - target: {fileID: 6362896118725149653, guid: e0260fc5c509a7b4cbb8604ef61ab05c, type: 3}
       propertyPath: m_Name
       value: ToggleButton (0)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362896118725149653, guid: e0260fc5c509a7b4cbb8604ef61ab05c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

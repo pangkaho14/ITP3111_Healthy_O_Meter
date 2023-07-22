@@ -55,9 +55,6 @@ public class RevivalQuiz : MonoBehaviour
 
     private void Start()
     {
-        // check localization from player prefs
-        LocaleKey = PlayerPrefs.GetInt("LocaleKey");
-        
         // Debug.Log("RevivalQuiz.Start()");
         
         // Set up answer toggle button text
