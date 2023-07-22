@@ -395,6 +395,18 @@ MonoBehaviour:
     m_Key: RevivalQuizText
     m_Metadata:
       m_Items: []
+  - m_Id: 4126413752885248
+    m_Key: HealthyContactText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126421835309056
+    m_Key: HealthyMissText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126423898906624
+    m_Key: UnhealthyContactText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

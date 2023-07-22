@@ -47,11 +47,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 583774756864
-    m_Localized: English
+    m_Localized: ENGLISH
     m_Metadata:
       m_Items: []
   - m_Id: 614200238080
-    m_Localized: Mandarin
+    m_Localized: MANDARIN
     m_Metadata:
       m_Items: []
   - m_Id: 659565830144
@@ -131,7 +131,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1464582791168
-    m_Localized: Menu
+    m_Localized: MENU
     m_Metadata:
       m_Items: []
   - m_Id: 37693693091840
@@ -416,6 +416,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3272579128221696
     m_Localized: Revival Quiz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126413752885248
+    m_Localized: "Good job! \nYou ate healthy food!\n+100 points & +20 health!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126421835309056
+    m_Localized: "Oh no! \nYou missed healthy food!\n-20 health :("
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126423898906624
+    m_Localized: "Oh no! \nYou ate unhealthy food!\n-20 health :("
     m_Metadata:
       m_Items: []
   references:
