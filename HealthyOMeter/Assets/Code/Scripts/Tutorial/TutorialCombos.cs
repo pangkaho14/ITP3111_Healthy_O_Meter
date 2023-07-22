@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 public class TutorialCombos : MonoBehaviour
 {
-    //CountDown UI
+    // CountDown UI
     public GameObject CountDownUI; // Reference to the countdown text UI element
     public TextMeshProUGUI CountDownText;
     [SerializeField] private int currentCountdown = 30; // Initial countdown 
@@ -23,7 +23,6 @@ public class TutorialCombos : MonoBehaviour
     public GameObject Background;
     private bool isPaused = false;
     
-
     // ScoreKeeper script to get highest combo
     public ScoreKeeper scoreKeeper;
     private int LocaleKey = 0;
@@ -77,10 +76,10 @@ public class TutorialCombos : MonoBehaviour
                          "A surprise can be found when u first lose all health points!\n\n"+
                          "Now, let's dive into the real game!";
         }
-        //Check if language selected is chinese
+        // Check if language selected is chinese
         else
         {
-            //Activate text
+            // Activate text
             textElement2.text = "哇，你得到的最高组合是 " + comboCount.ToString() + "!\n\n" +
                          "稍后尝试击败它!\n\n" +
                          "当你第一次失去所有生命值时，可以找到一个惊喜！\n\n"+
@@ -128,7 +127,7 @@ public class TutorialCombos : MonoBehaviour
 
     private void PopUpMessage()
     {
-        //Check LocaleKey once again to apply language change
+        // Check LocaleKey once again to apply language change
         LocaleKey = PlayerPrefs.GetInt("LocaleKey");
         if (LocaleKey == 0)
         {

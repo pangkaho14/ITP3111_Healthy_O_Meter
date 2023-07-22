@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4388088921509776241
 MonoBehaviour:
@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 5165193933321168126, guid: eed5e78f672fcca44832f347a863511e, type: 3}
   - {fileID: 5165203787184571013, guid: b44238686f4b7e44dae74c084308a6b9, type: 3}
   - {fileID: 3317258596026676390, guid: fdff936b117721e4d84a2739ed58043c, type: 3}
-  - {fileID: 5912425341979283478, guid: d71d1c48d8db3074898aab509c41561b, type: 3}
+  - {fileID: 7041359498299975599, guid: d71d1c48d8db3074898aab509c41561b, type: 3}
   - {fileID: 4911459791876360710, guid: f1a77ca0821f8af45bb1edf5af1b050e, type: 3}
   - {fileID: 568131623661751671, guid: b28e458534388334e9928fa8a5b55873, type: 3}
   - {fileID: 8219104493189890581, guid: 1eddbed33ce45534dab6367480728457, type: 3}
@@ -92,8 +92,8 @@ MonoBehaviour:
   - {fileID: 7517884460641653272, guid: 8403988dfb2d073448c1cbc7e1ad1768, type: 3}
   - {fileID: 4083731795281474842, guid: 7b6ddc68a84579d4ba89e304aebac238, type: 3}
   constantNutrigradeSpeed: 1
-  spawnInterval: 4
-  spawnSpeed: 1.5
+  spawnInterval: 2.3
+  spawnSpeed: 1
   laneOffset: 2
   laneWidth: 0.2
   minHeight: 0.2

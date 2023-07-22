@@ -1047,9 +1047,9 @@ MonoBehaviour:
   - {fileID: 1340925959}
   - {fileID: 2021423261}
   - {fileID: 1893571962}
-  LaneChangeSpeed: 5
+  LaneChangeSpeed: 8
   Threshold: 10
-  SwipeBufferTime: 0.5
+  SwipeBufferTime: 0.3
   Player: {fileID: 809565302}
   LeftMovementEffect: {fileID: 1205082183}
   RightMovementEffect: {fileID: 1205082182}
@@ -2190,9 +2190,81 @@ PrefabInstance:
       value: FoodSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: maxSpawnSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: spawnInterval
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
       propertyPath: middleLaneObject
       value: 
       objectReference: {fileID: 2021423260}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: minSpawnInterval
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8361906750589784291, guid: b694c7e0cc7d1c6479b60fc1e0ea1105, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7460842411694064795, guid: 718cd33d2da955146a54d1ef3b0da50a, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 5165193933321168126, guid: eed5e78f672fcca44832f347a863511e, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 5165203787184571013, guid: b44238686f4b7e44dae74c084308a6b9, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3317258596026676390, guid: fdff936b117721e4d84a2739ed58043c, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 4911459791876360710, guid: f1a77ca0821f8af45bb1edf5af1b050e, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 568131623661751671, guid: b28e458534388334e9928fa8a5b55873, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 8219104493189890581, guid: 1eddbed33ce45534dab6367480728457, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 7605070923302744506, guid: e37eca6e885574b4fbf72f92d0eaefba, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 5439021351005054200, guid: 8eb160996fb233841a4b4bbfb7b4c4c2, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: ntucHealthyFoodPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 7041359498299975599, guid: d71d1c48d8db3074898aab509c41561b, type: 3}
+    - target: {fileID: 4388088921509776241, guid: 89f8dbc855bf78d42a6e39fae2d66700, type: 3}
+      propertyPath: hawkerHealthyFoodPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8885671636946631298, guid: 5fbe057f3085a894d8bc4f640895e792, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

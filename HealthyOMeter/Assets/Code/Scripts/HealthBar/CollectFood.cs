@@ -81,18 +81,17 @@ public class CollectFood : MonoBehaviour
             scoreKeeper.ResetScoreAndCombo();
             WrongItem.Play();
 
-            float spawnSpeedDecreaseAmount = spawnSprite.spawnSpeed * percentageDecrease;
-            spawnSprite.spawnSpeed -= spawnSpeedDecreaseAmount;
+           // float spawnSpeedDecreaseAmount = spawnSprite.spawnSpeed * percentageDecrease;
+           // spawnSprite.spawnSpeed -= spawnSpeedDecreaseAmount;
 
+           // Cap the spawn speed at the minimum value
+           // if (spawnSprite.spawnSpeed < 1.3f)
+           // {
+           //     spawnSprite.spawnSpeed = 1.3f;
+           // }
 
-            // Cap the spawn speed at the minimum value
-            if (spawnSprite.spawnSpeed < 1.3f)
-            {
-                spawnSprite.spawnSpeed = 1.3f;
-            }
-
-            // Update the spawn speed-related fields in SpawnSprite
-            spawnSprite.UpdateSpawnSpeedFields(spawnSprite.spawnInterval, spawnSprite.spawnSpeedIncreaseAmount, spawnSprite.spawnSpeedIncreaseInterval);
+           // Update the spawn speed-related fields in SpawnSprite
+           // spawnSprite.UpdateSpawnSpeedFields(spawnSprite.spawnInterval, spawnSprite.spawnSpeedIncreaseAmount, spawnSprite.spawnSpeedIncreaseInterval);
 
             // Invoke event to pop up text
             if (isUnhealthyContactEvent)
@@ -168,10 +167,5 @@ public class CollectFood : MonoBehaviour
                 textMesh.color = Color.red;
             }
         }
-    }
-
-    private void EventTriggered()
-    {
-
     }
 }
