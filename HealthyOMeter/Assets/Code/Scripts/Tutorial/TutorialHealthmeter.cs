@@ -178,5 +178,6 @@ public class TutorialHealthmeter : MonoBehaviour
     {
         Time.timeScale = 1;
         HideEventText();
+        HandleResumeEvent();
     }
 }
