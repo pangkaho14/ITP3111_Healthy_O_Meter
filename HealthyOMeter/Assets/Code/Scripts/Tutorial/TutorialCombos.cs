@@ -67,10 +67,10 @@ public class TutorialCombos : MonoBehaviour
         // Check if language selected is english
         if (LocaleKey == 0)
         {
-            //Activate text
-            textElement2.text = "Wow, the highest combo you got is " + comboCount.ToString() + "!\n\n" +
+            // Activate text
+            textElement2.text = "Wow, the highest combo you got is " + comboCount + "!\n\n" +
                          "Try to beat that later!\n\n" +
-                         "A surprise can be found when u first lose all health points!\n\n"+
+                         "A surprise can be found when you first lose all health points!\n\n"+
                          "Now, let's dive into the real game!";
         }
         // Check if language selected is chinese
