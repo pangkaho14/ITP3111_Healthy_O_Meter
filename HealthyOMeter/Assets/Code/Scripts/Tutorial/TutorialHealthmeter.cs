@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System.Threading;
 
 public class TutorialHealthmeter : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class TutorialHealthmeter : MonoBehaviour
     private bool isPaused = false;
     private bool isHealthyContacted = false;
     private bool isUnhealthyContacted = false;
+    public GameObject continueButton;
 
     // Pausebutton script
     public PauseButton pauseButton;
@@ -141,11 +143,7 @@ public class TutorialHealthmeter : MonoBehaviour
         pauseButton.Pause();
         healthyContact.gameObject.SetActive(true);
         textBackground.SetActive(true);
-        StartCoroutine(HideTextCoroutine());
-
-        // Unpause the game with a delay of 1 second
-        float delay = 1f;
-        StartCoroutine(pauseButton.UnpauseWithDelay(delay));
+        continueButton.SetActive(true);
     }
 
     public void HandleUnhealthyContactEvent()
@@ -154,11 +152,7 @@ public class TutorialHealthmeter : MonoBehaviour
         pauseButton.Pause();
         unhealthyContact.gameObject.SetActive(true);
         textBackground.SetActive(true);
-        StartCoroutine(HideTextCoroutine());
-
-        // Unpause the game with a delay of 1 second
-        float delay = 1f;
-        StartCoroutine(pauseButton.UnpauseWithDelay(delay));
+        continueButton.SetActive(true);
     }
 
     public void HandleHealthyMissedEvent()
@@ -167,10 +161,22 @@ public class TutorialHealthmeter : MonoBehaviour
         pauseButton.Pause();
         healthyMissed.gameObject.SetActive(true);
         textBackground.SetActive(true);
-        StartCoroutine(HideTextCoroutine());
+        continueButton.SetActive(true);        
+    }
 
-        // Unpause the game with a delay of 1 second
-        float delay = 1f;
-        StartCoroutine(pauseButton.UnpauseWithDelay(delay));
+    public void HideEventText()
+    {
+        textBackground.SetActive(false);
+        unhealthyContact.gameObject.SetActive(false);
+        healthyMissed.gameObject.SetActive(false);
+        healthyContact.gameObject.SetActive(false);
+        continueButton.SetActive(false);
+    }
+
+    // To unpause the game and hide all game objects related
+    public void ContinueButton()
+    {
+        Time.timeScale = 1;
+        HideEventText();
     }
 }
