@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
+  m_Name: HawkerQuestion6
+  m_EditorClassIdentifier: 
+  englishQuestionText: Which of the following is FALSE when reducing sodium intake?
+  chineseQuestionText: "\u51CF\u5C11\u94A0\u6444\u5165\u91CF\u65F6\uFF0C\u4EE5\u4E0B\u54EA\u9879\u662F\u9519\u8BEF\u7684\uFF1F"
+  isEnglishLocalization: 1
+  englishAnswerChoices:
+  - Ask for less or no gravy
+  - Limit adding sauces like chili or soy sauce
+  - Drink more soup with meals
+  chineseAnswerChoices:
+  - "\u8981\u6C42\u66F4\u5C11\u6216\u6CA1\u6709\u8089\u6C41"
+  - "\u9650\u5236\u6DFB\u52A0\u8FA3\u6912\u6216\u9171\u6CB9\u7B49\u8C03\u5473\u6599"
+  - "\u7528\u996D\u83DC\u591A\u559D\u6C64"
+  correctAnswerIndex: 2

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
+  m_Name: GeneralQuestion1
+  m_EditorClassIdentifier: 
+  englishQuestionText: One tablespoon of soya sauce contains how many mg of sodium?
+  chineseQuestionText: "\u4E00\u6C64\u5319\u9171\u6CB9\u542B\u6709\u51E0\u6B21\u6BEB\u514B\u94A0?"
+  isEnglishLocalization: 1
+  englishAnswerChoices:
+  - 500 mg
+  - 1000 mg
+  - 1500 mg
+  chineseAnswerChoices:
+  - "500\u6BEB\u514B"
+  - "1000\u6BEB\u514B"
+  - "1500\u6BEB\u514B"
+  correctAnswerIndex: 1
