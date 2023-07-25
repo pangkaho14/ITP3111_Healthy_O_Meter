@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95cd1667905db840b10249aad707561, type: 3}
+  m_Name: HawkerQuestion5
+  m_EditorClassIdentifier: 
+  englishQuestionText: "How much sugar is in 1 cup of Kopi / Teh Siu Dai \u2013 less
+    sugar?"
+  chineseQuestionText: "1\u676Fkopi/teh siu dai\u4E2D\u6709\u591A\u5C11\u7CD6 - \u5C11\u7CD6\uFF1F"
+  isEnglishLocalization: 1
+  englishAnswerChoices:
+  - 2 tsp (10g)
+  - 3 tsp (15g)
+  - 4 tsp (20g)
+  chineseAnswerChoices:
+  - "2\u8336\u5319\uFF0810\u514B\uFF09"
+  - "3\u8336\u5319\uFF0815\u514B\uFF09"
+  - "4\u8336\u5319\uFF0820\u514B\uFF09"
+  correctAnswerIndex: 1

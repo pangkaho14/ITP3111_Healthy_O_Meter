@@ -2,22 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+// using UnityEngine.UIElements;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Settings : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+    [SerializeField] public Slider SliderVolume;
+    [SerializeField] public AudioMixer SoundMixer;
 
-        //Get the Exit Button
-        Button buttonExitSettings = root.Q<Button>("btnExit");
-        buttonExitSettings.clicked += LoadNextScene;
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("SoundVolume"))
+        {
+            LoadVolume();
+        }
+        else
+        {
+            SetSoundVolume();
+        }
     }
 
-    private void LoadNextScene()
+    public void SetSoundVolume()
     {
-        // Replace "NextSceneName" with the name or index of your desired next scene
-        SceneManager.LoadScene("Game");
+        float volume = SliderVolume.value;
+        SoundMixer.SetFloat("Sound", Mathf.Log10(volume)*20);
+        PlayerPrefs.SetFloat("SoundVolume", volume);
     }
+
+    private void LoadVolume()
+    {
+        SliderVolume.value = PlayerPrefs.GetFloat("SoundVolume");
+        SetSoundVolume();
+    }
+    
 }

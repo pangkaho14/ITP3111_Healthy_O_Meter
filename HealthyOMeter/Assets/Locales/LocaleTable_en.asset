@@ -1,0 +1,435 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LocaleTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c45e433d64c5b4acc879985ad320263e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 294942400512
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 332405923840
+    m_Localized: Leaderboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369718452224
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 402350137344
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 441797566464
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 511666282496
+    m_Localized: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546604834816
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 583774756864
+    m_Localized: ENGLISH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614200238080
+    m_Localized: MANDARIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659565830144
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 699202002944
+    m_Localized: Character Selection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 704021258240
+    m_Localized: LUCY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780286287872
+    m_Localized: RAYMOND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784082132992
+    m_Localized: Hawker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 852029857792
+    m_Localized: NTUC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 898897010688
+    m_Localized: Next >
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928680763392
+    m_Localized: Healthy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 977989001216
+    m_Localized: Unhealthy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1012009000960
+    m_Localized: There are different types of items!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043290120192
+    m_Localized: Swipe left and right to move between the 3 lanes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1045538267136
+    m_Localized: 'Health: 100%'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1047232765952
+    m_Localized: '"Collect food for 30s!
+
+      See how much score you can get!"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1170788573184
+    m_Localized: 'Health = + Health
+
+      Unhealthy = - Health'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207702642688
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1268834623488
+    m_Localized: Leaderboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1381724315648
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1413580054528
+    m_Localized: Play Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464582791168
+    m_Localized: MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37693693091840
+    m_Localized: Choose Your Scenario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37861914042368
+    m_Localized: Hawker Center
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37970684928000
+    m_Localized: Sheng Siong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39375676104704
+    m_Localized: FUN FACT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 876796340854784
+    m_Localized: CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 876798911963136
+    m_Localized: QUIT X
+    m_Metadata:
+      m_Items: []
+  - m_Id: 882562980372480
+    m_Localized: PAUSED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517441342496768
+    m_Localized: Nutri-Grade labels provide information about the sugar content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517546921517056
+    m_Localized: 'There is 0% sugar!
+
+      +100 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517618623143936
+    m_Localized: 'There is 4% sugar!
+
+      +75 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517666517901312
+    m_Localized: 'There is 8% sugar!
+
+      +50 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517721769467904
+    m_Localized: 'There is 12% sugar!
+
+      +25 points'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517773921443840
+    m_Localized: Nutri-Grade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521081167896576
+    m_Localized: 'Collect food for 30s!
+
+      Try to get the highest combo!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521755704254464
+    m_Localized: PRESS TO LEARN ABOUT COMBOS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622159779684352
+    m_Localized: SUBMIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622237017792512
+    m_Localized: GO NEXT QUESTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1622239169470464
+    m_Localized: PRESS TO RESUME GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625126465429504
+    m_Localized: You have X attempts left for the revival quiz. There will be 3 questions.
+      For every correct answer, you heal 10 hp and can continue playing the game
+      for a higher score!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625172908957696
+    m_Localized: QUIT TO MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1625210020159488
+    m_Localized: CONTINUE TO REVIVAL QUIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1627594200965120
+    m_Localized: Enter Player Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1628087237206016
+    m_Localized: Enter text...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510532782317568
+    m_Localized: Orange Juice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510591221555200
+    m_Localized: Salad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510619612798976
+    m_Localized: Sandwich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510656774332416
+    m_Localized: Soft Boiled Eggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510697719128064
+    m_Localized: Water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510721777655808
+    m_Localized: Burger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510751058092032
+    m_Localized: Chicken Drumsticks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510782427291648
+    m_Localized: Chicken Rice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510808008351744
+    m_Localized: Curry Puff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510842401644544
+    m_Localized: French Fries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510880527867904
+    m_Localized: Ice Kachang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510911104344064
+    m_Localized: Kueh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510933220909056
+    m_Localized: Nasi Lemak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510957661118464
+    m_Localized: Roti Prata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2510987520368640
+    m_Localized: Satay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2511008823238656
+    m_Localized: Ice Teh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513668758560768
+    m_Localized: Potato Chips
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513642770653184
+    m_Localized: Muffin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513615662866432
+    m_Localized: Lollipop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513586311127040
+    m_Localized: Ice Cream
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513564140036096
+    m_Localized: Donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513530124230656
+    m_Localized: Cup Noodles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513499765858304
+    m_Localized: Cookies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513464286240768
+    m_Localized: Coca Cola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513434573791232
+    m_Localized: Chocolate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513406732001280
+    m_Localized: Watermelon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513379548717056
+    m_Localized: Tomato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513352831000576
+    m_Localized: Pumpkin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513334363480064
+    m_Localized: Orange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513302851674112
+    m_Localized: Mushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513283528515584
+    m_Localized: Milk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513267602743296
+    m_Localized: Corn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513175080591360
+    m_Localized: Carrot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513173818105856
+    m_Localized: Broccoli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513171964223488
+    m_Localized: Bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513168893992960
+    m_Localized: Apple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2515304339988480
+    m_Localized: Food Guide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517546413580288
+    m_Localized: 'Hawker
+
+      (Healthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517576226693120
+    m_Localized: 'Hawker
+
+      (Unhealthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517606341795840
+    m_Localized: 'NTUC
+
+      (Healthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2517667125649408
+    m_Localized: 'NTUC
+
+      (Unhealthy)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2518263564066816
+    m_Localized: Healthy Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3272579128221696
+    m_Localized: Revival Quiz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126413752885248
+    m_Localized: "Good job! \nYou ate healthy food!\n+100 points & +20 health!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126421835309056
+    m_Localized: "Oh no! \nYou missed healthy food!\n-20 health :("
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4126423898906624
+    m_Localized: "Oh no! \nYou ate unhealthy food!\n-20 health :("
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e6ad2ff1fd8894998af5a5c27bd905, type: 3}
+  m_Name: FunFact9
+  m_EditorClassIdentifier: 
+  EnglishHeader: 'BALANCED DIET:'
+  ChineseHeader: "\u5747\u8861\u996E\u98DF\uFF1A"
+  EnglishFunFact: Whole grains have high fiber content which promote bowel movements
+    and lower cholesterol!
+  ChineseFunFact: "\u5168\u8C37\u7269\u5177\u6709\u9AD8\u7EA4\u7EF4\u542B\u91CF\uFF0C\u53EF\u4FC3\u8FDB\u6392\u4FBF\u548C\u4E0B\u80C6\u56FA\u9187\uFF01"
+  isEnglishLocalization: 1
+  image: {fileID: 0}
